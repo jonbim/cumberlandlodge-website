@@ -21,7 +21,7 @@
     "gulp-uglifyjs": "^0.6.2",
     "gulp-watch": "^5.0.1",
     "imagemin-pngcrush": "^6.0.0",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "name": "serenowebtheme",
   "description": "<!-- @file Instructions for subtheming using the Sass Starterkit. --> <!-- @defgroup sub_theming_sass --> <!-- @ingroup sub_theming --> # Sass Starterkit",
