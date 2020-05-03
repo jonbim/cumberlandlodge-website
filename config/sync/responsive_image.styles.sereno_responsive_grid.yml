@@ -1,0 +1,73 @@
+uuid: 1d5e2ce0-11d5-4f63-81d2-9b0716361401
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.sereno_grid_600_x_400_
+  theme:
+    - serenowebtheme
+id: sereno_responsive_grid
+label: 'Sereno responsive grid'
+image_style_mappings:
+  -
+    breakpoint_id: serenowebtheme.screen-lg-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-lg-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-md-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-md-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-md-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+  -
+    breakpoint_id: serenowebtheme.screen-xs-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_grid_600_x_400_
+breakpoint_group: serenowebtheme
+fallback_image_style: sereno_grid_600_x_400_

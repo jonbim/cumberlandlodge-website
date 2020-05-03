@@ -1,0 +1,205 @@
+uuid: 32eae378-d206-452d-9af2-4a15145b7551
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.programme_event.comment_node_programme_event
+    - field.field.node.programme_event.field_add_to_calendar
+    - field.field.node.programme_event.field_date_range
+    - field.field.node.programme_event.field_downloads
+    - field.field.node.programme_event.field_event_image
+    - field.field.node.programme_event.field_event_label
+    - field.field.node.programme_event.field_event_organisation
+    - field.field.node.programme_event.field_event_type
+    - field.field.node.programme_event.field_eventbrite_button
+    - field.field.node.programme_event.field_location
+    - field.field.node.programme_event.field_p_body
+    - field.field.node.programme_event.field_person
+    - field.field.node.programme_event.field_programme_event_resource
+    - field.field.node.programme_event.field_related_content
+    - field.field.node.programme_event.field_show_register_link
+    - field.field.node.programme_event.field_special_event
+    - field.field.node.programme_event.field_strapline
+    - field.field.node.programme_event.field_theme
+    - field.field.node.programme_event.field_twitter_hashtag
+    - node.type.programme_event
+    - responsive_image.styles.sereno_responsive_grid
+  module:
+    - addtocalendar
+    - date_range_formatter
+    - ds
+    - field_formatter_class
+    - field_group
+    - options
+    - responsive_image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_text_wrapper:
+      children: {  }
+      parent_name: ''
+      weight: 31
+      label: 'Text wrapper'
+      format_settings:
+        formatter: collapsible
+        description: ''
+        show_label: true
+        label_element: h3
+        effect: none
+        speed: fast
+        classes: 'group-text-wrapper field-group-div'
+        id: ''
+        element: div
+      format_type: html_element
+      region: hidden
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_event_image
+        - node_title
+        - field_strapline
+        - field_location
+        - field_date_range
+        - field_eventbrite_button
+        - field_show_register_link
+        - field_event_label
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.programme_event.teaser
+targetEntityType: node
+bundle: programme_event
+mode: teaser
+content:
+  field_date_range:
+    type: date_range_without_time
+    weight: 4
+    region: content
+    label: visually_hidden
+    settings:
+      timezone_override: ''
+      single: 'j F Y - g:ia'
+      single_all_day: 'j F Y - g:ia'
+      one_day: 'j F Y - g:ia'
+      one_month: 'j - {j} F Y - g:ia'
+      several_months: 'j F - {j} {F} Y - g:ia'
+      several_years: 'j F Y - {j} {F} {Y} - g:ia'
+      separator: '-'
+      date_format: 'Y-m-d\TH:i:s'
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: blue
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'Cumberland Lodge'
+          atc_organizer_email:
+            field: token
+            tokenized: info@cumberlandlodge.org.uk
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      field_formatter_class:
+        class: ''
+  field_event_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      responsive_image_style: sereno_responsive_grid
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_event_label:
+    type: string
+    weight: 7
+    region: content
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_eventbrite_button:
+    type: text_default
+    weight: 5
+    region: content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_location:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: visually_hidden
+    settings:
+      link: false
+    third_party_settings:
+      field_formatter_class:
+        class: p
+  field_show_register_link:
+    type: list_default
+    weight: 6
+    region: content
+    label: visually_hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_strapline:
+    type: string
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  comment_node_programme_event: true
+  field_add_to_calendar: true
+  field_downloads: true
+  field_event_organisation: true
+  field_event_type: true
+  field_p_body: true
+  field_person: true
+  field_programme_event_resource: true
+  field_related_content: true
+  field_special_event: true
+  field_theme: true
+  field_twitter_hashtag: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

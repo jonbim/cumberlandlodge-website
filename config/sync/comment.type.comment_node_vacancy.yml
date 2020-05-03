@@ -1,0 +1,8 @@
+uuid: 8ce91dd8-21b5-4a66-8985-9875a45f6683
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_vacancy
+label: 'Vacancy comment'
+target_entity_type_id: node
+description: null

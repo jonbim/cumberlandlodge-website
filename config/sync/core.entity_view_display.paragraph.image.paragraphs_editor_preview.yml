@@ -1,0 +1,27 @@
+uuid: 5d458ced-9fe7-459d-a162-f7b7793ca9e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_text_block_2
+    - paragraphs.paragraphs_type.image
+  module:
+    - image
+id: paragraph.image.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: image
+mode: paragraphs_editor_preview
+content:
+  field_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_text_block_2: true

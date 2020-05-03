@@ -1,0 +1,11 @@
+uuid: c8c1aa01-3a6e-4baa-9d67-2418fdc37c45
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_action
+label: 'Bulk Update Action Fields'
+type: action
+plugin: bulk_update_fields_action_base
+configuration: {  }

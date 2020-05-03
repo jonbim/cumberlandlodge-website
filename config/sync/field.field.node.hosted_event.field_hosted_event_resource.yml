@@ -1,0 +1,30 @@
+uuid: 26604bfe-7f63-4fb8-8e9e-4d80403961f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hosted_event_resource
+    - node.type.hosted_event
+    - node.type.resource
+id: node.hosted_event.field_hosted_event_resource
+field_name: field_hosted_event_resource
+entity_type: node
+bundle: hosted_event
+label: 'Hosted Event Resource'
+description: 'Add a resource such as a brochure to your hosted event'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resource: resource
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

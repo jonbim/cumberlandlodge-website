@@ -1,0 +1,14 @@
+uuid: f2f18932-1589-40b0-90f7-a6e0721a205c
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TrjtO2wskj94-mS9Sjjcao6G0hxATLPV3mK_2iCtX6k
+id: editor
+label: Editor
+weight: 4
+is_admin: null
+permissions:
+  - 'access browse_files entity browser pages'
+  - 'access browse_files_modal entity browser pages'
+  - 'dropzone upload files'

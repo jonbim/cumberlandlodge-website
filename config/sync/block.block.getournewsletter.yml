@@ -1,0 +1,29 @@
+uuid: a79d740b-5fe3-484a-8e62-6d3150eed5c9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6af22c38-ef6a-4c9a-8f2f-79e6fda6be23'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - serenowebtheme
+third_party_settings:
+  block_class:
+    classes: 'col-sm-6 col-md-3'
+id: getournewsletter
+theme: serenowebtheme
+region: footer_later
+weight: -23
+provider: null
+plugin: 'block_content:6af22c38-ef6a-4c9a-8f2f-79e6fda6be23'
+settings:
+  id: 'block_content:6af22c38-ef6a-4c9a-8f2f-79e6fda6be23'
+  label: 'Newsletter, cookies and credits'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

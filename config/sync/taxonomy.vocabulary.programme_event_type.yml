@@ -1,0 +1,8 @@
+uuid: 9a79f68d-c4c2-4720-8486-8703e08304a8
+langcode: en
+status: true
+dependencies: {  }
+name: 'Programme Event Type'
+vid: programme_event_type
+description: 'An event that is wholly created & administered by the Lodge'
+weight: 0

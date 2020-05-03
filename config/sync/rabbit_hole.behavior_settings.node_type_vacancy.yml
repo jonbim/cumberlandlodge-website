@@ -1,0 +1,11 @@
+uuid: 1fe9c116-8e30-4e74-ae88-3ee6e12be887
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.vacancy
+id: node_type_vacancy
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

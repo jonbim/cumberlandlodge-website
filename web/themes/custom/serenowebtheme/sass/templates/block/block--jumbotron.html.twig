@@ -1,0 +1,97 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a block.
+ *
+ * Available variables:
+ * - $block->subject: Block title.
+ * - $content: Block content.
+ * - $block->module: Module that generated the block.
+ * - $block->delta: An ID for the block, unique within each module.
+ * - $block->region: The block region embedding the current block.
+ * - $classes: String of classes that can be used to style contextually through
+ *   CSS. It can be manipulated through the variable $classes_array from
+ *   preprocess functions. The default values can be one or more of the
+ *   following:
+ *   - block: The current template type, i.e., "theming hook".
+ *   - block-[module]: The module generating the block. For example, the user
+ *     module is responsible for handling the default user navigation block. In
+ *     that case the class would be 'block-user'.
+ * - $title_prefix (array): An array containing additional output populated by
+ *   modules, intended to be displayed in front of the main title tag that
+ *   appears in the template.
+ * - $title_suffix (array): An array containing additional output populated by
+ *   modules, intended to be displayed after the main title tag that appears in
+ *   the template.
+ *
+ * Helper variables:
+ * - $classes_array: Array of html class attribute values. It is flattened
+ *   into a string within the variable $classes.
+ * - $block_zebra: Outputs 'odd' and 'even' dependent on each block region.
+ * - $zebra: Same output as $block_zebra but independent of any block region.
+ * - $block_id: Counter dependent on each block region.
+ * - $id: Same output as $block_id but independent of any block region.
+ * - $is_front: Flags true when presented in the front page.
+ * - $logged_in: Flags true when the current user is a logged-in member.
+ * - $is_admin: Flags true when the current user is an administrator.
+ * - $block_html_id: A valid HTML ID and guaranteed unique.
+ *
+ * @ingroup templates
+ *
+ * @see bootstrap_preprocess_block()
+ * @see template_preprocess()
+ * @see template_preprocess_block()
+ * @see bootstrap_process_block()
+ * @see template_process()
+ */
+
+ // Rod Tatham, Sereno :: 2019-11-28
+  - format the jumbotron, grabbing vars from the preprocess funtion for this block and inserting them here
+#}
+{%
+  set classes = [
+    'block',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    'clearfix',
+  ]
+%}
+<section{{ attributes.addClass(classes) }}>
+  {% block content %}
+
+    <div class="jumbotron d-flex" aria-label="{{ srn_jumbotron_image_alt }}" style="background-image: url('{{ srn_jumbotron_image_uri }}');">
+      <div class="container d-flex">
+        <div class="row d-flex">
+          <div class="col-sm-8 col-md-7 jumboText">
+            <h1>{{ srn_jumbotron_title }}</h1>
+            <p class="mt-auto">{{ srn_jumbotron_blurb|raw }}</p>
+
+            {% if(srn_jumbotron_links is not empty) %}
+              {% if srn_jumbotron_links|length > 2 %}
+              <div class="dropdown jumboList">
+                <button aria-expanded="true" aria-haspopup="true" class="btn btn-default dropdown-toggle" data-toggle="dropdown" id="dropdownMenu1" type="button">Find out more about what we do:</button>
+
+                <ul aria-labelledby="dropdownMenu1" class="dropdown-menu">
+                  {% for key,value in srn_jumbotron_links %}
+                    <li><a href="{{ key }}">{{ value }}</a></li>
+                  {% endfor %}
+                </ul>
+              </div>
+              {% else %}
+              {# it's 2 links or less, so format them differently #}
+                <div class="promoButtonLeft">
+                  {% for key,value in srn_jumbotron_links %}
+                    <a class="btn btn-default button-black" href="{{ key }}" role="button">{{ value }} <i class="fas fa-chevron-right" aria-hidden="true"></i></a>
+                   {% endfor %}
+                </div>
+              {% endif %}
+            {% endif %}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+</section>
+
+

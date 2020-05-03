@@ -1,0 +1,8 @@
+uuid: 60ede460-2c8d-4c30-95de-f7c50fe65762
+langcode: en
+status: true
+dependencies: {  }
+name: 'Media type'
+vid: media_type
+description: 'Resources can have audio or video attached'
+weight: 0

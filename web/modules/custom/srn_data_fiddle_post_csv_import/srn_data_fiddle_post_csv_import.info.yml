@@ -1,0 +1,5 @@
+name: 'Sereno data fiddle post csv import'
+type: module
+description: 'Grabs paragraphs from cType Paragraph importer and attaches them to existing nodes already migrated'
+core: 8.x
+package: 'Sereno'

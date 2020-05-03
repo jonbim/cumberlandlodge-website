@@ -1,0 +1,19 @@
+uuid: 2d257302-a3df-4c8f-a46a-0f6b41e6da1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strapline
+    - node.type.news_article
+id: node.news_article.field_strapline
+field_name: field_strapline
+entity_type: node
+bundle: news_article
+label: Strapline
+description: 'Used where a link into the full content is needed (eg on home page calls to action)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: b8d3a51e-5028-4a2f-9518-6c8613626d5d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Landing Section'
+vid: landing_section
+description: 'Add a page to a Landing Section to create a dynamic landing page'
+weight: 0

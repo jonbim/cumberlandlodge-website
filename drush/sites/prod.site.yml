@@ -1,0 +1,9 @@
+prod:
+ host: 81.31.76.118
+ user: sereno
+ root: /var/www/cmb/www.cumberlandlodge.ac.uk
+ uri: https://www.cumberlandlodge.ac.uk
+ paths:
+  drush-script: /var/www/cmb/www.cumberlandlodge.ac.uk/vendor/drush/drush/drush
+  files: web/sites/default/files
+  private: web/sites/default/private

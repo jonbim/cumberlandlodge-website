@@ -1,0 +1,25 @@
+uuid: 25559af9-44fb-4df6-9cfc-0876b0f787ca
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:55f73787-de85-433e-9ba9-f5d3d521197a'
+  module:
+    - block_content
+  theme:
+    - serenowebtheme
+id: socialaccountlinksheader
+theme: serenowebtheme
+region: upper_deck_starboard
+weight: -12
+provider: null
+plugin: 'block_content:55f73787-de85-433e-9ba9-f5d3d521197a'
+settings:
+  id: 'block_content:55f73787-de85-433e-9ba9-f5d3d521197a'
+  label: 'Social account links header'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

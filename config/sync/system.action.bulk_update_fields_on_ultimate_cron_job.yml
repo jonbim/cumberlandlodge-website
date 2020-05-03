@@ -1,0 +1,11 @@
+uuid: f3b20597-b66e-4b5a-97df-8e86fd24ae20
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_ultimate_cron_job
+label: 'Bulk Update Cron Job Fields'
+type: ultimate_cron_job
+plugin: bulk_update_fields_action_base
+configuration: {  }

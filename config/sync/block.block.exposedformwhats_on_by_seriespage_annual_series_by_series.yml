@@ -1,0 +1,29 @@
+uuid: df3e8dcd-e9ea-48a7-9992-0e8e8a5992de
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.whats_on_by_series
+  module:
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: exposedformwhats_on_by_seriespage_annual_series_by_series
+theme: serenowebtheme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:whats_on_by_series-page_annual_series_by_series'
+settings:
+  id: 'views_exposed_filter_block:whats_on_by_series-page_annual_series_by_series'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /whats-on/series
+    negate: false
+    context_mapping: {  }

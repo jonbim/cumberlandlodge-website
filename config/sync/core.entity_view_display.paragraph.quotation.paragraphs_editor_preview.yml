@@ -1,0 +1,15 @@
+uuid: d7de0987-ab28-4fd2-a22b-0b8e64b07225
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.quotation.field_text_block
+    - paragraphs.paragraphs_type.quotation
+id: paragraph.quotation.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: quotation
+mode: paragraphs_editor_preview
+content: {  }
+hidden:
+  field_text_block: true

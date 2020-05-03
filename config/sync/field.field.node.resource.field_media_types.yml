@@ -1,0 +1,26 @@
+uuid: bc2170c8-7c27-400d-b523-189a30c7b0a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_types
+    - node.type.resource
+    - taxonomy.vocabulary.media_type
+id: node.resource.field_media_types
+field_name: field_media_types
+entity_type: node
+bundle: resource
+label: 'Media Types (for filtering results)'
+description: 'Allows users to select only records with attached media, currently either ''video'' or ''audio'' content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      media_type: media_type
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

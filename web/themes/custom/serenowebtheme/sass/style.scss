@@ -1,0 +1,16 @@
+// Default variables.
+@import "default-variables";
+
+// Bootstrap Framework.
+@import '../bootstrap/assets/stylesheets/bootstrap';
+
+// Base-theme overrides.
+@import 'overrides';
+
+// Sereno scss files
+
+// mixins created by Sereno
+@import "./srn-css/srn-mixin";
+
+// all the specifically Bootstrap-based components
+@import './srn-css/srn-overrides';

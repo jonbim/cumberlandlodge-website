@@ -1,0 +1,9 @@
+stage:
+ host: 159.65.82.25
+ user: sereno
+ root: /var/www/cmb/cmb-d8.sereno-dev.co.uk
+ uri: https://cmb-d8.sereno-dev.co.uk
+ paths:
+  drush-script: /var/www/cmb/cmb-d8.sereno-dev.co.uk/vendor/drush/drush/drush
+  files: web/sites/default/files
+  private: web/sites/default/private

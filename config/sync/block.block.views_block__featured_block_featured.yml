@@ -1,0 +1,30 @@
+uuid: 8fd40e15-c532-424c-894b-bfab02689874
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.featured
+  module:
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__featured_block_featured
+theme: serenowebtheme
+region: sidebar_second
+weight: -11
+provider: null
+plugin: 'views_block:featured-block_featured'
+settings:
+  id: 'views_block:featured-block_featured'
+  label: 'Featured content'
+  provider: views
+  label_display: '0'
+  views_label: 'Featured content'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/about-us/guest-speakers\r\n/current-annual-series/confirmed-speakers\r\n/read-watch-listen\r\n/read-watch-listen/all-our-resources\r\n/user\r\n/whats-on\r\n/whats-on/series\r\n/venue-hire/hire-our-facilities\r\n/visiting-organisations\r\n/impact/case-studies\r\n/venue-hire/room-specifications\r\n/about-us/people"
+    negate: true
+    context_mapping: {  }

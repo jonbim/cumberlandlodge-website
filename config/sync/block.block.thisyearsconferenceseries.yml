@@ -1,0 +1,31 @@
+uuid: 8c0f6576-0b2d-4a23-b060-943a2800d14b
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:b4dd27a3-001e-4f75-be6c-576ddb8ff521'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: thisyearsconferenceseries
+theme: serenowebtheme
+region: content
+weight: -18
+provider: null
+plugin: 'block_content:b4dd27a3-001e-4f75-be6c-576ddb8ff521'
+settings:
+  id: 'block_content:b4dd27a3-001e-4f75-be6c-576ddb8ff521'
+  label: 'This year''s conference series'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

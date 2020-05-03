@@ -1,0 +1,22 @@
+uuid: 4dd7f8bc-3ede-48cd-a06a-f1a8979b72de
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_resource
+label: 'Content - Resource'
+type: 'canonical_entities:node'
+pattern: 'read-watch-listen/[node:title]'
+selection_criteria:
+  1a235ccb-9984-4996-8daf-5e6e261ed6ea:
+    id: node_type
+    bundles:
+      resource: resource
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 1a235ccb-9984-4996-8daf-5e6e261ed6ea
+selection_logic: and
+weight: -3
+relationships: {  }

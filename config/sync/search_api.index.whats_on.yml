@@ -1,0 +1,103 @@
+uuid: 188a3999-127a-42c7-ba93-685af89bdcff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_range
+    - field.storage.node.field_p_body
+    - field.storage.node.field_theme
+    - search_api.server.whats_on
+  module:
+    - node
+    - search_api
+id: whats_on
+name: 'Whats On'
+description: ''
+read_only: false
+field_settings:
+  end_value:
+    label: 'Date range » End date value'
+    datasource_id: 'entity:node'
+    property_path: 'field_date_range:end_value'
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_range
+  field_date_range:
+    label: 'Date range'
+    datasource_id: 'entity:node'
+    property_path: field_date_range
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_range
+  field_p_body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: field_p_body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_p_body
+  field_theme:
+    label: Theme
+    datasource_id: 'entity:node'
+    property_path: field_theme
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_theme
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 2
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - celebration
+        - exhibition
+        - hosted_event
+        - programme_event
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  rendered_item: {  }
+  add_url: {  }
+  entity_status: {  }
+  ignorecase:
+    all_fields: false
+    fields:
+      - field_p_body
+      - field_theme
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  stemmer:
+    all_fields: false
+    fields:
+      - field_p_body
+      - title
+    exceptions:
+      mexican: mexic
+      texan: texa
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+  aggregated_field: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: whats_on

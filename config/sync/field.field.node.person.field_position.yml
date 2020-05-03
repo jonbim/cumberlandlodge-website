@@ -1,0 +1,19 @@
+uuid: e015a4f3-ff13-49e3-aa95-e2678092746a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_position
+    - node.type.person
+id: node.person.field_position
+field_name: field_position
+entity_type: node
+bundle: person
+label: Position
+description: 'Position (if any). For example, Principal'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

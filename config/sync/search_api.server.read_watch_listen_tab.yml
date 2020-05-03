@@ -1,0 +1,17 @@
+uuid: 19560e78-aa08-4721-b066-cad4b64276b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: read_watch_listen_tab
+name: 'Read, Watch, Listen tab'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 3
+  matching: words
+  autocomplete:
+    suggest_suffix: true
+    suggest_words: true

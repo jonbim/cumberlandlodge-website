@@ -1,0 +1,38 @@
+uuid: 1ba0416d-0e93-4e13-881d-56a56e6bd3dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.image.field_image
+    - field.field.paragraph.image.field_text_block_2
+    - paragraphs.paragraphs_type.image
+    - responsive_image.styles.sereno_responsive_image_style
+  module:
+    - field_formatter_class
+    - responsive_image
+    - text
+id: paragraph.image.default
+targetEntityType: paragraph
+bundle: image
+mode: default
+content:
+  field_image:
+    label: hidden
+    weight: 0
+    type: responsive_image
+    settings:
+      responsive_image_style: sereno_responsive_image_style
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+  field_text_block_2:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  search_api_excerpt: true

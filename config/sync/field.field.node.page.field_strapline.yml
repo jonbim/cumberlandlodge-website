@@ -1,0 +1,19 @@
+uuid: e0d8475d-899b-4853-967e-c671e54d68fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strapline
+    - node.type.page
+id: node.page.field_strapline
+field_name: field_strapline
+entity_type: node
+bundle: page
+label: Strapline
+description: 'Used where a link into the full content is needed (eg on home page calls to action)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

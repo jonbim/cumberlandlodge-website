@@ -1,0 +1,23 @@
+uuid: b22c2072-3cc5-4033-b0ac-e0283440506e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.organisation
+  module:
+    - text
+id: node.organisation.body
+field_name: body
+entity_type: node
+bundle: organisation
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

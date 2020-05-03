@@ -1,0 +1,31 @@
+uuid: 5c678489-7b10-4344-9c7c-233c726a63f0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a8dee043-8759-4b1a-bd2a-130a11626118'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: readwatchlistenheader
+theme: serenowebtheme
+region: content
+weight: -26
+provider: null
+plugin: 'block_content:a8dee043-8759-4b1a-bd2a-130a11626118'
+settings:
+  id: 'block_content:a8dee043-8759-4b1a-bd2a-130a11626118'
+  label: 'Read, Watch, Listen header'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/read-watch-listen\r\n/read-watch-listen/all-our-resources"
+    negate: false
+    context_mapping: {  }

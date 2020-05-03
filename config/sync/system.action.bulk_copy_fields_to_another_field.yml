@@ -1,0 +1,13 @@
+uuid: 8fdbabe0-0f55-415b-a01e-b328d493883d
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_copy_fields
+_core:
+  default_config_hash: iNUJGwYmXYCjtrH4hE-XeNiLF0DFqHsh3_-MuexGl0A
+id: bulk_copy_fields_to_another_field
+label: 'Bulk Copy Field Values to Another Field'
+type: node
+plugin: bulk_copy_fields_action_base
+configuration: {  }

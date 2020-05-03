@@ -1,0 +1,31 @@
+uuid: e7c64c37-f5fb-4d17-b94e-ca72b6b20898
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+    available_menus:
+      - main
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Programme Event'
+type: programme_event
+description: 'Events put on by Cumberland Lodge'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

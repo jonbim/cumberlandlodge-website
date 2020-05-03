@@ -1,0 +1,25 @@
+uuid: 6a7f688c-b6ca-4f87-8d2f-ecd1eddf9a7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_url
+    - node.type.resource
+  module:
+    - video_embed_field
+id: node.resource.field_video_url
+field_name: field_video_url
+entity_type: node
+bundle: resource
+label: 'Video URL'
+description: 'Paste the URL of your Vimeo or Youtube video.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: vimeo
+    youtube: youtube
+    youtube_playlist: '0'
+field_type: video_embed_field

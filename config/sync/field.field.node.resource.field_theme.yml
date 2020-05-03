@@ -1,0 +1,28 @@
+uuid: 07374c13-f07a-4e07-b4af-c190bdc69db4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.resource
+    - taxonomy.vocabulary.programme_theme
+id: node.resource.field_theme
+field_name: field_theme
+entity_type: node
+bundle: resource
+label: Themes
+description: 'Assign your resource to a theme so it can be found in the Learning & Resources view'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      programme_theme: programme_theme
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

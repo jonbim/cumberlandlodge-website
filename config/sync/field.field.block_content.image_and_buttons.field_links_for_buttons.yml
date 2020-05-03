@@ -1,0 +1,23 @@
+uuid: e08beb6c-488b-4c8f-88d0-02154943c95f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_and_buttons
+    - field.storage.block_content.field_links_for_buttons
+  module:
+    - link
+id: block_content.image_and_buttons.field_links_for_buttons
+field_name: field_links_for_buttons
+entity_type: block_content
+bundle: image_and_buttons
+label: 'Links for buttons'
+description: 'Which links do you want to feature here?'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

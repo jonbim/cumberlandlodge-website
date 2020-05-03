@@ -1,0 +1,19 @@
+uuid: 9b9a6761-6693-4ccc-a785-6aa75f60ae0b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_programme_event_resource
+field_name: field_programme_event_resource
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

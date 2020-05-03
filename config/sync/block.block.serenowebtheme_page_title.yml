@@ -1,0 +1,20 @@
+uuid: cad434b8-2a7a-4443-bd65-f4be8d447c67
+langcode: en
+status: true
+dependencies:
+  theme:
+    - serenowebtheme
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: serenowebtheme_page_title
+theme: serenowebtheme
+region: header
+weight: -5
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,8 @@
+uuid: afebd59e-3ea0-4fcb-9193-89184985a192
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_space
+label: 'Space comment'
+target_entity_type_id: node
+description: null

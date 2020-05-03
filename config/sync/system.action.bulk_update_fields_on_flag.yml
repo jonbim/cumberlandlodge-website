@@ -1,0 +1,11 @@
+uuid: 5c0088ac-6f0a-4fba-afb4-2e09e757efd4
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_flag
+label: 'Bulk Update Flag Fields'
+type: flag
+plugin: bulk_update_fields_action_base
+configuration: {  }

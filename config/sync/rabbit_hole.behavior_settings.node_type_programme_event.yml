@@ -1,0 +1,11 @@
+uuid: 5535dbda-2ef6-4b4b-a16c-2ef95dd56a1d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.programme_event
+id: node_type_programme_event
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

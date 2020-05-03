@@ -1,0 +1,99 @@
+uuid: 85252ba6-e4ce-43df-8eef-d6f17a6c1eb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p_body
+    - node.type.resource
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - entity_reference_revisions
+id: node.resource.field_p_body
+field_name: field_p_body
+entity_type: node
+bundle: resource
+label: Content
+description: 'Add text and images paragraph style.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+      text_block: text_block
+    target_bundles_drag_drop:
+      image:
+        enabled: true
+        weight: 2
+      quotation:
+        weight: 3
+        enabled: false
+      slide:
+        weight: 4
+        enabled: false
+      sound_cloud:
+        weight: 5
+        enabled: false
+      text_block:
+        enabled: true
+        weight: 6
+      video:
+        weight: 7
+        enabled: false
+      bp_accordion:
+        weight: 8
+        enabled: false
+      bp_accordion_section:
+        weight: 9
+        enabled: false
+      bp_blank:
+        weight: 10
+        enabled: false
+      bp_block:
+        weight: 11
+        enabled: false
+      bp_carousel:
+        weight: 12
+        enabled: false
+      bp_columns:
+        weight: 13
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 14
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 15
+        enabled: false
+      bp_column_wrapper:
+        weight: 16
+        enabled: false
+      bp_image:
+        weight: 17
+        enabled: false
+      bp_modal:
+        weight: 18
+        enabled: false
+      bp_simple:
+        weight: 19
+        enabled: false
+      bp_tabs:
+        weight: 20
+        enabled: false
+      bp_tab_section:
+        weight: 21
+        enabled: false
+      bp_view:
+        weight: 22
+        enabled: false
+      view:
+        weight: 23
+        enabled: false
+      call_to_action:
+        weight: 39
+        enabled: false
+field_type: entity_reference_revisions

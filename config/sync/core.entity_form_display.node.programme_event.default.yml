@@ -1,0 +1,353 @@
+uuid: d0febb7a-ebe0-48ba-9679-c5a3a853b378
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.node.programme_event.comment_node_programme_event
+    - field.field.node.programme_event.field_add_to_calendar
+    - field.field.node.programme_event.field_date_range
+    - field.field.node.programme_event.field_downloads
+    - field.field.node.programme_event.field_event_image
+    - field.field.node.programme_event.field_event_label
+    - field.field.node.programme_event.field_event_organisation
+    - field.field.node.programme_event.field_event_type
+    - field.field.node.programme_event.field_eventbrite_button
+    - field.field.node.programme_event.field_location
+    - field.field.node.programme_event.field_p_body
+    - field.field.node.programme_event.field_person
+    - field.field.node.programme_event.field_programme_event_resource
+    - field.field.node.programme_event.field_related_content
+    - field.field.node.programme_event.field_show_register_link
+    - field.field.node.programme_event.field_special_event
+    - field.field.node.programme_event.field_strapline
+    - field.field.node.programme_event.field_theme
+    - field.field.node.programme_event.field_twitter_hashtag
+    - node.type.programme_event
+  module:
+    - addtocalendar
+    - comment
+    - datetime_range
+    - entity_browser
+    - field_group
+    - paragraphs
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_form:
+      children:
+        - group_about
+        - group_content
+        - group_categories_related
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Form
+    group_about:
+      children:
+        - title
+        - field_strapline
+        - field_date_range
+        - field_location
+      parent_name: group_form
+      weight: 32
+      format_type: tab
+      region: content
+      format_settings:
+        description: 'Basic info about this content'
+        formatter: open
+        required_fields: true
+        id: ''
+        classes: ''
+      label: About
+    group_content:
+      children:
+        - field_p_body
+        - field_event_image
+        - field_programme_event_resource
+        - field_show_register_link
+        - field_event_label
+        - field_downloads
+        - field_person
+        - field_event_organisation
+        - field_eventbrite_button
+        - field_twitter_hashtag
+        - field_add_to_calendar
+      parent_name: group_form
+      weight: 33
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Substance of this content'
+        formatter: closed
+        required_fields: true
+      label: Content
+    group_categories_related:
+      children:
+        - field_event_type
+        - field_special_event
+        - field_related_content
+        - field_theme
+      parent_name: group_form
+      weight: 34
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Tags and groupings'
+        formatter: closed
+        required_fields: true
+      label: 'Categories & related'
+id: node.programme_event.default
+targetEntityType: node
+bundle: programme_event
+mode: default
+content:
+  comment_node_programme_event:
+    type: comment_default
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_add_to_calendar:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: add_to_calendar_widget_type
+    region: content
+  field_date_range:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: daterange_default
+    region: content
+  field_downloads:
+    weight: 12
+    type: entity_browser_file
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      field_widget_edit: true
+      open: false
+      view_mode: default
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    region: content
+  field_event_image:
+    weight: 8
+    type: entity_browser_file
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      preview_image_style: file_entity_browser_small
+      field_widget_edit: true
+      open: false
+      view_mode: default
+    third_party_settings: {  }
+    region: content
+  field_event_label:
+    weight: 11
+    type: string_textfield
+    settings:
+      size: 12
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_event_organisation:
+    weight: 14
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_event_type:
+    weight: 17
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_eventbrite_button:
+    weight: 15
+    type: text_textarea
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_location:
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_p_body:
+    weight: 7
+    type: entity_reference_paragraphs
+    settings:
+      title: Item
+      title_plural: Items
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_person:
+    weight: 13
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_programme_event_resource:
+    weight: 9
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_related_content:
+    weight: 22
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_show_register_link:
+    weight: 10
+    type: options_select
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_special_event:
+    weight: 20
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_strapline:
+    weight: 2
+    type: string_textfield
+    settings:
+      size: 12
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_theme:
+    weight: 23
+    type: options_buttons
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_twitter_hashtag:
+    weight: 16
+    type: string_textfield
+    settings:
+      size: 12
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  flag:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

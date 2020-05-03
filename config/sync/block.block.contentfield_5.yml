@@ -1,0 +1,37 @@
+uuid: b6287d18-799c-4b0f-b715-5d39d428103f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_image
+  module:
+    - fieldblock
+    - node
+    - responsive_image
+  theme:
+    - serenowebtheme
+id: contentfield_5
+theme: serenowebtheme
+region: sidebar_second
+weight: -25
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Content field'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: false
+  field_name: field_person_image
+  formatter_id: responsive_image
+  formatter_settings:
+    responsive_image_style: sereno_responsive_image_style
+    image_link: ''
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      person: person
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

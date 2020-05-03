@@ -1,0 +1,27 @@
+uuid: 651fbc67-e1f0-4b41-9d61-f513d60ba943
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_downloads
+    - field.field.comment.comment_node_downloads.comment_body
+  module:
+    - text
+id: comment.comment_node_downloads.default
+targetEntityType: comment
+bundle: comment_node_downloads
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

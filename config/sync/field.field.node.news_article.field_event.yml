@@ -1,0 +1,36 @@
+uuid: f364088b-c7ce-4d30-8946-49d5635b70e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event
+    - node.type.exhibition
+    - node.type.hosted_event
+    - node.type.news_article
+    - node.type.programme_event
+id: node.news_article.field_event
+field_name: field_event
+entity_type: node
+bundle: news_article
+label: Event
+description: 'Type the name of the event you wish to add as a link to your article'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      exhibition: exhibition
+      hosted_event: hosted_event
+      programme_event: programme_event
+    sort:
+      field: title
+      direction: ASC
+    behaviors:
+      entityqueue:
+        status: 0
+      views-select-list:
+        status: 0
+field_type: entity_reference

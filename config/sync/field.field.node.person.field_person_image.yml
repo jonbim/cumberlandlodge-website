@@ -1,0 +1,33 @@
+uuid: cc02ca55-3e57-4fb1-a11c-c0aa01904908
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_image
+    - node.type.person
+  module:
+    - image
+id: node.person.field_person_image
+field_name: field_person_image
+entity_type: node
+bundle: person
+label: 'Person Image'
+description: 'Generally shown in square format. Upload your image 290px x 290px or larger.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  title_field: false
+  default_image: '635'
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

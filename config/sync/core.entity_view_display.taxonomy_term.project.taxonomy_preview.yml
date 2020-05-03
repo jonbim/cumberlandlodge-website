@@ -1,0 +1,60 @@
+uuid: a5f1032a-8d91-4c05-8f3c-6627a8957425
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_preview
+    - field.field.taxonomy_term.project.field_annual_series
+    - field.field.taxonomy_term.project.field_image
+    - field.field.taxonomy_term.project.field_last_resource_update
+    - field.field.taxonomy_term.project.field_sticky_at_top_of_list
+    - taxonomy.vocabulary.project
+  module:
+    - ds
+    - image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - description
+        - taxonomy_term_title
+        - field_image
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: taxonomy_term.project.taxonomy_preview
+targetEntityType: taxonomy_term
+bundle: project
+mode: taxonomy_preview
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    weight: 2
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden:
+  field_annual_series: true
+  field_last_resource_update: true
+  field_sticky_at_top_of_list: true
+  search_api_excerpt: true

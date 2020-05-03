@@ -1,0 +1,25 @@
+uuid: 89c54502-cde5-4de1-b033-d725fbf72eba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - serenowebtheme
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: serenowebtheme_branding
+theme: serenowebtheme
+region: upper_deck
+weight: -14
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: a8049502-85e4-4d8a-83fb-171b875437de
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_hosted_event
+label: 'Content - Hosted Event'
+type: 'canonical_entities:node'
+pattern: 'whats-on/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      hosted_event: hosted_event
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -7
+relationships: {  }

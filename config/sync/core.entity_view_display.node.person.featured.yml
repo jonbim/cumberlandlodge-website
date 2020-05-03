@@ -1,0 +1,72 @@
+uuid: ad2c54b5-3c02-4a92-842f-dd4e59a84d6b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.featured
+    - field.field.node.person.body
+    - field.field.node.person.comment_node_person
+    - field.field.node.person.field_in_team
+    - field.field.node.person.field_person_email
+    - field.field.node.person.field_person_image
+    - field.field.node.person.field_position
+    - field.field.node.person.field_qualifications_honours
+    - field.field.node.person.field_team
+    - field.field.node.person.field_telephone
+    - node.type.person
+    - responsive_image.styles.sereno_responsive_grid
+  module:
+    - ds
+    - field_formatter_class
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - node_title
+        - field_person_image
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.person.featured
+targetEntityType: node
+bundle: person
+mode: featured
+content:
+  field_person_image:
+    type: responsive_image
+    weight: 1
+    region: content
+    label: visually_hidden
+    settings:
+      responsive_image_style: sereno_responsive_grid
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  body: true
+  comment_node_person: true
+  field_in_team: true
+  field_person_email: true
+  field_position: true
+  field_qualifications_honours: true
+  field_team: true
+  field_telephone: true
+  links: true
+  search_api_excerpt: true

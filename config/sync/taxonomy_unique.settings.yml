@@ -1,0 +1,8 @@
+special_event: 0
+special_event_message: 'Term @term already exists in vocabulary @vocabulary.'
+project: 1
+project_message: 'Term @term already exists in vocabulary @vocabulary.'
+location: 0
+location_message: 'Term @term already exists in vocabulary @vocabulary.'
+resource_type: 0
+resource_type_message: 'Term @term already exists in vocabulary @vocabulary.'

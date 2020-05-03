@@ -1,0 +1,66 @@
+uuid: df3923fa-ee35-4e74-ba00-29fc040aa406
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.exhibition.comment_node_exhibition
+    - field.field.node.exhibition.field_artist
+    - field.field.node.exhibition.field_date
+    - field.field.node.exhibition.field_downloads
+    - field.field.node.exhibition.field_event_image
+    - field.field.node.exhibition.field_exhibition_type
+    - field.field.node.exhibition.field_p_body
+    - field.field.node.exhibition.field_slideshow_images
+    - node.type.exhibition
+    - responsive_image.styles.sereno_responsive_grid
+  module:
+    - ds
+    - field_formatter_class
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_event_image
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.exhibition.teaser
+targetEntityType: node
+bundle: exhibition
+mode: teaser
+content:
+  field_event_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      responsive_image_style: sereno_responsive_grid
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  comment_node_exhibition: true
+  field_artist: true
+  field_date: true
+  field_downloads: true
+  field_exhibition_type: true
+  field_p_body: true
+  field_slideshow_images: true
+  links: true
+  search_api_excerpt: true

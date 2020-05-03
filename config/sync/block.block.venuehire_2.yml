@@ -1,0 +1,31 @@
+uuid: 1c7d46ed-358d-49e4-af82-ec444c9da8bc
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_buttons:23d05248-3b20-4a10-a05a-7cbd7da0349c'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: venuehire_2
+theme: serenowebtheme
+region: content
+weight: -20
+provider: null
+plugin: 'block_content:23d05248-3b20-4a10-a05a-7cbd7da0349c'
+settings:
+  id: 'block_content:23d05248-3b20-4a10-a05a-7cbd7da0349c'
+  label: 'Venue hire'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,18 @@
+uuid: cf9226ba-5add-4ae6-833a-95720d661a5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.testimonial
+id: node.testimonial.title
+field_name: title
+entity_type: node
+bundle: testimonial
+label: 'Which person/organisation provided this quotation?'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

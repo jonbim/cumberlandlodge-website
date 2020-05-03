@@ -1,0 +1,26 @@
+uuid: a26f91b4-e894-4ce8-823f-691ec62957c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_type
+    - node.type.programme_event
+    - taxonomy.vocabulary.programme_event_type
+id: node.programme_event.field_event_type
+field_name: field_event_type
+entity_type: node
+bundle: programme_event
+label: 'Event Type'
+description: 'Select the type of event you are creating.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      programme_event_type: programme_event_type
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

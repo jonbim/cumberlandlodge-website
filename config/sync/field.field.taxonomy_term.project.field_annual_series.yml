@@ -1,0 +1,29 @@
+uuid: 0e9c3392-15f3-4e7c-be57-fd10407bca02
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_annual_series
+    - taxonomy.vocabulary.project
+    - taxonomy.vocabulary.special_event
+id: taxonomy_term.project.field_annual_series
+field_name: field_annual_series
+entity_type: taxonomy_term
+bundle: project
+label: Series
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      special_event: special_event
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

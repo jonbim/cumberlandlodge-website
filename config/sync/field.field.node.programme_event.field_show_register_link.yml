@@ -1,0 +1,21 @@
+uuid: f35e34f3-4d1f-416b-b833-2572ba8dd922
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_register_link
+    - node.type.programme_event
+  module:
+    - options
+id: node.programme_event.field_show_register_link
+field_name: field_show_register_link
+entity_type: node
+bundle: programme_event
+label: 'Show Register Link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

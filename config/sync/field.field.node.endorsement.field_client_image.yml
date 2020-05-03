@@ -1,0 +1,33 @@
+uuid: e013ca6d-afd5-4f90-8d66-91d3a44cfc65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client_image
+    - node.type.endorsement
+  module:
+    - image
+id: node.endorsement.field_client_image
+field_name: field_client_image
+entity_type: node
+bundle: endorsement
+label: 'Client Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  title_field: false
+  default_image: '653'
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

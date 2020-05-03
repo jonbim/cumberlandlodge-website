@@ -1,0 +1,27 @@
+uuid: 874afa4c-5669-4420-95ac-cf2c6129c802
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - menu_block
+  theme:
+    - serenowebtheme
+id: mainmenu
+theme: serenowebtheme
+region: navigation
+weight: -13
+provider: null
+plugin: 'menu_block:main'
+settings:
+  id: 'menu_block:main'
+  label: 'Main menu'
+  provider: menu_block
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand: 1
+  parent: 'main:'
+  suggestion: main
+visibility: {  }

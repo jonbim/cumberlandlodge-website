@@ -1,0 +1,29 @@
+uuid: 77558631-a1d4-4355-818e-760ba847c080
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:76bcb3b2-a64c-4e1c-bbd3-ebe7e992c369'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - serenowebtheme
+third_party_settings:
+  block_class:
+    classes: 'col-sm-6 col-md-3'
+id: contactus
+theme: serenowebtheme
+region: footer_later
+weight: -24
+provider: null
+plugin: 'block_content:76bcb3b2-a64c-4e1c-bbd3-ebe7e992c369'
+settings:
+  id: 'block_content:76bcb3b2-a64c-4e1c-bbd3-ebe7e992c369'
+  label: 'Contact us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

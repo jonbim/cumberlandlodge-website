@@ -1,0 +1,8 @@
+uuid: 32bfda7d-50d5-4348-b40b-df9390dad818
+langcode: en
+status: true
+dependencies: {  }
+name: Location
+vid: location
+description: 'Add a location - currently this is only used for Programme Events'
+weight: 0

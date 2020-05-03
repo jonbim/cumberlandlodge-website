@@ -1,0 +1,15 @@
+uuid: 0b9af4e9-f255-4200-98e6-cec7e9ed48fe
+langcode: en
+status: true
+dependencies: {  }
+name: sereno_small_x2_767px_
+label: 'Sereno Small x2 (767px)'
+effects:
+  915028fc-5c4f-440a-9eb6-febd2dc91f97:
+    uuid: 915028fc-5c4f-440a-9eb6-febd2dc91f97
+    id: image_scale
+    weight: 1
+    data:
+      width: 1534
+      height: null
+      upscale: false

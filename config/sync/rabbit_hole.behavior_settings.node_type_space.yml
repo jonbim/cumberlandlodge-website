@@ -1,0 +1,11 @@
+uuid: 16ad1bd0-18f2-41a6-a87c-84aa2d574c43
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.space
+id: node_type_space
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

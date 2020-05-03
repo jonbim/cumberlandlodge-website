@@ -1,0 +1,32 @@
+uuid: bfbbd1ce-734d-40db-9324-cb20c45176ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_endorsement_logo
+    - node.type.endorsement
+    - node.type.organisation
+id: node.endorsement.field_endorsement_logo
+field_name: field_endorsement_logo
+entity_type: node
+bundle: endorsement
+label: 'Endorsement Logo'
+description: 'Attach a logo. Logos are contained in your Organisation content content type.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      organisation: organisation
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      entityqueue:
+        status: 0
+      views-select-list:
+        status: 0
+field_type: entity_reference

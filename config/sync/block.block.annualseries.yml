@@ -1,0 +1,29 @@
+uuid: da292f40-8b07-4a94-8c8b-1c57c5ff6cd2
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.annual_series
+  module:
+    - facets
+    - system
+  theme:
+    - serenowebtheme
+id: annualseries
+theme: serenowebtheme
+region: sidebar_first
+weight: -24
+provider: null
+plugin: 'facet_block:annual_series'
+settings:
+  id: 'facet_block:annual_series'
+  label: Series
+  provider: facets
+  label_display: visible
+  block_id: annualseries
+visibility:
+  request_path:
+    id: request_path
+    pages: /read-watch-listen
+    negate: false
+    context_mapping: {  }

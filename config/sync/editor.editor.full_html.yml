@@ -1,0 +1,77 @@
+uuid: 1eef6d7d-1395-4b00-8115-f2f4cba66a47
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - Linkit
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalImage
+            - file_browser
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Format
+            - Styles
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "h2.cbody|H2 clean\r\nh3.cbody|H3 clean\r\nh4.cbody|H4 clean\r\nh5.cbody|H5 clean\r\np.bg-db|Body on dark blue\r\np.bg-lb|Body on light blue\r\np.bg-dg|Body on dark green\r\nh2.bg-db|Banner on dark blue\r\nh2.bg-lb|Banner on light blue\r\nh2.bg-dg|Banner on dark green\r\np.intro|Bold intro"
+    linkit:
+      linkit_profile: sereno_linkit_profile
+    video_embed:
+      defaults:
+        children:
+          autoplay: true
+          responsive: true
+          width: '854'
+          height: '480'
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

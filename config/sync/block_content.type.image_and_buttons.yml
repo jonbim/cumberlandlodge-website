@@ -1,0 +1,8 @@
+uuid: 8ed819a4-1bae-48ea-b7a7-a70b32c68f5f
+langcode: en
+status: true
+dependencies: {  }
+id: image_and_buttons
+label: 'Image and buttons'
+revision: 0
+description: 'Block sits on landing page with extra media and clickable things'

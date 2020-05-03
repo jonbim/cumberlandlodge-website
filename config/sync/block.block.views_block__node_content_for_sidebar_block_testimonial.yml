@@ -1,0 +1,46 @@
+uuid: 0b541644-db46-4d87-8fb0-c704029f43ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.node_content_for_sidebar
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__node_content_for_sidebar_block_testimonial
+theme: serenowebtheme
+region: sidebar_second
+weight: -13
+provider: null
+plugin: 'views_block:node_content_for_sidebar-block_testimonial'
+settings:
+  id: 'views_block:node_content_for_sidebar-block_testimonial'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: '5'
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: "<front>\r\n/annual-series/confirmed-speakers\r\n/about-us/guest-speakers\r\n/impact/case-studies\r\n/venue-hire/room-specifications\r\n/about-us/people"
+    negate: true
+    context_mapping: {  }
+  node_type:
+    id: node_type
+    bundles:
+      case_study: case_study
+      news_article: news_article
+      organisation: organisation
+      page: page
+      programme_event: programme_event
+      resource: resource
+      space: space
+      vacancy: vacancy
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

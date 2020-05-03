@@ -1,0 +1,30 @@
+uuid: 75bce012-c0e6-4281-a68f-7dcaa24740af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programme_event_resource
+    - node.type.programme_event
+    - node.type.resource
+id: node.programme_event.field_programme_event_resource
+field_name: field_programme_event_resource
+entity_type: node
+bundle: programme_event
+label: 'Programme Event Resource'
+description: 'Add a resource such as a report to your programme event'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resource: resource
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

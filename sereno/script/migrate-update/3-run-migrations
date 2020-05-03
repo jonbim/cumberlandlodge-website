@@ -1,0 +1,167 @@
+#!/usr/bin/env bash
+
+# Rod Tatham, Sereno :: 10 October 2019
+
+# phased migration of config in D8
+
+# 10 October 2019 - this was run manually, section by section
+
+
+# image
+drush migrate-import upgrade_d7_image_settings
+drush migrate-import upgrade_d7_image_styles
+drush migrate-import upgrade_system_image_gd
+drush migrate-import upgrade_system_image
+
+# system config
+drush migrate-import upgrade_d7_color
+drush migrate-import upgrade_d7_dblog_settings
+drush migrate-import upgrade_d7_menu_links
+drush migrate-import upgrade_d7_menu
+drush migrate-import upgrade_menu_settings
+
+# paths
+drush migrate-import upgrade_d7_pathauto_patterns
+drush migrate-import upgrade_d7_pathauto_settings
+drush migrate-import upgrade_d7_path_redirect
+
+# search
+drush migrate-import upgrade_d7_search_page
+drush migrate-import upgrade_d7_search_settings
+
+# required for fields
+drush migrate-import upgrade_d7_file_private
+drush migrate-import upgrade_d7_file
+drush migrate-import upgrade_d7_system_file
+drush migrate-import upgrade_file_settings
+
+# block config
+drush migrate-import upgrade_block_content_body_field
+drush migrate-import upgrade_block_content_entity_display
+drush migrate-import upgrade_block_content_entity_form_display
+drush migrate-import upgrade_block_content_type
+drush migrate-import upgrade_d7_block
+drush migrate-import upgrade_d7_custom_block
+
+# theme
+drush migrate-import upgrade_d7_theme_settings
+drush migrate-import upgrade_d7_global_theme_settings
+
+# system
+drush migrate-import upgrade_d7_system_authorize
+drush migrate-import upgrade_d7_system_cron
+drush migrate-import upgrade_d7_system_date
+drush migrate-import upgrade_d7_system_mail
+drush migrate-import upgrade_d7_system_performance
+drush migrate-import upgrade_system_logging
+drush migrate-import upgrade_system_maintenance
+drush migrate-import upgrade_system_rss
+drush migrate-import upgrade_system_site
+drush migrate-import upgrade_d7_rdf_mapping
+drush migrate-import upgrade_d7_shortcut_set
+drush migrate-import upgrade_d7_shortcut
+drush migrate-import upgrade_d7_syslog_settings
+drush migrate-import upgrade_d7_view_modes
+drush migrate-import upgrade_statistics_settings
+drush migrate-import upgrade_text_settings
+drush migrate-import upgrade_update_settings
+drush migrate-import upgrade_d7_filter_format
+drush migrate-import upgrade_d7_filter_settings
+
+# fields
+drush migrate-import upgrade_d7_field_formatter_settings
+drush migrate-import upgrade_d7_field_group
+drush migrate-import upgrade_d7_field_instance_widget_settings
+drush migrate-import upgrade_d7_field_instance
+drush migrate-import upgrade_d7_field
+drush migrate-import upgrade_user_picture_field_instance
+drush migrate-import upgrade_user_picture_field
+drush migrate-import upgrade_d7_paragraphs_type
+
+# taxonomy
+drush migrate-import upgrade_taxonomy_settings
+drush migrate-import upgrade_d7_taxonomy_term_endorsement_type
+drush migrate-import upgrade_d7_taxonomy_term_exhbition_type
+drush migrate-import upgrade_d7_taxonomy_term_hosted_event_type
+drush migrate-import upgrade_d7_taxonomy_term_landing_section
+drush migrate-import upgrade_d7_taxonomy_term_media_type
+drush migrate-import upgrade_d7_taxonomy_term_programme_event_type
+drush migrate-import upgrade_d7_taxonomy_term_programme_theme
+drush migrate-import upgrade_d7_taxonomy_term_resource_type
+drush migrate-import upgrade_d7_taxonomy_term_space_type
+drush migrate-import upgrade_d7_taxonomy_term_special_event
+drush migrate-import upgrade_d7_taxonomy_term_tags
+drush migrate-import upgrade_d7_taxonomy_term_team
+drush migrate-import upgrade_d7_taxonomy_vocabulary
+
+# user + role
+drush migrate-import upgrade_d7_user_flood
+drush migrate-import upgrade_d7_user_mail
+drush migrate-import upgrade_d7_user_role
+drush migrate-import upgrade_d7_user
+drush migrate-import upgrade_user_picture_entity_display
+drush migrate-import upgrade_user_picture_entity_form_display
+drush migrate-import upgrade_d7_shortcut_set_users
+
+# node
+drush migrate-import upgrade_d7_node_blog
+drush migrate-import upgrade_d7_node_celebration
+drush migrate-import upgrade_d7_node_downloads
+drush migrate-import upgrade_d7_node_endorsement
+drush migrate-import upgrade_d7_node_exhibition
+drush migrate-import upgrade_d7_node_hosted_event
+drush migrate-import upgrade_d7_node_landing_page_advanced
+drush migrate-import upgrade_d7_node_landing_page
+drush migrate-import upgrade_d7_node_large_slide
+drush migrate-import upgrade_d7_node_link_tile
+drush migrate-import upgrade_d7_node_news_article
+drush migrate-import upgrade_d7_node_organisation
+drush migrate-import upgrade_d7_node_page
+drush migrate-import upgrade_d7_node_panel
+drush migrate-import upgrade_d7_node_person
+drush migrate-import upgrade_d7_node_preamble
+drush migrate-import upgrade_d7_node_programme_event
+drush migrate-import upgrade_d7_node_resource
+drush migrate-import upgrade_d7_node_revision_blog
+drush migrate-import upgrade_d7_node_revision_celebration
+drush migrate-import upgrade_d7_node_revision_downloads
+drush migrate-import upgrade_d7_node_revision_endorsement
+drush migrate-import upgrade_d7_node_revision_exhibition
+drush migrate-import upgrade_d7_node_revision_hosted_event
+drush migrate-import upgrade_d7_node_revision_landing_page_advanced
+drush migrate-import upgrade_d7_node_revision_landing_page
+drush migrate-import upgrade_d7_node_revision_large_slide
+drush migrate-import upgrade_d7_node_revision_link_tile
+drush migrate-import upgrade_d7_node_revision_news_article
+drush migrate-import upgrade_d7_node_revision_organisation
+drush migrate-import upgrade_d7_node_revision_page
+drush migrate-import upgrade_d7_node_revision_panel
+drush migrate-import upgrade_d7_node_revision_person
+drush migrate-import upgrade_d7_node_revision_preamble
+drush migrate-import upgrade_d7_node_revision_programme_event
+drush migrate-import upgrade_d7_node_revision_resource
+drush migrate-import upgrade_d7_node_revision_space
+drush migrate-import upgrade_d7_node_revision_vacancy
+drush migrate-import upgrade_d7_node_revision_webform
+drush migrate-import upgrade_d7_node_settings
+drush migrate-import upgrade_d7_node_space
+drush migrate-import upgrade_d7_node_title_label
+drush migrate-import upgrade_d7_node_type
+drush migrate-import upgrade_d7_node_vacancy
+drush migrate-import upgrade_d7_node_webform
+
+# comment
+drush migrate-import upgrade_d7_comment_entity_display
+drush migrate-import upgrade_d7_comment_entity_form_display_subject
+drush migrate-import upgrade_d7_comment_entity_form_display
+drush migrate-import upgrade_d7_comment_type
+drush migrate-import upgrade_d7_comment
+drush migrate-import upgrade_d7_comment_field_instance
+drush migrate-import upgrade_d7_comment_field
+
+# url alias
+drush migrate-import upgrade_d7_url_alias
+
+# matomo
+drush migrate-import upgrade_d7_matomo_settings
+drush migrate-import upgrade_d7_matomo_user_settings

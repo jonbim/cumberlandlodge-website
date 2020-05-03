@@ -1,0 +1,79 @@
+uuid: a5026d53-bbc8-44c9-a471-18483833c27b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_teaser
+    - field.field.taxonomy_term.project.field_annual_series
+    - field.field.taxonomy_term.project.field_image
+    - field.field.taxonomy_term.project.field_last_resource_update
+    - field.field.taxonomy_term.project.field_sticky_at_top_of_list
+    - responsive_image.styles.sereno_responsive_grid
+    - taxonomy.vocabulary.project
+  module:
+    - ds
+    - field_formatter_class
+    - responsive_image
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: null
+    regions:
+      content:
+        - field_image
+        - taxonomy_term_title
+        - description
+        - field_annual_series
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: taxonomy_term.project.taxonomy_teaser
+targetEntityType: taxonomy_term
+bundle: project
+mode: taxonomy_teaser
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_annual_series:
+    weight: 3
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      responsive_image_style: sereno_responsive_grid
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: responsive_image
+    region: content
+hidden:
+  field_last_resource_update: true
+  field_sticky_at_top_of_list: true
+  search_api_excerpt: true

@@ -1,0 +1,11 @@
+uuid: 7b3c26a7-b307-4eca-8566-b962e26b677c
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_date_recur_interpreter
+label: 'Bulk Update Recurring date interpreter Fields'
+type: date_recur_interpreter
+plugin: bulk_update_fields_action_base
+configuration: {  }

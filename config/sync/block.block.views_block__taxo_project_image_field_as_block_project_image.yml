@@ -1,0 +1,31 @@
+uuid: cccce63c-88dc-48b5-9dd8-fae1cd6bfc0f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.taxonomy_project_image_field_as_block
+  module:
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__taxo_project_image_field_as_block_project_image
+theme: serenowebtheme
+region: sidebar_second
+weight: -30
+provider: null
+plugin: 'views_block:taxonomy_project_image_field_as_block-block_project_image'
+settings:
+  id: 'views_block:taxonomy_project_image_field_as_block-block_project_image'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/project/*'
+    negate: false
+    context_mapping: {  }

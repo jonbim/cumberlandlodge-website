@@ -1,0 +1,29 @@
+uuid: 53a39a59-c28b-48c5-9327-9eed8481e0dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image
+    - field.field.block_content.image.field_image
+    - responsive_image.styles.sereno_responsive_image_style
+  module:
+    - field_formatter_class
+    - responsive_image
+id: block_content.image.default
+targetEntityType: block_content
+bundle: image
+mode: default
+content:
+  field_image:
+    weight: 1
+    label: visually_hidden
+    settings:
+      responsive_image_style: sereno_responsive_image_style
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    type: responsive_image
+    region: content
+hidden:
+  search_api_excerpt: true

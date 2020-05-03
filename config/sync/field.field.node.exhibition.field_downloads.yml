@@ -1,0 +1,27 @@
+uuid: 49a279b1-3837-4489-90dd-78ce26e744a0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_downloads
+    - node.type.exhibition
+  module:
+    - file
+id: node.exhibition.field_downloads
+field_name: field_downloads
+entity_type: node
+bundle: exhibition
+label: Downloads
+description: 'Downloads that are unique to this event'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt pdf docx xls'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

@@ -1,0 +1,136 @@
+uuid: 7e940b57-5e81-4679-9a26-f6b2ec28d932
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_exhibition
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldInstanceMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Nodes (Exhibition)'
+source:
+  plugin: d7_node
+  node_type: exhibition
+process:
+  nid:
+    -
+      plugin: get
+      source: tnid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_exhibition/0/status:
+    -
+      plugin: get
+      source: comment
+  field_exhibition_type:
+    -
+      plugin: sub_process
+      source: field_exhibition_type
+      process:
+        target_id: tid
+  field_slideshow_images:
+    -
+      plugin: sub_process
+      source: field_slideshow_images
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_date:
+    -
+      plugin: sub_process
+      source: field_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_artist:
+    -
+      plugin: get
+      source: field_artist
+  field_p_body:
+    -
+      plugin: get
+      source: field_p_body
+  field_event_image:
+    -
+      plugin: sub_process
+      source: field_event_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_downloads:
+    -
+      plugin: sub_process
+      source: field_downloads
+      process:
+        target_id: fid
+        display: display
+        description: description
+destination:
+  plugin: 'entity:node'
+  default_bundle: exhibition
+migration_dependencies:
+  required:
+    - upgrade_d7_user
+    - upgrade_d7_node_type
+  optional:
+    - upgrade_d7_field_instance
+    - upgrade_d7_comment_field_instance

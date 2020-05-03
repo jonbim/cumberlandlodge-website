@@ -1,0 +1,63 @@
+uuid: e96447f2-01bc-4d1d-b475-3280cc1b104e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_downloads
+    - field.field.node.page.field_image
+    - field.field.node.page.field_p_body
+    - field.field.node.page.field_related_content
+    - field.field.node.page.field_strapline
+    - field.field.node.page.field_testimonials
+    - node.type.page
+    - responsive_image.styles.sereno_responsive_grid
+  module:
+    - ds
+    - field_formatter_class
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_image
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.page.teaser
+targetEntityType: node
+bundle: page
+mode: teaser
+content:
+  field_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      responsive_image_style: sereno_responsive_grid
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  comment_node_page: true
+  field_downloads: true
+  field_p_body: true
+  field_related_content: true
+  field_strapline: true
+  field_testimonials: true
+  links: true
+  search_api_excerpt: true

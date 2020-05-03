@@ -1,0 +1,21 @@
+uuid: fc49cfa8-75f1-472b-b176-e9fff2a49159
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_media
+    - node.type.resource
+  module:
+    - text
+id: node.resource.field_resource_media
+field_name: field_resource_media
+entity_type: node
+bundle: resource
+label: 'Resource Media'
+description: 'Add your media element from Backdoor here. Use the complete audio code snippet.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

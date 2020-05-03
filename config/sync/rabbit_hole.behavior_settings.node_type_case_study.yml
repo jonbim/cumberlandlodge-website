@@ -1,0 +1,11 @@
+uuid: e8688086-b968-4cee-9cfd-e11448763126
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.case_study
+id: node_type_case_study
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

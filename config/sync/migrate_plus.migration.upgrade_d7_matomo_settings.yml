@@ -1,0 +1,150 @@
+uuid: 46ebb285-40c3-4ec8-be47-5e657211ab17
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_matomo_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Configuration
+migration_group: migrate_drupal_7
+label: 'Matomo 7 configuration'
+source:
+  plugin: variable
+  variables:
+    - matomo_cache
+    - matomo_codesnippet_after
+    - matomo_codesnippet_before
+    - matomo_custom
+    - matomo_custom_var
+    - matomo_domain_mode
+    - matomo_pages
+    - matomo_privacy_donottrack
+    - matomo_roles
+    - matomo_site_id
+    - matomo_site_search
+    - matomo_track
+    - matomo_trackcolorbox
+    - matomo_trackfiles_extensions
+    - matomo_trackmailto
+    - matomo_trackmessages
+    - matomo_trackuserid
+    - matomo_translation_set
+    - matomo_url_http
+    - matomo_url_https
+    - matomo_visibility_pages
+    - matomo_visibility_roles
+    - matomo_page_title_hierarchy
+    - matomo_page_title_hierarchy_exclude_home
+  source_module: matomo
+process:
+  cache:
+    -
+      plugin: get
+      source: matomo_cache
+  codesnippet/after:
+    -
+      plugin: get
+      source: matomo_codesnippet_after
+  codesnippet/before:
+    -
+      plugin: get
+      source: matomo_codesnippet_before
+  custom/variable:
+    -
+      plugin: matomo_custom_vars
+      source:
+        - matomo_custom_var
+  domain_mode:
+    -
+      plugin: get
+      source: matomo_domain_mode
+  privacy/donottrack:
+    -
+      plugin: get
+      source: matomo_privacy_donottrack
+  site_id:
+    -
+      plugin: get
+      source: matomo_site_id
+  track/colorbox:
+    -
+      plugin: get
+      source: matomo_trackcolorbox
+  track/files:
+    -
+      plugin: get
+      source: matomo_track
+  track/files_extensions:
+    -
+      plugin: get
+      source: matomo_trackfiles_extensions
+  track/mailto:
+    -
+      plugin: get
+      source: matomo_trackmailto
+  track/messages:
+    -
+      plugin: get
+      source: matomo_trackmessages
+  track/site_search:
+    -
+      plugin: get
+      source: matomo_site_search
+  track/userid:
+    -
+      plugin: get
+      source: matomo_trackuserid
+  translation_set:
+    -
+      plugin: get
+      source: matomo_translation_set
+  url_http:
+    -
+      plugin: get
+      source: matomo_url_http
+  url_https:
+    -
+      plugin: get
+      source: matomo_url_https
+  visibility/user_account_mode:
+    -
+      plugin: get
+      source: matomo_custom
+  visibility/request_path_mode:
+    -
+      plugin: get
+      source: matomo_visibility_pages
+  visibility/request_path_pages:
+    -
+      plugin: matomo_visibility_pages
+      source:
+        - matomo_visibility_pages
+        - matomo_pages
+      skip_php: true
+  visibility/user_role_mode:
+    -
+      plugin: get
+      source: matomo_visibility_roles
+  visibility/user_role_roles:
+    -
+      plugin: matomo_visibility_roles
+      source:
+        - matomo_roles
+  page_title_hierarchy:
+    -
+      plugin: get
+      source: matomo_page_title_hierarchy
+  page_title_hierarchy_exclude_home:
+    -
+      plugin: get
+      source: matomo_page_title_hierarchy_exclude_home
+destination:
+  plugin: config
+  config_name: matomo.settings
+migration_dependencies:
+  optional:
+    - upgrade_d7_user_role
+  required: {  }

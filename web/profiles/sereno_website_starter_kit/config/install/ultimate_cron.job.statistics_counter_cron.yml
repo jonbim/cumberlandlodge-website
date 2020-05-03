@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - statistics_counter
+title: 'Default cron handler'
+id: statistics_counter_cron
+weight: 0
+module: statistics_counter
+callback: statistics_counter_cron
+scheduler:
+  id: simple
+launcher:
+  id: serial
+logger:
+  id: database

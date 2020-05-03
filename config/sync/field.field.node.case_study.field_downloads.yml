@@ -1,0 +1,27 @@
+uuid: 132fde6f-ab11-479a-949d-ad0507865479
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_downloads
+    - node.type.case_study
+  module:
+    - file
+id: node.case_study.field_downloads
+field_name: field_downloads
+entity_type: node
+bundle: case_study
+label: Downloads
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt pdf docx xls'
+  max_filesize: '5 MB'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

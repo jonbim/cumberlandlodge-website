@@ -1,0 +1,11 @@
+uuid: 7c0861aa-3645-4079-8b3a-feb53cf9c242
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_field_storage_config
+label: 'Bulk Update Field storage Fields'
+type: field_storage_config
+plugin: bulk_update_fields_action_base
+configuration: {  }

@@ -1,0 +1,19 @@
+uuid: 661d0fdc-5ab6-4a41-a7d4-a9eb6325a98a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.slide.field_image
+    - field.field.paragraph.slide.field_label
+    - field.field.paragraph.slide.field_link_url_only
+    - paragraphs.paragraphs_type.slide
+id: paragraph.slide.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: slide
+mode: paragraphs_editor_preview
+content: {  }
+hidden:
+  field_image: true
+  field_label: true
+  field_link_url_only: true

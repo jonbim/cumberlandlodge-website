@@ -1,0 +1,66 @@
+uuid: a6a2d65c-65c8-4399-bc48-5609d6f41db0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.case_study.comment_node_page
+    - field.field.node.case_study.field_downloads
+    - field.field.node.case_study.field_image
+    - field.field.node.case_study.field_p_body
+    - field.field.node.case_study.field_related_content
+    - field.field.node.case_study.field_strapline
+    - node.type.case_study
+    - responsive_image.styles.sereno_responsive_grid
+  module:
+    - ds
+    - field_formatter_class
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_image
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.case_study.teaser
+targetEntityType: node
+bundle: case_study
+mode: teaser
+content:
+  field_image:
+    label: visually_hidden
+    weight: 0
+    type: responsive_image
+    settings:
+      responsive_image_style: sereno_responsive_grid
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+hidden:
+  comment_node_page: true
+  field_downloads: true
+  field_p_body: true
+  field_related_content: true
+  field_strapline: true
+  links: true
+  search_api_excerpt: true

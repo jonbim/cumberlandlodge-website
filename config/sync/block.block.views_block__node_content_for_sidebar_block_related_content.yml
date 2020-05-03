@@ -1,0 +1,48 @@
+uuid: bf7c8a93-6f9d-43bc-a1fe-2d936ca6a137
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.node_content_for_sidebar
+  module:
+    - node
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__node_content_for_sidebar_block_related_content
+theme: serenowebtheme
+region: sidebar_second
+weight: -21
+provider: null
+plugin: 'views_block:node_content_for_sidebar-block_related_content'
+settings:
+  id: 'views_block:node_content_for_sidebar-block_related_content'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  node_type:
+    id: node_type
+    bundles:
+      blog: blog
+      exhibition: exhibition
+      hosted_event: hosted_event
+      news_article: news_article
+      page: page
+      person: person
+      programme_event: programme_event
+      resource: resource
+      space: space
+      vacancy: vacancy
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  request_path:
+    id: request_path
+    pages: "/about-us/guest-speakers\r\n/impact/case-studies\r\n/venue-hire/room-specifications\r\n/about-us/people"
+    negate: true
+    context_mapping: {  }

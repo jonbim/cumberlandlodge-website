@@ -1,0 +1,14 @@
+uuid: 4b84bb58-ccb1-470e-b5d2-8ddd3aaae4d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lodge_administrator
+  module:
+    - user
+id: user_remove_role_action.lodge_administrator
+label: 'Remove the lodge-administrator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lodge_administrator

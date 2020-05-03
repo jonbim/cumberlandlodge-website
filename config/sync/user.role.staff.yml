@@ -1,0 +1,14 @@
+uuid: c2d85778-55c4-44df-8603-92097dd4b812
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ZImqCrRj69faTXTe5rGCEhgsT2444V4CYwMx2vytQZw
+id: staff
+label: Staff
+weight: 5
+is_admin: null
+permissions:
+  - 'access browse_files entity browser pages'
+  - 'access browse_files_modal entity browser pages'
+  - 'dropzone upload files'

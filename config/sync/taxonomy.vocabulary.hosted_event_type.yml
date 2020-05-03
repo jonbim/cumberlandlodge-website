@@ -1,0 +1,8 @@
+uuid: 19f7754b-7f0d-45ff-97da-e54d8bbe4648
+langcode: en
+status: true
+dependencies: {  }
+name: 'Hosted Event Type'
+vid: hosted_event_type
+description: 'Event run by the Lodge on behalf of a client'
+weight: 0

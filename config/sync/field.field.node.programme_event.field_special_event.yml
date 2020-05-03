@@ -1,0 +1,28 @@
+uuid: 36527ad9-cff9-4184-9656-5f0fb924c4af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_special_event
+    - node.type.programme_event
+    - taxonomy.vocabulary.special_event
+id: node.programme_event.field_special_event
+field_name: field_special_event
+entity_type: node
+bundle: programme_event
+label: 'Annual Series'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      special_event: special_event
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

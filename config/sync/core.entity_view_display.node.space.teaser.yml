@@ -1,0 +1,85 @@
+uuid: f4cd5f97-796b-4467-887c-7255253e1c05
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.space.comment_node_space
+    - field.field.node.space.field_capacity
+    - field.field.node.space.field_image
+    - field.field.node.space.field_p_body
+    - field.field.node.space.field_space_type
+    - image.style.sereno_grid_600_x_400_
+    - node.type.space
+  module:
+    - ds
+    - field_formatter_class
+    - image
+    - taxonomy
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_image
+        - node_title
+        - field_capacity
+        - field_space_type
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.space.teaser
+targetEntityType: node
+bundle: space
+mode: teaser
+content:
+  field_capacity:
+    type: number_integer
+    weight: 2
+    region: content
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: sereno_grid_600_x_400_
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+  field_space_type:
+    type: entity_reference_rss_category
+    weight: 3
+    region: content
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_space: true
+  field_p_body: true
+  links: true
+  search_api_excerpt: true

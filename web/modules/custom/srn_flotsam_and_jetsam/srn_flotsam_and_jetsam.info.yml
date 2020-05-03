@@ -1,0 +1,5 @@
+name: 'Sereno flotsam and jetsam'
+type: module
+description: 'Floating oddments; collected, herded bits and pieces'
+core: 8.x
+package: 'Sereno'

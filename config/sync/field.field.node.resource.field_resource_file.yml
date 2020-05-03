@@ -1,0 +1,27 @@
+uuid: 4c728720-84c8-449d-b910-38c6b3ceee31
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_file
+    - node.type.resource
+  module:
+    - file
+id: node.resource.field_resource_file
+field_name: field_resource_file
+entity_type: node
+bundle: resource
+label: 'Resource File'
+description: 'Upload your file'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt odt docx pptx pdf'
+  max_filesize: '10 MB'
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

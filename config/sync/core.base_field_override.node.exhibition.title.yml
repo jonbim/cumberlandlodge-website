@@ -1,0 +1,18 @@
+uuid: 514d54ea-d08f-4b49-9570-eef9d5e72ed2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.exhibition
+id: node.exhibition.title
+field_name: title
+entity_type: node
+bundle: exhibition
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

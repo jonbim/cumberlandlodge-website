@@ -1,0 +1,31 @@
+uuid: ffecbf54-eb46-47a8-a0a0-c48d275d186a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.taxonomy_project_image_field_as_block
+  module:
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__taxo_project_image_as_block_block_annual_series
+theme: serenowebtheme
+region: sidebar_second
+weight: -31
+provider: null
+plugin: 'views_block:taxonomy_project_image_field_as_block-block_annual_series'
+settings:
+  id: 'views_block:taxonomy_project_image_field_as_block-block_annual_series'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  request_path:
+    id: request_path
+    pages: '/annual-series*'
+    negate: false
+    context_mapping: {  }

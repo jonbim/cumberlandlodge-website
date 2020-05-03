@@ -1,0 +1,15 @@
+uuid: 494a66b8-5d20-4cb0-b069-0444193fd0cf
+langcode: en
+status: true
+dependencies: {  }
+name: hero_full_width
+label: 'Hero full width'
+effects:
+  0b1c926d-5765-42fc-9012-01ffa8081ff1:
+    uuid: 0b1c926d-5765-42fc-9012-01ffa8081ff1
+    id: image_scale
+    weight: 1
+    data:
+      width: 2000
+      height: null
+      upscale: false

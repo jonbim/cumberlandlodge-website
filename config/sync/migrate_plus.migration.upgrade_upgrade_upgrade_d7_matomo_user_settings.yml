@@ -1,0 +1,49 @@
+uuid: 65df41d4-1919-42a0-9181-1eeccb3e9bfc
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_upgrade_upgrade_d7_matomo_user_settings
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+migration_group: migrate_drupal_7
+label: 'Matomo user settings'
+source:
+  key: drupal_7
+  database:
+    driver: mysql
+    username: sereno-mysql
+    password: lime
+    host: localhost
+    port: ''
+    database: cmb-d7.biscay.net
+    prefix: null
+  plugin: d7_user
+  constants:
+    key: user_account_users
+    module: matomo
+process:
+  uid:
+    -
+      plugin: get
+      source: uid
+  key:
+    -
+      plugin: get
+      source: constants/key
+  module:
+    -
+      plugin: get
+      source: constants/module
+  settings:
+    -
+      plugin: skip_row_if_not_set
+      index: custom
+      source: data/matomo
+destination:
+  plugin: user_data
+migration_dependencies:
+  required: {  }
+  optional: {  }

@@ -1,0 +1,37 @@
+uuid: 78ff495a-560e-4817-9e53-bdcc05b6b7c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vacancy
+  module:
+    - ctools
+    - fieldblock
+    - responsive_image
+  theme:
+    - serenowebtheme
+id: contentfield_3
+theme: serenowebtheme
+region: sidebar_second
+weight: -27
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Content field'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: true
+  field_name: field_vacancy
+  formatter_id: responsive_image
+  formatter_settings:
+    responsive_image_style: sereno_responsive_image_style
+    image_link: content
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      vacancy: vacancy
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

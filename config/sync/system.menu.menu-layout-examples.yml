@@ -1,0 +1,8 @@
+uuid: d3d2365b-ea4d-468d-9778-8ab87cc13424
+langcode: en
+status: true
+dependencies: {  }
+id: menu-layout-examples
+label: 'Views layout class examples'
+description: ''
+locked: false

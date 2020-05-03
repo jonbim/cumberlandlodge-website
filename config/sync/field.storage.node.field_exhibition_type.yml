@@ -1,0 +1,20 @@
+uuid: 4046abe2-68a5-48ee-9722-d9b2cf659dc3
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_exhibition_type
+field_name: field_exhibition_type
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

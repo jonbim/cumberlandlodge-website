@@ -1,0 +1,36 @@
+uuid: 62f82850-0a5a-4235-a1e5-d81220cb5932
+langcode: en
+status: true
+dependencies: {  }
+id: lodge_contributor
+label: lodge-contributor
+weight: 5
+is_admin: null
+permissions:
+  - 'access administration menu'
+  - 'access administration pages'
+  - 'access browse_files entity browser pages'
+  - 'access browse_files_modal entity browser pages'
+  - 'access ckeditor link'
+  - 'access content overview'
+  - 'access media browser'
+  - 'add media from remote sources'
+  - 'create blog content'
+  - 'create files'
+  - 'create programme_event content'
+  - 'create resource content'
+  - 'delete any resource content'
+  - 'delete own blog content'
+  - 'delete own programme_event content'
+  - 'delete own resource content'
+  - 'dropzone upload files'
+  - 'edit any programme_event content'
+  - 'edit any resource content'
+  - 'edit own blog content'
+  - 'edit own programme_event content'
+  - 'edit own resource content'
+  - 'manipulate entityqueues'
+  - 'update learning_resources_highlights entityqueue'
+  - 'use manualcrop'
+  - 'use text format full_html'
+  - 'view the administration theme'

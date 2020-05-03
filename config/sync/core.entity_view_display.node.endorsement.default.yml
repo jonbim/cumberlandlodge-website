@@ -1,0 +1,72 @@
+uuid: cfd2dd09-fac7-4c70-be65-a2f44f414cf1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_endorsement.default
+    - field.field.node.endorsement.body
+    - field.field.node.endorsement.comment_node_endorsement
+    - field.field.node.endorsement.field_client_image
+    - field.field.node.endorsement.field_client_name
+    - field.field.node.endorsement.field_endorsement_logo
+    - field.field.node.endorsement.field_endorsement_type
+    - node.type.endorsement
+  module:
+    - comment
+    - image
+    - text
+    - user
+id: node.endorsement.default
+targetEntityType: node
+bundle: endorsement
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  comment_node_endorsement:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_client_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_client_name:
+    label: hidden
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_endorsement_logo:
+    label: hidden
+    weight: 3
+    type: entity_reference_entity_view
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_endorsement_type: true

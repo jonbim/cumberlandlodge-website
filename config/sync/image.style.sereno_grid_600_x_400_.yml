@@ -1,0 +1,15 @@
+uuid: 35283c20-2120-4d46-b8fa-b5018662decc
+langcode: en
+status: true
+dependencies: {  }
+name: sereno_grid_600_x_400_
+label: 'Sereno Grid (600 x 400)'
+effects:
+  6dea30d5-1717-42f7-834e-133810949f23:
+    uuid: 6dea30d5-1717-42f7-834e-133810949f23
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 600
+      height: 400
+      anchor: center-center

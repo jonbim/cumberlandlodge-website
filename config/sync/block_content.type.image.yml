@@ -1,0 +1,8 @@
+uuid: ccda3718-7277-44ff-b65a-9e24bf525c0e
+langcode: en
+status: true
+dependencies: {  }
+id: image
+label: Image
+revision: 0
+description: 'Image blocks which responsify the image field'

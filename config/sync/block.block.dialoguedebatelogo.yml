@@ -1,0 +1,31 @@
+uuid: 1d1227b1-c0ee-44ee-baeb-b07a12323736
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:2a331fe3-8839-4b15-9738-b2b433c26124'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: dialoguedebatelogo
+theme: serenowebtheme
+region: sidebar_second
+weight: -22
+provider: null
+plugin: 'block_content:2a331fe3-8839-4b15-9738-b2b433c26124'
+settings:
+  id: 'block_content:2a331fe3-8839-4b15-9738-b2b433c26124'
+  label: 'Dialogue & Debate logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /programmes/dialogue-debate-webinars
+    negate: false
+    context_mapping: {  }

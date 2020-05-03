@@ -1,0 +1,11 @@
+uuid: 3e3ac2d3-75bb-49e5-8c7e-4ca5166d85e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_embed_button
+label: 'Bulk Update Embed button Fields'
+type: embed_button
+plugin: bulk_update_fields_action_base
+configuration: {  }

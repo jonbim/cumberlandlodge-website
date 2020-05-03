@@ -1,0 +1,26 @@
+uuid: 19a0697e-af89-4fce-b981-0459fb52dc80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_team
+    - node.type.person
+    - taxonomy.vocabulary.team
+id: node.person.field_team
+field_name: field_team
+entity_type: node
+bundle: person
+label: Team
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      team: team
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

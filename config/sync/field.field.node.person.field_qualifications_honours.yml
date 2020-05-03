@@ -1,0 +1,19 @@
+uuid: d0da1d9f-0ea2-4305-b962-340c488600b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_qualifications_honours
+    - node.type.person
+id: node.person.field_qualifications_honours
+field_name: field_qualifications_honours
+entity_type: node
+bundle: person
+label: 'Qualifications & honours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

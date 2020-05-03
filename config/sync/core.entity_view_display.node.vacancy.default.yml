@@ -1,0 +1,149 @@
+uuid: b49573dc-fde7-43cc-b34e-cc71115c413d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.vacancy.body
+    - field.field.node.vacancy.comment_node_vacancy
+    - field.field.node.vacancy.field_application_form
+    - field.field.node.vacancy.field_application_pack
+    - field.field.node.vacancy.field_closing_date
+    - field.field.node.vacancy.field_hours
+    - field.field.node.vacancy.field_interview_date
+    - field.field.node.vacancy.field_reference
+    - field.field.node.vacancy.field_salary
+    - field.field.node.vacancy.field_vacancy
+    - node.type.vacancy
+  module:
+    - datetime
+    - ds
+    - file
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_reference
+        - field_hours
+        - field_salary
+        - field_interview_date
+        - field_closing_date
+        - body
+        - field_application_pack
+        - field_application_form
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  body:
+    label: visually_hidden
+    weight: 5
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_application_form:
+    label: inline
+    weight: 7
+    type: file_default
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  field_application_pack:
+    label: inline
+    weight: 6
+    type: file_default
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  field_closing_date:
+    label: inline
+    weight: 4
+    type: datetime_default
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: blue
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'Cumberland Lodge'
+          atc_organizer_email:
+            field: token
+            tokenized: info@cumberlandlodge.org.uk
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      field_formatter_class:
+        class: closing-date-default
+    region: content
+  field_hours:
+    label: inline
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_interview_date:
+    label: inline
+    weight: 3
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  field_reference:
+    label: inline
+    weight: 0
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  field_salary:
+    label: inline
+    weight: 2
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_vacancy: true
+  field_vacancy: true
+  links: true
+  search_api_excerpt: true

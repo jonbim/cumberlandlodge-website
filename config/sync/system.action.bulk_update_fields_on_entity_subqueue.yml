@@ -1,0 +1,11 @@
+uuid: d50a98ef-a901-4fa6-8af2-9d90a4d76d87
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_entity_subqueue
+label: 'Bulk Update Entity subqueue Fields'
+type: entity_subqueue
+plugin: bulk_update_fields_action_base
+configuration: {  }

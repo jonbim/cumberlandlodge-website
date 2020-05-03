@@ -1,0 +1,14 @@
+uuid: 1159659b-7ac1-452b-a1a8-805426d60dad
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lodge_editor
+  module:
+    - user
+id: user_add_role_action.lodge_editor
+label: 'Add the lodge-editor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lodge_editor

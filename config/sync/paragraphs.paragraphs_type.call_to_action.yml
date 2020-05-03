@@ -1,0 +1,9 @@
+uuid: dceaaf37-421f-47ce-b93b-b026a56e9903
+langcode: en
+status: true
+dependencies: {  }
+id: call_to_action
+label: 'Call to action'
+icon_uuid: null
+description: 'Used on home and landing pages to guide people to key pages'
+behavior_plugins: {  }

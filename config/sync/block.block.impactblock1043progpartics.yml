@@ -1,0 +1,31 @@
+uuid: e16ce7e7-32bf-409d-8d3e-efacef772b3b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:d785fc34-b2e4-4536-9816-d4c9936ec94e'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: impactblock1043progpartics
+theme: serenowebtheme
+region: sidebar_second
+weight: -14
+provider: null
+plugin: 'block_content:d785fc34-b2e4-4536-9816-d4c9936ec94e'
+settings:
+  id: 'block_content:d785fc34-b2e4-4536-9816-d4c9936ec94e'
+  label: 'Impact block - 1,043 prog partics'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/programmes/cross-sector-conferences\r\n/inclusion-opportunity\r\n/identities-belonging\r\n/programmes/cumberland-lodge-dialogues\r\n/about-us/what-we-do\r\n/programmes/annual-forums"
+    negate: false
+    context_mapping: {  }

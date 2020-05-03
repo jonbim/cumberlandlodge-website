@@ -1,0 +1,45 @@
+uuid: 817a2ff8-c814-48a6-aee3-b383d8398305
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.hosted_event.comment_node_hosted_event
+    - field.field.node.hosted_event.field_date
+    - field.field.node.hosted_event.field_event_image
+    - field.field.node.hosted_event.field_event_organisation
+    - field.field.node.hosted_event.field_hosted_event_resource
+    - field.field.node.hosted_event.field_hosted_event_type
+    - field.field.node.hosted_event.field_notable_name
+    - field.field.node.hosted_event.field_p_body
+    - node.type.hosted_event
+  module:
+    - datetime
+    - user
+id: node.hosted_event.teaser
+targetEntityType: node
+bundle: hosted_event
+mode: teaser
+content:
+  field_date:
+    label: hidden
+    weight: 1
+    type: datetime_default
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_hosted_event: true
+  field_event_image: true
+  field_event_organisation: true
+  field_hosted_event_resource: true
+  field_hosted_event_type: true
+  field_notable_name: true
+  field_p_body: true

@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of 'serenowebtheme' theme.
+
+serenowebtheme.settings:
+  type: theme_settings
+  label: 'Sereno web theme settings'

@@ -1,0 +1,8 @@
+uuid: 5609ec44-9365-4356-8aec-51969355f940
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_link_tile
+label: 'Link Tile comment'
+target_entity_type_id: node
+description: null

@@ -1,0 +1,236 @@
+uuid: 98377382-d235-40fd-b6c9-2d213f8d9a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.node.vacancy.body
+    - field.field.node.vacancy.comment_node_vacancy
+    - field.field.node.vacancy.field_application_form
+    - field.field.node.vacancy.field_application_pack
+    - field.field.node.vacancy.field_closing_date
+    - field.field.node.vacancy.field_hours
+    - field.field.node.vacancy.field_interview_date
+    - field.field.node.vacancy.field_reference
+    - field.field.node.vacancy.field_salary
+    - field.field.node.vacancy.field_vacancy
+    - node.type.vacancy
+  module:
+    - comment
+    - datetime
+    - entity_browser
+    - field_group
+    - file
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_form:
+      children:
+        - group_about
+        - group_content
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        direction: vertical
+      label: Form
+    group_about:
+      children:
+        - title
+        - field_hours
+        - field_salary
+        - field_reference
+        - field_interview_date
+        - field_closing_date
+      parent_name: group_form
+      weight: 12
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Info about this vacancy'
+        formatter: open
+        required_fields: true
+      label: About
+    group_content:
+      children:
+        - body
+        - field_vacancy
+        - field_application_form
+        - field_application_pack
+      parent_name: group_form
+      weight: 13
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Substance of this vacancy'
+        formatter: closed
+        required_fields: true
+      label: Content
+id: node.vacancy.default
+targetEntityType: node
+bundle: vacancy
+mode: default
+content:
+  body:
+    weight: 2
+    type: text_textarea_with_summary
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  comment_node_vacancy:
+    type: comment_default
+    weight: 8
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_application_form:
+    weight: 4
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_application_pack:
+    weight: 5
+    type: file_generic
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    region: content
+  field_closing_date:
+    weight: 6
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_hours:
+    weight: 2
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_interview_date:
+    weight: 5
+    type: datetime_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_reference:
+    weight: 4
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_salary:
+    weight: 3
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_vacancy:
+    weight: 3
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      preview_image_style: file_entity_browser_small
+      field_widget_edit: true
+      open: false
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_browser_file
+    region: content
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 13
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 6
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

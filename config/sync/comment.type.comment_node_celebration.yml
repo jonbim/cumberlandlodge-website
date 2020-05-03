@@ -1,0 +1,8 @@
+uuid: 69d40326-fb9c-4f8d-9813-1ed46caba674
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_celebration
+label: 'Celebration comment'
+target_entity_type_id: node
+description: null

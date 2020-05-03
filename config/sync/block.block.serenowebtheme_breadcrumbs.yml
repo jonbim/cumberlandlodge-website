@@ -1,0 +1,22 @@
+uuid: f22cb066-948a-4521-90cf-5297a6eafe8f
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - serenowebtheme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: serenowebtheme_breadcrumbs
+theme: serenowebtheme
+region: header
+weight: -6
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

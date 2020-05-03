@@ -1,0 +1,29 @@
+uuid: 298866ce-bf6a-476c-bb60-5bcc5a8e2093
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.read_watch_listen_index_tab
+  module:
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: exposedformread_watch_listen_index_tabpage_1
+theme: serenowebtheme
+region: sidebar_first
+weight: -25
+provider: null
+plugin: 'views_exposed_filter_block:read_watch_listen_index_tab-page_1'
+settings:
+  id: 'views_exposed_filter_block:read_watch_listen_index_tab-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: Search
+visibility:
+  request_path:
+    id: request_path
+    pages: /read-watch-listen/all-our-resources
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,21 @@
+uuid: 120101bd-8fe7-451a-9986-e35fabaeb6e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sound_cloud
+    - node.type.resource
+  module:
+    - soundcloudfield
+id: node.resource.field_sound_cloud
+field_name: field_sound_cloud
+entity_type: node
+bundle: resource
+label: 'Sound Cloud'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: soundcloud

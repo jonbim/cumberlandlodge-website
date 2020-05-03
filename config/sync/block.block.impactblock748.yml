@@ -1,0 +1,31 @@
+uuid: 69ee94df-7c73-4ee3-b317-b3bad0816ff0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:79e3ea2d-2cf0-4774-b400-4fd6eae6f5b7'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: impactblock748
+theme: serenowebtheme
+region: sidebar_second
+weight: -20
+provider: null
+plugin: 'block_content:79e3ea2d-2cf0-4774-b400-4fd6eae6f5b7'
+settings:
+  id: 'block_content:79e3ea2d-2cf0-4774-b400-4fd6eae6f5b7'
+  label: 'Impact block - 748'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/impact/our-impact\r\n/programmes/student-conferences\r\n/programmes/student-bursaries\r\n/impact-support-our-work\r\n/programmes/st-catharines-sessions\r\n/programmes/knowledge-cafes"
+    negate: false
+    context_mapping: {  }

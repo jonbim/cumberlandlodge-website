@@ -1,0 +1,15 @@
+uuid: 969beafd-2e3c-44e7-895d-89da4910af61
+langcode: en
+status: true
+dependencies: {  }
+name: sereno_large_x2_1199px_
+label: 'Sereno Large x2 (1199px)'
+effects:
+  756150d8-1270-4da7-9ccb-0271857a63ec:
+    uuid: 756150d8-1270-4da7-9ccb-0271857a63ec
+    id: image_scale
+    weight: 1
+    data:
+      width: 2398
+      height: null
+      upscale: true

@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Rod Tatham, Sereno :: 2019-08-05
+
+# part 2 of the set up for data migration. Enabling contrib modules to set
+# up the site.
+
+# run from the sereno/script
+
+PARENT_DIRECTORY="${PWD}"
+
+echo "checking $PARENT_DIRECTORY contains 'sereno/script'..."
+
+if [[ $PARENT_DIRECTORY == *"sereno/script"* ]]; then
+
+  # go to the site root
+  cd ../../
+
+  composer require drupal/address
+  composer require drupal/backup_migrate
+  composer require drupal/better_exposed_filters
+  composer require drupal/captcha
+  composer require drupal/context
+  composer require drupal/date_all_day
+  composer require drupal/date_popup
+  composer require drupal/ds
+  composer require drupal/entityqueue
+  composer require drupal/eu_cookie_compliance
+  composer require drupal/field_group
+  composer require drupal/flexslider
+  composer require drupal/honeypot
+  composer require drupal/imce
+  composer require drupal/linked_field
+  composer require drupal/menu_admin_per_menu
+  composer require drupal/menu_block
+  composer require drupal/module_filter
+  composer require drupal/module_missing_message_fixer
+  composer require drupal/rabbit_hole
+  composer require drupal/redirect
+  composer require drupal/role_delegation
+  composer require drupal/scheduler
+  composer require drupal/sitemap
+  composer require drupal/soundcloudfield
+  composer require drupal/token
+  composer require drupal/video_embed_field
+  composer require drupal/webform
+  composer require drupal/xmlsitemap
+
+  echo "required via composer the modules for Drupal 8 in $PARENT_DIRECTORY"
+else
+  echo 'NOT DOING ANYTHING. You need to run this from within a dir called sereno/script'
+fi

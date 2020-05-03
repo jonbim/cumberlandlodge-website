@@ -1,0 +1,10 @@
+uuid: b41be7ed-791d-4dbd-9d45-3d19ba57eec2
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: NhsUYU-9Oxqiu2u9eK-rTyts7z6usrPkPTu8eVEaTIQ
+id: file_browser
+label: 'File Browser'
+revision: 1
+description: 'An example Custom Block type that uses File Browser''s Entity Browser and EntityReferenceImageFormatter.'

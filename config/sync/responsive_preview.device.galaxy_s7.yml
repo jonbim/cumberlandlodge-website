@@ -1,0 +1,11 @@
+id: galaxy_s7
+uuid: f0fbbb79-d5e8-46b3-a543-0ffe7e6f0ccc
+label: 'Galaxy S7'
+weight: -8
+status: 1
+orientation: portrait
+dimensions:
+  width: 1440
+  height: 2560
+  dppx: !!float 4
+langcode: en

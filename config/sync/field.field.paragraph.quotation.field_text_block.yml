@@ -1,0 +1,21 @@
+uuid: 62513c76-3a8f-4504-a450-ad71e541617a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_block
+    - paragraphs.paragraphs_type.quotation
+  module:
+    - text
+id: paragraph.quotation.field_text_block
+field_name: field_text_block
+entity_type: paragraph
+bundle: quotation
+label: Quotation
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,15 @@
+uuid: 0a369c09-fbd0-42c9-b763-333a89713e77
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.paragraphs_editor_preview
+    - field.field.paragraph.text_block.field_text_block
+    - paragraphs.paragraphs_type.text_block
+id: paragraph.text_block.paragraphs_editor_preview
+targetEntityType: paragraph
+bundle: text_block
+mode: paragraphs_editor_preview
+content: {  }
+hidden:
+  field_text_block: true

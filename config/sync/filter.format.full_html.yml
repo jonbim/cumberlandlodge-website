@@ -1,0 +1,56 @@
+uuid: 2e11b405-86ef-4e7f-b959-af3c28773974
+langcode: en
+status: true
+dependencies:
+  module:
+    - convert_media_tags_to_markup
+    - media
+_core:
+  default_config_hash: svejBAiBwALaC_w177xrfxgSohJVRMBWC8o2kfKabLs
+name: 'Full HTML'
+format: full_html
+weight: -10
+filters:
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 1
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <p> <h2 id> <h3 id> <h4 id> <embed> <source> <audio> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <h2> <h3> <h4> <span>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  convert_legacy_media_tags_to_markup:
+    id: convert_legacy_media_tags_to_markup
+    provider: convert_media_tags_to_markup
+    status: true
+    weight: 0
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: false
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types: {  }
+      allowed_view_modes: {  }

@@ -1,0 +1,100 @@
+uuid: b1fd9356-a63d-4b09-83c4-947d9807631c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_hosted_event.default
+    - field.field.node.hosted_event.comment_node_hosted_event
+    - field.field.node.hosted_event.field_date
+    - field.field.node.hosted_event.field_event_image
+    - field.field.node.hosted_event.field_event_organisation
+    - field.field.node.hosted_event.field_hosted_event_resource
+    - field.field.node.hosted_event.field_hosted_event_type
+    - field.field.node.hosted_event.field_notable_name
+    - field.field.node.hosted_event.field_p_body
+    - node.type.hosted_event
+  module:
+    - comment
+    - datetime
+    - entity_reference_revisions
+    - image
+    - user
+id: node.hosted_event.default
+targetEntityType: node
+bundle: hosted_event
+mode: default
+content:
+  comment_node_hosted_event:
+    label: hidden
+    type: comment_default
+    weight: 20
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_date:
+    weight: 101
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_event_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+  field_event_organisation:
+    label: above
+    weight: 2
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_hosted_event_resource:
+    label: above
+    weight: 4
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_hosted_event_type:
+    label: above
+    weight: 6
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_notable_name:
+    label: above
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_p_body:
+    label: hidden
+    weight: 5
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

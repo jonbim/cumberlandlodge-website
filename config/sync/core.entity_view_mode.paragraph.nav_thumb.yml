@@ -1,0 +1,10 @@
+uuid: a221dde2-4f55-4867-942f-14bedfc8f152
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.nav_thumb
+label: nav_thumb
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,8 @@
+uuid: ca3c8a21-ec92-4f9c-9034-8c50a986727b
+langcode: en
+status: true
+dependencies: {  }
+name: 'Exhbition Type'
+vid: exhbition_type
+description: 'Exhibition types such as art and photography'
+weight: 0

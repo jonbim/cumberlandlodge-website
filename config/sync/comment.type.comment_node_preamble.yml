@@ -1,0 +1,8 @@
+uuid: 00b27822-6db2-409f-b2a5-42b92b72539c
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_preamble
+label: 'Preamble comment'
+target_entity_type_id: node
+description: null

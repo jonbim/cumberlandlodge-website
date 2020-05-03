@@ -1,0 +1,19 @@
+uuid: 780f027b-0b11-459b-97c8-36fb47988ca3
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_eventbrite_button
+field_name: field_eventbrite_button
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

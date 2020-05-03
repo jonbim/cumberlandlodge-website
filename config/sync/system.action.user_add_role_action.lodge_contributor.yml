@@ -1,0 +1,14 @@
+uuid: 081c7168-9a15-421a-a448-673e9becfaec
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lodge_contributor
+  module:
+    - user
+id: user_add_role_action.lodge_contributor
+label: 'Add the lodge-contributor role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lodge_contributor

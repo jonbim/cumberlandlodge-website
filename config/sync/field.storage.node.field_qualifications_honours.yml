@@ -1,0 +1,21 @@
+uuid: 25bd2490-251e-49a2-ad19-3d34233e0e22
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_qualifications_honours
+field_name: field_qualifications_honours
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

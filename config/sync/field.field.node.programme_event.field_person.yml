@@ -1,0 +1,30 @@
+uuid: c415df39-44df-4f1e-8b4d-2349b0d06ef1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person
+    - node.type.person
+    - node.type.programme_event
+id: node.programme_event.field_person
+field_name: field_person
+entity_type: node
+bundle: programme_event
+label: Person
+description: 'Add a person to be displayed with this event'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      person: person
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      views-select-list:
+        status: 0
+field_type: entity_reference

@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "bootstrap-sass": "^3.4.1",
+    "browser-sync": "^2.26.7",
+    "font-awesome": "^4.7.0",
+    "gulp": "3.8.8",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-environments": "^1.0.0",
+    "gulp-imagemin": "^6.2.0",
+    "gulp-livereload": "^4.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-glob": "^1.1.0",
+    "gulp-shell": "^0.7.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-watch": "^5.0.1",
+    "imagemin-pngcrush": "^6.0.0",
+    "jquery": "^3.4.1"
+  },
+  "name": "serenowebtheme",
+  "description": "<!-- @file Instructions for subtheming using the Sass Starterkit. --> <!-- @defgroup sub_theming_sass --> <!-- @ingroup sub_theming --> # Sass Starterkit",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  },
+  "author": "rtatham",
+  "license": "ISC",
+  "devDependencies": {
+    "yarn": "^1.19.1"
+  }
+}

@@ -1,0 +1,37 @@
+uuid: a5fa74cf-890a-40a5-a0ef-ec284ee1043c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organisation_logo
+  module:
+    - ctools
+    - fieldblock
+    - responsive_image
+  theme:
+    - serenowebtheme
+id: contentfield_7
+theme: serenowebtheme
+region: sidebar_second
+weight: -24
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Content field'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: true
+  field_name: field_organisation_logo
+  formatter_id: responsive_image
+  formatter_settings:
+    responsive_image_style: sereno_responsive_image_style
+    image_link: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      organisation: organisation
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

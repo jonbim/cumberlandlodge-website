@@ -1,0 +1,18 @@
+
+// Rod Tatham, Sereno :: 2019-08-22
+
+FOLLOW THESE STEPS
+nb - you need to use gulp 3, not gulp 4, or the format of the gulpfile is wrong -
+     this is accounted for in instructions below using gulp@3.3.8
+   - node_modules directory is in .gitignore, so you need to set up as follows
+     on your OS
+
+#> npm init .
+ - opened package.json and made this change:
+"test": "echo \"Error: no test specified\" && exit 1"
+replaced with this line instead:
+"postinstall": "find node_modules/ -name '*.info' -type f -delete"
+ - created a file in theme base called .npmrc, content being unsafe-perm = true
+#> npm install yarn --save-dev
+#> yarn add gulp@3.8.8 bootstrap-sass browser-sync font-awesome gulp-clean-css gulp-environments gulp-sass gulp-imagemin gulp-shell gulp-plumber gulp-notify gulp-autoprefixer gulp-sass-glob gulp-uglify gulp-uglifyjs gulp-concat gulp-rename gulp-sourcemaps gulp-watch gulp-livereload imagemin-pngcrush jquery --save-dev
+ - set up gulpfile.js, inc domain specific details (ADAPT GULPFILE.JS.ORGINIAL FILE IN THIS DIRECTORY RENAMING TO gulpfile.js)

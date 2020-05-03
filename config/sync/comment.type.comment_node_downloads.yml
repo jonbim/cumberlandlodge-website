@@ -1,0 +1,8 @@
+uuid: 56313121-a5c1-4b84-b0a3-0aff92ba2a66
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_downloads
+label: 'Downloads comment'
+target_entity_type_id: node
+description: null

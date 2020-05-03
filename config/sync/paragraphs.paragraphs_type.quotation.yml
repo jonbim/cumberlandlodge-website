@@ -1,0 +1,9 @@
+uuid: 708289c6-c074-488a-b483-d3cb2c76f157
+langcode: en
+status: true
+dependencies: {  }
+id: quotation
+label: Quotation
+icon_uuid: null
+description: 'Migrated from paragraph bundle Quotation'
+behavior_plugins: {  }

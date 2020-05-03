@@ -1,0 +1,8 @@
+uuid: cbc0b4e2-bdff-410d-9449-3a15faf81532
+langcode: en
+status: true
+dependencies: {  }
+name: Team
+vid: team
+description: 'Teams give us a way of organising people'
+weight: 0

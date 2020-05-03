@@ -1,0 +1,23 @@
+uuid: 814b0d54-88c8-435e-842a-9e37d4eaeed6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.testimonial
+  module:
+    - text
+id: node.testimonial.body
+field_name: body
+entity_type: node
+bundle: testimonial
+label: 'Quotation text'
+description: 'What''s the content of this quotation?'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

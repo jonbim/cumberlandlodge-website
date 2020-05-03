@@ -1,0 +1,12 @@
+uuid: 938edc12-85cb-43b0-b1e4-8ecedb95835a
+langcode: en
+status: true
+dependencies: {  }
+id: file
+label: 'File - default'
+type: 'canonical_entities:file'
+pattern: 'file/[file:name]'
+selection_criteria: {  }
+selection_logic: and
+weight: 3
+relationships: {  }

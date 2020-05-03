@@ -1,0 +1,120 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the installation profile.
+ */
+
+use Drupal\user\Entity\User;
+use Drupal\user\Entity\Role;
+use Drupal\user\RoleInterface;
+use Drupal\shortcut\Entity\Shortcut;
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function sereno_website_starter_kit_install() {
+
+  // First, do everything in standard profile.
+  include_once DRUPAL_ROOT . '/core/profiles/standard/standard.install';
+  standard_install();
+
+  // Can add code in here to make nodes, terms, etc.
+
+  /* \Drupal::configFactory()
+    ->getEditable('system.site')
+    ->set('page.front', '/stream')
+    ->save(TRUE); */
+
+  // Assign user 1 the "administrator" role.
+  $user = User::load(1);
+  $user->roles[] = 'administrator';
+  $user->save();
+/* errors on install 'Site architect already exists'
+  // Create the roles.
+  $data = ['id' => 'site_architect', 'label' => 'Site architect'];
+  $role = Role::create($data);
+  $role->save();
+
+  $data = ['id' => 'editor', 'label' => 'Editor'];
+  $role = Role::create($data);
+  $role->save();
+
+  $data = ['id' => 'staff', 'label' => 'Staff'];
+  $role = Role::create($data);
+  $role->save();
+*/
+  // Create accounts for The Jive Police
+  $user_add = \Drupal\user\Entity\User::create();
+  $user_add->setUsername('Jazz Butcher');
+  $user_add->setEmail('jazz@sereno.co.uk');
+  $user_add->setPassword(user_password());
+  $user_add->enforceIsNew();
+  $user_add->activate();
+  $user_add->roles[] = 'site_architect';
+  $user_add->roles[] = 'editor';
+  $user_add->roles[] = 'staff';
+  $res = $user_add->save();
+
+  $user_add = \Drupal\user\Entity\User::create();
+  $user_add->setUsername('Wolfgang Press');
+  $user_add->setEmail('wolfgang@sereno.co.uk');
+  $user_add->setPassword(user_password());
+  $user_add->enforceIsNew();
+  $user_add->activate();
+  $user_add->roles[] = 'editor';
+  $user_add->roles[] = 'staff';
+  $res = $user_add->save();
+
+  $user_add = \Drupal\user\Entity\User::create();
+  $user_add->setUsername('Pierre Saltine');
+  $user_add->setEmail('pierre@sereno.co.uk');
+  $user_add->setPassword(user_password());
+  $user_add->enforceIsNew();
+  $user_add->activate();
+  $user_add->roles[] = 'editor';
+  $user_add->roles[] = 'staff';
+  $res = $user_add->save();
+
+  $user_add = \Drupal\user\Entity\User::create();
+  $user_add->setUsername('Grant Bones');
+  $user_add->setEmail('grant@sereno.co.uk');
+  $user_add->setPassword(user_password());
+  $user_add->enforceIsNew();
+  $user_add->activate();
+  $user_add->roles[] = 'staff';
+  $res = $user_add->save();
+
+  $user_add = \Drupal\user\Entity\User::create();
+  $user_add->setUsername('Veronica Snool');
+  $user_add->setEmail('veronica@sereno.co.uk');
+  $user_add->setPassword(user_password());
+  $user_add->enforceIsNew();
+  $user_add->activate();
+  $user_add->roles[] = 'staff';
+  $res = $user_add->save();
+
+  $user_add = \Drupal\user\Entity\User::create();
+  $user_add->setUsername('Alan Staples');
+  $user_add->setEmail('alan@sereno.co.uk');
+  $user_add->setPassword(user_password());
+  $user_add->enforceIsNew();
+  $user_add->activate();
+  $user_add->roles[] = 'staff';
+  $res = $user_add->save();
+
+  // Switch on the themes
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('default', 'serenowebsitetheme')
+    ->save();
+
+  \Drupal::configFactory()
+    ->getEditable('system.theme')
+    ->set('admin', 'seven')
+    ->save();
+}

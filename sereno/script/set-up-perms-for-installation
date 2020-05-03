@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# run from the root of the site
+
+
+composer install drupal/address
+composer install drupal/backup_migrate
+composer install drupal/better_exposed_filters
+composer install drupal/captcha
+composer install drupal/context
+composer install drupal/date_all_day
+composer install drupal/date_popup
+composer install drupal/ds
+composer install drupal/entityqueue
+composer install drupal/eu_cookie_compliance
+composer install drupal/field_group
+composer install drupal/flexslider
+composer install drupal/honeypot
+composer install drupal/imce
+composer install drupal/linked_field
+composer install drupal/menu_admin_per_menu
+composer install drupal/menu_block
+composer install drupal/module_filter
+composer install drupal/module_missing_message_fixer
+composer install drupal/rabbit_hole
+composer install drupal/redirect
+composer install drupal/role_delegation
+composer install drupal/scheduler
+composer install drupal/sitemap
+composer install drupal/soundcloudfield
+composer install drupal/token
+composer install drupal/video_embed_field
+composer install drupal/webform
+composer install drupal/xmlsitemap

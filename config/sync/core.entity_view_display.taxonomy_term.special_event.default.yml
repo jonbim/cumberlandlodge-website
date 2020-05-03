@@ -1,0 +1,37 @@
+uuid: 091a95df-0c1b-45c2-855a-befd55b9422a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.special_event.field_image
+    - taxonomy.vocabulary.special_event
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - description
+id: taxonomy_term.special_event.default
+targetEntityType: taxonomy_term
+bundle: special_event
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_image: true
+  search_api_excerpt: true

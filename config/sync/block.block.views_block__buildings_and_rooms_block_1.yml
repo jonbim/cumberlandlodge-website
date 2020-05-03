@@ -1,0 +1,24 @@
+uuid: 51489f07-67c2-4bb0-adea-1da9cac4eaec
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.buildings_and_rooms
+  module:
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__buildings_and_rooms_block_1
+theme: serenowebtheme
+region: block_car_park
+weight: 0
+provider: null
+plugin: 'views_block:buildings_and_rooms-block_1'
+settings:
+  id: 'views_block:buildings_and_rooms-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

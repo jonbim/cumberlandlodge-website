@@ -1,0 +1,78 @@
+uuid: 7dc5218f-4254-4296-8aff-21301c55f625
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.sereno_large_x1_1199px_
+    - image.style.sereno_large_x2_1199px_
+    - image.style.sereno_medium_x1_991px_
+    - image.style.sereno_medium_x2_991px_
+    - image.style.sereno_small_x1_767px_
+    - image.style.sereno_small_x2_767px_
+  theme:
+    - serenowebtheme
+id: sereno_responsive_image_style
+label: 'Sereno responsive'
+image_style_mappings:
+  -
+    breakpoint_id: serenowebtheme.screen-lg-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_large_x1_1199px_
+  -
+    breakpoint_id: serenowebtheme.screen-lg-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_large_x2_1199px_
+  -
+    breakpoint_id: serenowebtheme.screen-md-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_large_x1_1199px_
+  -
+    breakpoint_id: serenowebtheme.screen-md-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_large_x2_1199px_
+  -
+    breakpoint_id: serenowebtheme.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_large_x1_1199px_
+  -
+    breakpoint_id: serenowebtheme.screen-md-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_large_x2_1199px_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_medium_x1_991px_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_medium_x2_991px_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_medium_x1_991px_
+  -
+    breakpoint_id: serenowebtheme.screen-sm-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_medium_x2_991px_
+  -
+    breakpoint_id: serenowebtheme.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: sereno_small_x1_767px_
+  -
+    breakpoint_id: serenowebtheme.screen-xs-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: sereno_small_x2_767px_
+breakpoint_group: serenowebtheme
+fallback_image_style: sereno_small_x1_767px_

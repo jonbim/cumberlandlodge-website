@@ -1,0 +1,31 @@
+uuid: 97816b07-9cf5-48bf-b8ed-cf5effabd898
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:6c096e59-0122-4990-b1bf-6b232200268c'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: impactblock100christmas
+theme: serenowebtheme
+region: sidebar_second
+weight: -17
+provider: null
+plugin: 'block_content:6c096e59-0122-4990-b1bf-6b232200268c'
+settings:
+  id: 'block_content:6c096e59-0122-4990-b1bf-6b232200268c'
+  label: 'Impact block - 100% Christmas'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /programmes/student-conferences
+    negate: false
+    context_mapping: {  }

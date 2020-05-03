@@ -1,0 +1,9 @@
+uuid: 6ec782a6-1d2d-4f84-b80d-032836ac81b6
+langcode: en
+status: true
+dependencies: {  }
+id: sound_cloud
+label: 'Sound Cloud'
+icon_uuid: null
+description: 'Migrated from paragraph bundle Sound Cloud'
+behavior_plugins: {  }

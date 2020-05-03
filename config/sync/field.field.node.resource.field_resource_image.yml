@@ -1,0 +1,38 @@
+uuid: 320c00d1-2e07-4991-9848-0f9b2d1c7eeb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_image
+    - node.type.resource
+  module:
+    - image
+id: node.resource.field_resource_image
+field_name: field_resource_image
+entity_type: node
+bundle: resource
+label: 'Resource Image'
+description: 'Add an image to your resource to override the default - a square 290 x 290 px'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: 'Resource image'
+    title: 'Resource image'
+    width: 6
+    height: 6
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

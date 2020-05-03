@@ -1,0 +1,17 @@
+uuid: 240365e0-7ccf-4033-bd02-e82112047f04
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: visitor_logo
+label: 'Visitor logo listing'
+effects:
+  2a9b2ed4-667d-43ed-9bd4-4b46c86ebc2a:
+    uuid: 2a9b2ed4-667d-43ed-9bd4-4b46c86ebc2a
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 400
+      height: 300
+      crop_type: focal_point

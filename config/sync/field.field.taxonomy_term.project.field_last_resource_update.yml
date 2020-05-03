@@ -1,0 +1,24 @@
+uuid: ac1a8b2c-8bd2-43b8-aa46-9ea1867aaea1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_last_resource_update
+    - taxonomy.vocabulary.project
+  module:
+    - datetime
+id: taxonomy_term.project.field_last_resource_update
+field_name: field_last_resource_update
+entity_type: taxonomy_term
+bundle: project
+label: 'Last resource update'
+description: 'A system field, recording when the most recent related resource was updated - see custom code'
+required: false
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

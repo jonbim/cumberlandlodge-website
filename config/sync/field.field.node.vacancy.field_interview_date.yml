@@ -1,0 +1,21 @@
+uuid: 42e318f8-93bd-41fb-941b-fabfa2e88f11
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interview_date
+    - node.type.vacancy
+  module:
+    - datetime
+id: node.vacancy.field_interview_date
+field_name: field_interview_date
+entity_type: node
+bundle: vacancy
+label: 'Interview Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,20 @@
+uuid: 7cc276f5-9674-4614-8ef2-acd34091d043
+langcode: en
+status: true
+dependencies: {  }
+id: migrate_drupal_7
+label: 'Import from Drupal 7'
+description: 'Migrations originally generated from drush migrate-upgrade --configure-only'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: drupal_7
+    database:
+      driver: mysql
+      username: sereno-mysql
+      password: lime
+      host: localhost
+      port: ''
+      database: cmb-d7.biscay.net
+      prefix: null

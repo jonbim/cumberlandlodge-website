@@ -1,0 +1,94 @@
+uuid: dff7662d-e8f2-4d89-a072-de415ee01512
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.project.field_annual_series
+    - field.field.taxonomy_term.project.field_image
+    - field.field.taxonomy_term.project.field_last_resource_update
+    - field.field.taxonomy_term.project.field_sticky_at_top_of_list
+    - image.style.thumbnail
+    - taxonomy.vocabulary.project
+  module:
+    - image
+    - path
+    - readonly_field_widget
+    - text
+id: taxonomy_term.project.default
+targetEntityType: taxonomy_term
+bundle: project
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_annual_series:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_image:
+    weight: 3
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_last_resource_update:
+    weight: 7
+    settings:
+      label: above
+      formatter_type: datetime_default
+      show_description: '1'
+      formatter_settings:
+        datetime_plain:
+          timezone_override: ''
+        datetime_time_ago:
+          future_format: '@interval hence'
+          past_format: '@interval ago'
+          granularity: '2'
+        datetime_default:
+          timezone_override: ''
+          format_type: medium
+        datetime_custom:
+          timezone_override: ''
+          date_format: 'Y-m-d\TH:i:s'
+    third_party_settings: {  }
+    type: readonly_field_widget
+    region: content
+  field_sticky_at_top_of_list:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+hidden: {  }

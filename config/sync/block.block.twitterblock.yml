@@ -1,0 +1,52 @@
+uuid: 2edaa17e-fcde-4295-a3bf-e6c11eb89683
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - system
+    - twitter_block
+  theme:
+    - serenowebtheme
+id: twitterblock
+theme: serenowebtheme
+region: sidebar_second
+weight: -12
+provider: null
+plugin: twitter_block
+settings:
+  id: twitter_block
+  label: 'On Twitter'
+  provider: twitter_block
+  label_display: visible
+  username: '@CumberlandLodge'
+  theme: ''
+  link_color: ''
+  width: ''
+  height: ''
+  chrome:
+    noheader: noheader
+    noborders: noborders
+    nofooter: '0'
+    noscrollbar: '0'
+    transparent: '0'
+  border_color: ''
+  language: ''
+  tweet_limit: '4'
+  related: ''
+  polite: polite
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-us/news
+    negate: false
+    context_mapping: {  }
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      news_article: news_article
+      page: page
+      vacancy: vacancy
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

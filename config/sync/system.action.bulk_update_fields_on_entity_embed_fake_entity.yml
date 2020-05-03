@@ -1,0 +1,11 @@
+uuid: a67d98ba-73c0-4e06-99f6-f675a254f819
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_entity_embed_fake_entity
+label: 'Bulk Update Fake entity type Fields'
+type: entity_embed_fake_entity
+plugin: bulk_update_fields_action_base
+configuration: {  }

@@ -1,0 +1,11 @@
+uuid: d807b821-e918-43cd-a7a6-ffaf4f60766b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.endorsement
+id: node_type_endorsement
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

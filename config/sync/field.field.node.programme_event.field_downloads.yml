@@ -1,0 +1,27 @@
+uuid: ccd43cb2-ba84-4e3d-838d-a701576c9beb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_downloads
+    - node.type.programme_event
+  module:
+    - file
+id: node.programme_event.field_downloads
+field_name: field_downloads
+entity_type: node
+bundle: programme_event
+label: Downloads
+description: 'Files that are unique to this event node - ie these are not shown as Learning Resources'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'txt pdf docx xls doc'
+  max_filesize: 12MB
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

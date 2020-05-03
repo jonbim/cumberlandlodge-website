@@ -1,0 +1,48 @@
+cdn_provider: ''
+_core:
+  default_config_hash: _5qrDuRmWmRVjW00si3U1s1NrgrocA4N653EYGRfgEE
+favicon:
+  mimetype: image/vnd.microsoft.icon
+  path: ''
+  url: 'https://cmb-d8.sereno-dev.co.uk/themes/custom/serenowebtheme/favicon.ico'
+  use_default: true
+logo:
+  path: ''
+  url: 'https://cmb-d8.sereno-dev.co.uk/themes/custom/serenowebtheme/logo.svg'
+  use_default: true
+schemas:
+  bootstrap: 8000
+  serenowebtheme: 8000
+fluid_container: 1
+table_responsive: '-1'
+region_wells:
+  upper_deck: ''
+  upper_deck_starboard: ''
+  navigation: ''
+  navigation_collapsible: ''
+  header: ''
+  highlighted: ''
+  help: ''
+  content: ''
+  sidebar_first: ''
+  sidebar_second: ''
+  pre_footer_stripe: ''
+  footer: ''
+  footer_later: ''
+  block_car_park: ''
+cdn_theme: bootstrap
+cdn_cache_ttl_versions: 0
+cdn_cache_ttl_themes: 0
+cdn_cache_ttl_assets: 0
+cdn_cache_ttl_library: 0
+reset_http_request_cache: ''
+table: ''
+breadcrumb_home: 1
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+  logo: true
+  name: true
+  slogan: true

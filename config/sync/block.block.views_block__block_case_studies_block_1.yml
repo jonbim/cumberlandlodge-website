@@ -1,0 +1,24 @@
+uuid: b0c48dc0-8642-49fe-acda-18a0fb42295b
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.block_case_studies
+  module:
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__block_case_studies_block_1
+theme: serenowebtheme
+region: block_car_park
+weight: 0
+provider: null
+plugin: 'views_block:block_case_studies-block_1'
+settings:
+  id: 'views_block:block_case_studies-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

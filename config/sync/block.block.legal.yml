@@ -1,0 +1,29 @@
+uuid: a3c1e32a-ad36-4f7c-ac1d-09a66e969b9e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:02874306-9ee1-4b07-89fb-9aa7a555fce1'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - serenowebtheme
+third_party_settings:
+  block_class:
+    classes: 'col-sm-6 col-md-3'
+id: legal
+theme: serenowebtheme
+region: footer_later
+weight: -22
+provider: null
+plugin: 'block_content:02874306-9ee1-4b07-89fb-9aa7a555fce1'
+settings:
+  id: 'block_content:02874306-9ee1-4b07-89fb-9aa7a555fce1'
+  label: Legal
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

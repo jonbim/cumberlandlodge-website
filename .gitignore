@@ -1,0 +1,51 @@
+# Ignore core and vendor when managing dependencies with Composer.
+/drush/contrib/
+/vendor/
+/web/core/
+/web/modules/contrib/
+/web/themes/contrib/
+/web/profiles/contrib/
+/web/libraries/
+
+# Ignore configuration files that may contain sensitive information.
+/web/sites/*/*settings*.php
+/web/sites/*/services*.yml
+
+# Ignore paths that contain generated content.
+/web/sites/*/files
+/web/sites/*/private
+/web/sites/*/tmp
+
+// Rod Tatham, Sereno :: 2018-05-30
+# local config
+/config/dev_toolbox/*
+
+# ------------------------------------------------------------------------------
+# Linux
+# ------------------------------------------------------------------------------
+
+# Tilde files.
+*~
+
+# KDE directory preferences.
+.directory
+
+# Linux trash folder which might appear on any partition or disk.
+.Trash-*
+
+# ------------------------------------------------------------------------------
+# Editor files
+# ------------------------------------------------------------------------------
+
+.komodotools
+*.komodoproject
+*.sublime-workspace
+.idea
+.idea/*
+
+# ------------------------------------------------------------------------------
+# The gulp file and the map file are environment specific
+# ------------------------------------------------------------------------------
+
+web/themes/custom/serenowebsitetheme/gulpfile.js
+web/themes/custom/serenowebsitetheme/css/maps/style.css.map

@@ -1,0 +1,11 @@
+id: event_hashtag_link
+label: 'Twitter hashtag'
+ui_limit: ''
+properties:
+  content:
+    value: "<p><a href=\"https://www.twitter.com/hashtag/[node:field_twitter_hashtag]\">#[node:field_twitter_hashtag]</a></p>\r\n"
+    format: full_html
+type: token
+type_label: 'Token field'
+entities:
+  node: node

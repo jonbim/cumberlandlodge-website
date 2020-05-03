@@ -1,0 +1,11 @@
+uuid: 2029025b-c15a-49b4-859e-10726c0e8604
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node_type_page
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

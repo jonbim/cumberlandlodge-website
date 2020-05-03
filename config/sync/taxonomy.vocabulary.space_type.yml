@@ -1,0 +1,8 @@
+uuid: 6f2cd3eb-89a8-4666-9b31-d13f6985298c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Space Type'
+vid: space_type
+description: ''
+weight: 0

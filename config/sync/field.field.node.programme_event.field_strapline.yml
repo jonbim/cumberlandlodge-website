@@ -1,0 +1,19 @@
+uuid: 4a909ad5-dc58-4587-bbac-03ca61803673
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strapline
+    - node.type.programme_event
+id: node.programme_event.field_strapline
+field_name: field_strapline
+entity_type: node
+bundle: programme_event
+label: Strapline
+description: 'Add a brief single sentence description of your page. This text is displayed when you use highlight your page elsewhere on the site within entity queues or lists.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,8 @@
+uuid: 1fc29ed6-bf97-437b-b2ef-475dff4b69c4
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_endorsement
+label: 'Endorsement comment'
+target_entity_type_id: node
+description: null

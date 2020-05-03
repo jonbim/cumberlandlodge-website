@@ -1,0 +1,31 @@
+uuid: e77e3080-8bac-487f-bc09-63450b4ba33f
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.keep_in_touch
+  module:
+    - system
+    - webform
+  theme:
+    - serenowebtheme
+id: webform
+theme: serenowebtheme
+region: content
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Webform - Keep in touch'
+  provider: webform
+  label_display: '0'
+  webform_id: keep_in_touch
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /keep-in-touch
+    negate: false
+    context_mapping: {  }

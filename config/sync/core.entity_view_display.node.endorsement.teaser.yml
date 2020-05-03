@@ -1,0 +1,47 @@
+uuid: 28d3cd27-0a7f-45dd-9599-f9ce5daffec1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.endorsement.body
+    - field.field.node.endorsement.comment_node_endorsement
+    - field.field.node.endorsement.field_client_image
+    - field.field.node.endorsement.field_client_name
+    - field.field.node.endorsement.field_endorsement_logo
+    - field.field.node.endorsement.field_endorsement_type
+    - node.type.endorsement
+  module:
+    - text
+    - user
+id: node.endorsement.teaser
+targetEntityType: node
+bundle: endorsement
+mode: teaser
+content:
+  body:
+    label: hidden
+    weight: 0
+    type: text_summary_or_trimmed
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_client_name:
+    label: hidden
+    weight: 1
+    type: string
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_endorsement: true
+  field_client_image: true
+  field_endorsement_logo: true
+  field_endorsement_type: true

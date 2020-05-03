@@ -1,0 +1,93 @@
+uuid: 7ebeb80b-475c-4b95-b147-3d2427dabfb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.featured
+    - field.field.node.programme_event.comment_node_programme_event
+    - field.field.node.programme_event.field_add_to_calendar
+    - field.field.node.programme_event.field_date_range
+    - field.field.node.programme_event.field_downloads
+    - field.field.node.programme_event.field_event_image
+    - field.field.node.programme_event.field_event_label
+    - field.field.node.programme_event.field_event_organisation
+    - field.field.node.programme_event.field_event_type
+    - field.field.node.programme_event.field_eventbrite_button
+    - field.field.node.programme_event.field_location
+    - field.field.node.programme_event.field_p_body
+    - field.field.node.programme_event.field_person
+    - field.field.node.programme_event.field_programme_event_resource
+    - field.field.node.programme_event.field_related_content
+    - field.field.node.programme_event.field_show_register_link
+    - field.field.node.programme_event.field_special_event
+    - field.field.node.programme_event.field_strapline
+    - field.field.node.programme_event.field_theme
+    - field.field.node.programme_event.field_twitter_hashtag
+    - node.type.programme_event
+    - responsive_image.styles.sereno_responsive_image_style
+  module:
+    - ds
+    - field_formatter_class
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_event_image
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.programme_event.featured
+targetEntityType: node
+bundle: programme_event
+mode: featured
+content:
+  field_event_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      responsive_image_style: sereno_responsive_image_style
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  comment_node_programme_event: true
+  field_add_to_calendar: true
+  field_date_range: true
+  field_downloads: true
+  field_event_label: true
+  field_event_organisation: true
+  field_event_type: true
+  field_eventbrite_button: true
+  field_location: true
+  field_p_body: true
+  field_person: true
+  field_programme_event_resource: true
+  field_related_content: true
+  field_show_register_link: true
+  field_special_event: true
+  field_strapline: true
+  field_theme: true
+  field_twitter_hashtag: true
+  links: true
+  search_api_excerpt: true
+  sharethis: true

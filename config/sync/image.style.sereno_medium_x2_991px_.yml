@@ -1,0 +1,15 @@
+uuid: 47279cce-c791-449d-867e-1c5358bdc7ba
+langcode: en
+status: true
+dependencies: {  }
+name: sereno_medium_x2_991px_
+label: 'Sereno Medium x2 (991px)'
+effects:
+  8fa8d024-e948-49c8-b568-0f09c358dc3c:
+    uuid: 8fa8d024-e948-49c8-b568-0f09c358dc3c
+    id: image_scale
+    weight: 1
+    data:
+      width: 1982
+      height: null
+      upscale: false

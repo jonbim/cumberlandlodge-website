@@ -1,0 +1,8 @@
+uuid: fc6219c3-7fe6-4fba-bef6-99376443fcc0
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_exhibition
+label: 'Exhibition comment'
+target_entity_type_id: node
+description: null

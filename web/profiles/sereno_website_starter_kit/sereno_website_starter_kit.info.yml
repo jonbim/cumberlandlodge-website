@@ -1,0 +1,109 @@
+name: Sereno Website starter kit
+type: profile
+description: 'Kickstarts a copy of Sereno Website.'
+core: '8.x'
+
+
+#distribution:
+#  name: Sereno Website starter kit
+
+dependencies:
+  - admin_toolbar
+  - admin_toolbar_tools
+  - automated_cron
+  - block
+  - block_class
+  - block_content
+  - bootstrap_paragraphs
+  - breakpoint
+  - ckeditor
+  - color
+  - comment
+  - components
+  - config
+  - config_filter
+  - config_ignore
+  - config_readonly
+  - contact
+  - contextual
+  - ctools
+  - datetime
+  - dblog
+  - devel
+  - disable_messages
+  - dynamic_page_cache
+  - easy_breadcrumb
+  - editor
+  - entity_browser
+  - entity_reference
+  - entity_reference_revisions
+  - entityqueue
+  - environment_indicator
+  - field
+  - field_formatter_class
+  - field_group
+  - field_ui
+  - file
+  - filter
+  - flag
+  - help
+  - history
+  - image
+  - layout_plugin
+  - link
+  - masquerade
+  - matomo
+  - menu_ui
+  - metatag
+  - node
+  - options
+  - page_cache
+  - path
+  - poll
+  - quickedit
+  - rabbit_hole
+  - rdf
+  - readonly_field_widget
+  - redirect
+  - reroute_email
+  - responsive_image
+  - responsive_preview
+  - search
+  - settings_tray
+  - shield
+  - shortcut
+  - single_datetime
+  - sitemap
+  - stage_file_proxy
+  - statistics
+  - statistics_counter
+  - syslog
+  - system
+  - taxonomy
+  - taxonomy_unique
+  - telephone
+  - text
+  - token
+  - toolbar
+  - tour
+  - twig_field_value
+  - twig_tweak
+  - twig_xdebug
+  - ultimate_cron
+  - update
+  - user
+  - video_embed_field
+  - views_bootstrap
+  - views_bulk_operations
+  - views_ui
+  - viewsreference
+  - menu_link_content
+  - pathauto
+  - views
+  - paragraphs
+
+themes:
+  - serenowebsitetheme
+  - bootstrap
+  - bartik
+  - seven

@@ -1,0 +1,22 @@
+uuid: 3efb8d58-3bfa-45e4-bf58-fa71336b641a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: case_study
+label: 'Content - Case study'
+type: 'canonical_entities:node'
+pattern: 'impact/case-studies/[node:title]'
+selection_criteria:
+  afc635a2-1e36-4f87-9d90-2561ab5d7f9e:
+    id: node_type
+    bundles:
+      case_study: case_study
+    negate: false
+    context_mapping:
+      node: node
+    uuid: afc635a2-1e36-4f87-9d90-2561ab5d7f9e
+selection_logic: and
+weight: -10
+relationships: {  }

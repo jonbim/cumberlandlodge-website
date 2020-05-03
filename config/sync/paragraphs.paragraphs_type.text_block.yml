@@ -1,0 +1,9 @@
+uuid: c01bef19-bd1a-4df1-8dcb-2a792c8a231f
+langcode: en
+status: true
+dependencies: {  }
+id: text_block
+label: 'Text block'
+icon_uuid: null
+description: 'Migrated from paragraph bundle Text block'
+behavior_plugins: {  }

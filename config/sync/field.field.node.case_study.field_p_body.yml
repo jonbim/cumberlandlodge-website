@@ -1,0 +1,111 @@
+uuid: 01cc8931-efdf-47a7-a3fb-d55126926d7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p_body
+    - node.type.case_study
+    - paragraphs.paragraphs_type.bp_accordion
+    - paragraphs.paragraphs_type.bp_accordion_section
+    - paragraphs.paragraphs_type.bp_view
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.quotation
+    - paragraphs.paragraphs_type.sound_cloud
+    - paragraphs.paragraphs_type.text_block
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.case_study.field_p_body
+field_name: field_p_body
+entity_type: node
+bundle: case_study
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+      quotation: quotation
+      text_block: text_block
+      video: video
+      bp_accordion: bp_accordion
+      bp_accordion_section: bp_accordion_section
+      bp_view: bp_view
+      sound_cloud: sound_cloud
+    target_bundles_drag_drop:
+      image:
+        enabled: true
+        weight: 2
+      quotation:
+        enabled: true
+        weight: 3
+      text_block:
+        enabled: true
+        weight: 4
+      video:
+        enabled: true
+        weight: 5
+      slide:
+        weight: 9
+        enabled: false
+      bp_accordion:
+        enabled: true
+        weight: 10
+      bp_accordion_section:
+        enabled: true
+        weight: 11
+      bp_blank:
+        weight: 12
+        enabled: false
+      bp_block:
+        weight: 13
+        enabled: false
+      bp_carousel:
+        weight: 14
+        enabled: false
+      bp_columns:
+        weight: 15
+        enabled: false
+      bp_columns_three_uneven:
+        weight: 16
+        enabled: false
+      bp_columns_two_uneven:
+        weight: 17
+        enabled: false
+      bp_column_wrapper:
+        weight: 18
+        enabled: false
+      bp_image:
+        weight: 19
+        enabled: false
+      bp_modal:
+        weight: 20
+        enabled: false
+      bp_simple:
+        weight: 21
+        enabled: false
+      bp_tabs:
+        weight: 22
+        enabled: false
+      bp_tab_section:
+        weight: 23
+        enabled: false
+      bp_view:
+        enabled: true
+        weight: 24
+      sound_cloud:
+        enabled: true
+        weight: 25
+      view:
+        weight: 26
+        enabled: false
+      call_to_action:
+        weight: 39
+        enabled: false
+field_type: entity_reference_revisions

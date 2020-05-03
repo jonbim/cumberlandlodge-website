@@ -1,0 +1,26 @@
+uuid: 39a1bfa5-6e20-4c68-a36d-93dff1572bef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme
+    - node.type.programme_event
+    - taxonomy.vocabulary.programme_theme
+id: node.programme_event.field_theme
+field_name: field_theme
+entity_type: node
+bundle: programme_event
+label: Theme
+description: 'Thematic areas your event may be attached to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      programme_theme: programme_theme
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

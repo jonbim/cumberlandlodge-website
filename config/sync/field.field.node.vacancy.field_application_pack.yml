@@ -1,0 +1,27 @@
+uuid: 7a4425d9-07f5-42f8-955a-0b53e6d7e1f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_pack
+    - node.type.vacancy
+  module:
+    - file
+id: node.vacancy.field_application_pack
+field_name: field_application_pack
+entity_type: node
+bundle: vacancy
+label: 'Application Pack'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: vacancy
+  file_extensions: 'txt docx doc odt pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

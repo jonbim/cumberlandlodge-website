@@ -1,0 +1,27 @@
+uuid: a3653e61-84f9-4a68-9c7b-d6810829b8b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_endorsement
+    - field.field.comment.comment_node_endorsement.comment_body
+  module:
+    - text
+id: comment.comment_node_endorsement.default
+targetEntityType: comment
+bundle: comment_node_endorsement
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

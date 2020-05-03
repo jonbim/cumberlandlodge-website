@@ -1,0 +1,31 @@
+uuid: 5defc564-90fa-42d5-8e34-8c138e9b9675
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'Parent redirect'
+type: parent_redirect
+description: 'This page acts as a parent page to assist with menus and breadcrumbs. It does not contain content but a 301 redirect helps organise content. This may be replaced by true Landing Pages if required.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: true

@@ -1,0 +1,18 @@
+uuid: 81f1cf40-cf1f-4581-bb3f-53ada71b4eb4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hosted_event
+id: node.hosted_event.title
+field_name: title
+entity_type: node
+bundle: hosted_event
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

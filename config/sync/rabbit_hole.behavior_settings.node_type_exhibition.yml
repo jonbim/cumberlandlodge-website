@@ -1,0 +1,11 @@
+uuid: 5b157560-cc72-465c-8bc9-d1ef424bec22
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.exhibition
+id: node_type_exhibition
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

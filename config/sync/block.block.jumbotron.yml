@@ -1,0 +1,33 @@
+uuid: b445f5c8-e541-4808-81f8-966e4911ce57
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1cabe20c-c8b7-4622-9b2a-cb9323f65384'
+  module:
+    - block_content
+    - ctools
+  theme:
+    - serenowebtheme
+id: jumbotron
+theme: serenowebtheme
+region: header
+weight: -7
+provider: null
+plugin: 'block_content:1cabe20c-c8b7-4622-9b2a-cb9323f65384'
+settings:
+  id: 'block_content:1cabe20c-c8b7-4622-9b2a-cb9323f65384'
+  label: Jumbotron
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      landing_page: landing_page
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

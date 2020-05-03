@@ -1,0 +1,35 @@
+uuid: 16aea28d-c81d-4a31-bb45-52597f962570
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:eb1453b1-f97c-4ee5-a058-9509f335cd54'
+  module:
+    - block_class
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+third_party_settings:
+  block_class:
+    classes: col-sm-3
+id: footerfunderslogos
+theme: serenowebtheme
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:eb1453b1-f97c-4ee5-a058-9509f335cd54'
+settings:
+  id: 'block_content:eb1453b1-f97c-4ee5-a058-9509f335cd54'
+  label: 'Footer funders'' logos'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

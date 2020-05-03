@@ -1,0 +1,187 @@
+<?php
+
+/**
+ * @file
+ * Contains srn_data_fiddle_post_csv_import.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+use Drupal\Core\Messenger\MessengerInterface;
+
+// for the fiddling of data
+use Drupal\user\Entity\User;
+use Drupal\node\Entity\Node;
+use Drupal\paragraphs\Entity\Paragraph;
+use Drupal\paragraphs\Entity\ParagraphsType;
+use Drupal\taxonomy\Entity\Term;
+
+
+/**
+ * Implements hook_help().
+ */
+function srn_data_fiddle_post_csv_import_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the srn_data_fiddle_post_csv_import module.
+    case 'help.page.srn_data_fiddle_post_csv_import':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Grabs paragraphs from cType Paragraph importer and attaches them to existing nodes already migrated') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function srn_data_fiddle_post_csv_import_theme() {
+  return [
+    'srn_data_fiddle_post_csv_import' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+
+
+/**
+ * Implements hook_cron().
+ *
+ * Attach the paragraphs held in cType Paragraph Importer to their
+ * parent nodes, which have already been imported via Drupal Migrate
+ */
+/*
+function srn_data_fiddle_post_csv_import_cron() {
+
+  $count_of_updated_teams = 0;
+  $count_of_updated_managers = 0;
+  $count_of_updated_places = 0;
+  $tally_new_teams = 0;
+
+
+  // *** GET WHOLE LIST OF UNPROCESSED NODES IN PARAGRAPH_IMPORTER *** //
+
+  $query = \Drupal::entityQuery('node');
+  $query->condition('type','paragraph_importer');
+  //$query->accessCheck(FALSE); // Otherwise, you only get published nodes
+
+  $nids = $query->execute();
+
+  $paragraphs_from_csv = Node::loadMultiple($nids);
+
+  \Drupal::logger('srn_data_fiddle_post_csv_import')->notice('<br> Here comes the new paragraphs:-' );
+
+//  $i=0;
+
+  foreach ($paragraphs_from_csv as $new_content) {
+
+  // *** FIND PARENT NODE OF THIS SPECIFIC PARAGRAPH THAT WE WANT TO IMPORT *** //
+  #  \Drupal::logger('srn_data_fiddle_post_csv_import')
+   #   ->notice('<br> New content added:- ' . $new_content->field_parent_node_id->value . ' - '. dump($new_content));
+    drupal_set_message('field_csv_id_in_text:- '  . $new_content->field_csv_id_in_text->value);
+    drupal_set_message('field_parent_node_id:- '  . $new_content->field_parent_node_id->value);
+    drupal_set_message('field_order:- '  . $new_content->field_order->value);
+    drupal_set_message('field_paragraph_bundle:- '  . $new_content->field_paragraph_bundle->value);
+
+    drupal_set_message('field_text_block:- '  . $new_content->field_text_block->value);
+
+    drupal_set_message('field_image_in_text:- '  . $new_content->field_image_in_text->value);
+    drupal_set_message('field_text_block_2:- '  . $new_content->field_text_block_2->value);
+
+    drupal_set_message('field_video_url_in_text:- '  . $new_content->field_video_url_in_text->value);
+    drupal_set_message("<hr>");
+    #  kpr($new_content);
+
+    $csv_id_in_text = $new_content->field_csv_id_in_text->value;
+    $parent_node_id = $new_content->field_parent_node_id->value;
+    $order = $new_content->field_order->value;
+    $bundle = $new_content->field_paragraph_bundle->value;
+
+    $text_block = $new_content->field_text_block->value;
+
+    $image_in_text = $new_content->field_image_in_text->value;
+    $text_block_2 = $new_content->field_text_block_2->value;
+
+    $video_url_in_text = $new_content->field_video_url_in_text->value;
+
+    if($bundle == 'text_block') {
+      $paragraph = Paragraph::create([
+        'type' => 'text_block',
+        'field_text_block' => $text_block,
+        'format' => 'full_html',
+      ]);
+
+      if(!$paragraph || empty($paragraph)) {
+        drupal_set_message('a) COULDNT CREATE PARAGRAPH ' . $parent_node_id . ' ~ ' . $bundle . ' - ' . $csv_id_in_text);
+        continue;
+      }
+    }
+    elseif($bundle == 'image') {
+      $paragraph = Paragraph::create(['type' => 'image',]);
+
+      // @var \Drupal\file\FileInterface[] $files
+      $file = \Drupal::entityTypeManager()
+        ->getStorage('file')
+        ->loadByProperties(['uri' => $image_in_text]);
+      $paragraph->set('field_image', $file);
+      $paragraph->set('field_text_block_2', $text_block_2); // ie the caption
+
+      if(!$paragraph || empty($paragraph)) {
+        drupal_set_message('b) COULDNT CREATE PARAGRAPH ' . $parent_node_id . ' ~ ' . $bundle . ' - ' . $csv_id_in_text);
+        continue;
+      }
+    }
+    elseif($bundle == 'video') {
+      $paragraph = Paragraph::create([
+        'type' => 'video',
+        'field_video_url' => $video_url_in_text,
+        ]);
+
+      if(!$paragraph || empty($paragraph)) {
+        drupal_set_message('c) COULDNT CREATE PARAGRAPH ' . $parent_node_id . ' ~ ' . $bundle . ' - ' . $csv_id_in_text);
+        continue;
+      }
+    }
+    else {
+      drupal_set_message('You cant import that kind of paragraph:- ');
+      drupal_set_message($bundle);
+      drupal_set_message($csv_id_in_text);
+      drupal_set_message("<hr>");
+      continue;
+    }
+
+    $paragraph->isNew();
+    #$paragraph->save();
+
+    $node = Node::load($parent_node_id);
+    $node->field_p_body->appendItem($paragraph);
+
+    #$node->save();
+
+    //    $i++;
+    //    if($i>10) break;
+      // *** SET UP THE NEW PARAGRAPH AND THEN SAVE IT *** //
+    //    $neu_paragraph = Paragraph::create([
+    //      'type' => 'image',
+    //      'field_media' => array(
+    //        'target_id'  =>  $drupalMedia->id(),
+    //      )
+    //    ]);
+    //    $imageparagraph->save();
+
+
+    //    $node = entity_load('node', $nid);
+    //    $paragraph = Paragraph::create(['type' => 'PARAGRAPH_TYPE',]);
+    //    $paragraph->set('TEXT_FIELD_NAME', $content);
+    //    if ($fid) {
+    //      $file = file_load($fid);
+    //      $paragraph->set('IMAGE_FIELD_NAME', $file);
+    //    }
+    //    $paragraph->isNew();
+    //    $paragraph->save();
+
+  }
+}
+*/

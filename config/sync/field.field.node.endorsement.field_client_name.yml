@@ -1,0 +1,19 @@
+uuid: d9de502c-938f-4fce-9887-eb44a167f8be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_client_name
+    - node.type.endorsement
+id: node.endorsement.field_client_name
+field_name: field_client_name
+entity_type: node
+bundle: endorsement
+label: 'Client Name'
+description: 'The name of the person providing the endorsement.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

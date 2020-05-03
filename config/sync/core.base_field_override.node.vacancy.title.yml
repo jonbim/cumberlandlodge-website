@@ -1,0 +1,18 @@
+uuid: 6a69c702-adae-4117-8307-d76092d231c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.vacancy
+id: node.vacancy.title
+field_name: title
+entity_type: node
+bundle: vacancy
+label: Title
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

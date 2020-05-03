@@ -1,0 +1,47 @@
+uuid: a7cf0a90-6278-44df-ae1c-55b914829d49
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:2c9875c6-670f-4c7a-b0ba-b1d3429a0d05'
+  module:
+    - block_content
+    - system
+    - user
+  theme:
+    - serenowebtheme
+id: impactblock4400
+theme: serenowebtheme
+region: sidebar_second
+weight: -19
+provider: null
+plugin: 'block_content:2c9875c6-670f-4c7a-b0ba-b1d3429a0d05'
+settings:
+  id: 'block_content:2c9875c6-670f-4c7a-b0ba-b1d3429a0d05'
+  label: 'Impact block - 4,400'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/venue-hire/subsidised-student-retreats\r\n/programmes/student-bursaries\r\n/impact/our-impact\r\n/impact/support-our-work\r\n/about-us/what-we-do\r\n/about-us/our-ethos"
+    negate: false
+    context_mapping: {  }
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      administrator: administrator
+      lodge_editor: lodge_editor
+      site_architect: site_architect
+      editor: editor
+      lodge_contributor: lodge_contributor
+      staff: staff
+      lodge_administrator: lodge_administrator
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

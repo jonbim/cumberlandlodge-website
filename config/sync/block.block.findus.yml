@@ -1,0 +1,29 @@
+uuid: 34377a26-599e-4335-b6df-2d3688cfc5ca
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:09b21395-76f5-435b-854c-dc372063bc25'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - serenowebtheme
+third_party_settings:
+  block_class:
+    classes: 'col-sm-6 col-md-3'
+id: findus
+theme: serenowebtheme
+region: footer_later
+weight: -25
+provider: null
+plugin: 'block_content:09b21395-76f5-435b-854c-dc372063bc25'
+settings:
+  id: 'block_content:09b21395-76f5-435b-854c-dc372063bc25'
+  label: 'Find Us'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

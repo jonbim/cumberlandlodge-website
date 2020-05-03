@@ -1,0 +1,34 @@
+uuid: 9d1da076-d707-4ecd-aeb7-9220985bb552
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_content
+    - node.type.case_study
+    - node.type.landing_page
+    - node.type.page
+    - node.type.programme_event
+    - node.type.resource
+id: node.case_study.field_related_content
+field_name: field_related_content
+entity_type: node
+bundle: case_study
+label: 'Related Content'
+description: 'Add other basic pages you think a user might find helpful - these will be displayed next to your content in the secondary column. Add 1-6 items.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      page: page
+      landing_page: landing_page
+      programme_event: programme_event
+      resource: resource
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: page
+field_type: entity_reference

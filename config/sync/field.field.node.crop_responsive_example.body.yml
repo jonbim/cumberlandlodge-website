@@ -1,0 +1,25 @@
+uuid: 3cea18b9-b211-4f43-bf92-44d2834c6db6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.crop_responsive_example
+  module:
+    - text
+_core:
+  default_config_hash: YkMwWWMkPD4GSUIImabkSGS3nV7gxvPkqj4oDJAeZzU
+id: node.crop_responsive_example.body
+field_name: body
+entity_type: node
+bundle: crop_responsive_example
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

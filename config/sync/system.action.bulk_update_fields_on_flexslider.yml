@@ -1,0 +1,11 @@
+uuid: dc0bf042-c1ac-44dd-9704-602f60cf6f36
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_flexslider
+label: 'Bulk Update FlexSlider optionset Fields'
+type: flexslider
+plugin: bulk_update_fields_action_base
+configuration: {  }

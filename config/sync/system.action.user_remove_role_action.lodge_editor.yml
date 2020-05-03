@@ -1,0 +1,14 @@
+uuid: 0306615b-1260-4369-be2f-d3c123af4df6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lodge_editor
+  module:
+    - user
+id: user_remove_role_action.lodge_editor
+label: 'Remove the lodge-editor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lodge_editor

@@ -1,0 +1,11 @@
+uuid: ae7ef16a-a280-4883-a0b0-4b759ae9962d
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_linkit_profile
+label: 'Bulk Update Linkit profile Fields'
+type: linkit_profile
+plugin: bulk_update_fields_action_base
+configuration: {  }

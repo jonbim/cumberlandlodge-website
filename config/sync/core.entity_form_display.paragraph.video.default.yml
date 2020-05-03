@@ -1,0 +1,23 @@
+uuid: c44da1aa-4c7e-47e9-a1ae-7777e301e0e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.video.field_video_url
+    - paragraphs.paragraphs_type.video
+  module:
+    - video_embed_field
+id: paragraph.video.default
+targetEntityType: paragraph
+bundle: video
+mode: default
+content:
+  field_video_url:
+    weight: 1
+    type: video_embed_field_textfield
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

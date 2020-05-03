@@ -1,0 +1,59 @@
+uuid: 9c461444-a47c-4235-805c-94fbf27dd78a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.comment_node_landing_page
+    - field.field.node.landing_page.field_blurb
+    - field.field.node.landing_page.field_content
+    - field.field.node.landing_page.field_image
+    - field.field.node.landing_page.field_link_path
+    - field.field.node.landing_page.field_page_intro
+    - field.field.node.landing_page.field_strapline
+    - node.type.landing_page
+  module:
+    - entity_reference_revisions
+    - field_formatter_class
+    - user
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_page_intro:
+    label: visually_hidden
+    weight: 0
+    type: basic_string
+    settings: {  }
+    third_party_settings:
+      field_formatter_class:
+        class: text-center
+    region: content
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  comment_node_landing_page: true
+  field_blurb: true
+  field_image: true
+  field_link_path: true
+  field_strapline: true
+  search_api_excerpt: true

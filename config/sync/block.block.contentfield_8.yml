@@ -1,0 +1,37 @@
+uuid: 58522125-ac2b-48e1-b3b6-015bdf3a3fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+  module:
+    - ctools
+    - fieldblock
+    - responsive_image
+  theme:
+    - serenowebtheme
+id: contentfield_8
+theme: serenowebtheme
+region: sidebar_second
+weight: -10
+provider: null
+plugin: 'fieldblock:node'
+settings:
+  id: 'fieldblock:node'
+  label: 'Content field'
+  provider: fieldblock
+  label_display: '0'
+  label_from_field: false
+  field_name: field_image
+  formatter_id: responsive_image
+  formatter_settings:
+    responsive_image_style: sereno_responsive_image_style
+    image_link: ''
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      case_study: case_study
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

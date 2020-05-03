@@ -1,0 +1,93 @@
+"use strict";
+
+// Don't you forget to update the proxyURL if you use this @ another URL
+var config = {
+//  ************ UPDATE THE FOLLOWING PROXYURL LINE ************
+  proxyURL: 'foxhole.crt.biscay.net',
+  sassPath: './sass',
+  jsPath: './sass/js',
+  fontPath: './sass/font',
+  twigPath: './sass/templates',
+  nodeDir: './node_modules'
+}
+
+var gulp = require("gulp");
+var uglify = require('gulp-uglifyjs');
+var sass = require("gulp-sass");
+var util = require("gulp-util");
+var notify = require("gulp-notify");
+var sourcemaps = require("gulp-sourcemaps");
+
+var browserSync = require('browser-sync').create();
+
+// nb - this isn't fired with 'gulp watch', since it only
+// happens once in a blue moon
+gulp.task("fonts", function () {
+  return gulp.src(
+      [config.nodeDir + "/bootstrap-sass/assets/fonts/bootstrap/**.*"],
+      [config.nodeDir + "/font-awesome/fonts/**.*"],
+      [config.fontPath + "/**.*"]
+  )
+    .pipe(gulp.dest("./fonts/bootstrap"))
+    .pipe(browserSync.stream());
+});
+
+gulp.task("sass", function () {
+  return gulp.src([
+    config.sassPath + "/**/*.scss"
+  ])
+    .pipe(sourcemaps.init())
+    .pipe(sass({
+    //  outputStyle: "compressed", - uncomment for production
+      includePaths: [
+        config.nodeDir + "/bootstrap/assets/stylesheets",
+        config.nodeDir + "/font-awesome/scss"]
+    })
+      .on("error", sass.logError))
+    .pipe(sourcemaps.write("./maps"))
+    .pipe(gulp.dest("./css"))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('uglify', function() { // nb - only uglify in production - see comment
+  return gulp.src([
+    config.jsPath + "/**/*.js"
+  ])
+   // .pipe(uglify('main.js')) - uncomment for production
+    .pipe(gulp.dest('./js'))
+    .pipe(browserSync.stream());
+});
+
+/**
+ * @task clearcache
+ * Clear all caches
+ */
+gulp.task('clearcache', function(done) {
+  return cp.spawn('drush', ['cache-rebuild'], {stdio: 'inherit'})
+  .on('close', done);
+});
+
+/**
+ * @task reload
+ * Refresh the page after clearing cache
+ */
+gulp.task('reload', ['clearcache'], function () {
+  browserSync.reload();
+});
+
+// Rerun the task when a file changes
+gulp.task("watch", function () {
+
+    browserSync.init({
+        proxy: config.proxyURL
+    });
+
+  gulp.watch(config.sassPath + "/**/*.scss", ["sass"]);
+  gulp.watch(config.sassPath + "/**/*.js", ['uglify']);
+  gulp.watch([config.twigPath + '/**/*.twig','./css/style.css','./js/*.js']).on('change',browserSync.reload);
+
+
+});
+
+
+gulp.task("default", ["fonts", "sass", "uglify"]);

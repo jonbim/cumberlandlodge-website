@@ -1,0 +1,10 @@
+uuid: 4dd9494c-4d7a-4349-afe5-84378c24c901
+langcode: en
+status: true
+dependencies:
+  module:
+    - file
+id: file.media_link
+label: media_link
+targetEntityType: file
+cache: true

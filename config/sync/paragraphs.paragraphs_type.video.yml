@@ -1,0 +1,9 @@
+uuid: 81ce3168-881d-4163-a910-430b6d50a9d2
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+icon_uuid: null
+description: 'Migrated from paragraph bundle Video'
+behavior_plugins: {  }

@@ -1,0 +1,14 @@
+uuid: 4c3963c1-4434-4aec-aac1-415bdea0db0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lodge_administrator
+  module:
+    - user
+id: user_add_role_action.lodge_administrator
+label: 'Add the lodge-administrator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: lodge_administrator

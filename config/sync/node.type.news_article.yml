@@ -1,0 +1,31 @@
+uuid: 6b38a22c-61ca-4c5b-b6f8-ddd391b780b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    parent: 'main:'
+    available_menus:
+      - main
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_past_date_created: false
+    publish_required: false
+    publish_revision: false
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: false
+name: 'News Article'
+type: news_article
+description: 'Use <em>articles</em> for time-sensitive content like news or press releases.'
+help: ''
+new_revision: false
+preview_mode: 0
+display_submitted: false

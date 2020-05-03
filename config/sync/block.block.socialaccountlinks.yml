@@ -1,0 +1,29 @@
+uuid: 88b08907-f945-499c-b124-2bb0dc1bc7bd
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6dccdc8a-a9ff-4e92-8f66-6aaef62d57cb'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - serenowebtheme
+third_party_settings:
+  block_class:
+    classes: 'text-center footer-social'
+id: socialaccountlinks
+theme: serenowebtheme
+region: footer
+weight: -13
+provider: null
+plugin: 'block_content:6dccdc8a-a9ff-4e92-8f66-6aaef62d57cb'
+settings:
+  id: 'block_content:6dccdc8a-a9ff-4e92-8f66-6aaef62d57cb'
+  label: 'Social account links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

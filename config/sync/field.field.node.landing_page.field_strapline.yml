@@ -1,0 +1,19 @@
+uuid: 94aa32db-f5dd-4f65-9317-e0cd94fe8ed7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_strapline
+    - node.type.landing_page
+id: node.landing_page.field_strapline
+field_name: field_strapline
+entity_type: node
+bundle: landing_page
+label: 'Jumbotron title'
+description: 'Short title - appears super-imposed over the image'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

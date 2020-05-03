@@ -1,0 +1,57 @@
+uuid: a85c49d3-fd82-47e1-bb26-5809a9f9d702
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_add_to_calendar
+    - node.type.programme_event
+  module:
+    - addtocalendar
+id: node.programme_event.field_add_to_calendar
+field_name: field_add_to_calendar
+entity_type: node
+bundle: programme_event
+label: 'Add to Calendar'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Add to Calendar'
+  off_label: 'Add to Calendar Disabled'
+  addtocalendar_show: 1
+  addtocalendar_settings:
+    style: glow_orange
+    atc_title:
+      field: title
+      tokenized: Title
+    atc_description:
+      field: field_strapline
+      tokenized: Description
+    atc_location:
+      field: field_p_body
+      tokenized: Location
+    atc_organizer:
+      field: field_location
+      tokenized: 'Cumberland Lodge'
+    atc_organizer_email:
+      field: token
+      tokenized: info@cumberlandlodge.org.uk
+    atc_date_start:
+      field: field_date_range
+      tokenized: ''
+    atc_date_end:
+      field: field_date_range
+      tokenized: ''
+    atc_privacy: public
+    data_secure: auto
+    data_calendars:
+      iCalendar: iCalendar
+      'Google Calendar': 'Google Calendar'
+      Outlook: Outlook
+      'Outlook Online': 'Outlook Online'
+      'Yahoo! Calendar': 'Yahoo! Calendar'
+field_type: add_to_calendar_field

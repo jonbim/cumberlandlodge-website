@@ -1,0 +1,27 @@
+uuid: 5cad35e8-d77b-4ac1-b58b-b3132bb844cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_form
+    - node.type.vacancy
+  module:
+    - file
+id: node.vacancy.field_application_form
+field_name: field_application_form
+entity_type: node
+bundle: vacancy
+label: 'Application Form'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: vacancy
+  file_extensions: 'txt doc odt docx pdf'
+  max_filesize: ''
+  description_field: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

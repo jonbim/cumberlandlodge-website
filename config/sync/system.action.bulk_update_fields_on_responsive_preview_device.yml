@@ -1,0 +1,11 @@
+uuid: e0b255ca-2ed5-412d-a52e-5e64cbca5444
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_responsive_preview_device
+label: 'Bulk Update Responsive preview device Fields'
+type: responsive_preview_device
+plugin: bulk_update_fields_action_base
+configuration: {  }

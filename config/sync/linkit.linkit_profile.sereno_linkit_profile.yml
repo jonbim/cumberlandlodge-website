@@ -1,0 +1,20 @@
+uuid: 2af77b66-129b-44cb-90bf-208b50048c7e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: sereno_linkit_profile
+label: 'Sereno linkit profile'
+description: 'For internal and external linking within wysiwyg'
+attributes: {  }
+matchers:
+  234c2107-63dc-4065-8772-bc461cfd295f:
+    uuid: 234c2107-63dc-4065-8772-bc461cfd295f
+    id: 'entity:node'
+    weight: 0
+    settings:
+      result_description: Content
+      bundles: {  }
+      group_by_bundle: false
+      include_unpublished: true

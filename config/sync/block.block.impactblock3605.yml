@@ -1,0 +1,31 @@
+uuid: a69952c4-cefe-4f51-930a-c47549999260
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:a1688a5b-2b39-4977-ade4-1cdc08c102d0'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: impactblock3605
+theme: serenowebtheme
+region: sidebar_second
+weight: -16
+provider: null
+plugin: 'block_content:a1688a5b-2b39-4977-ade4-1cdc08c102d0'
+settings:
+  id: 'block_content:a1688a5b-2b39-4977-ade4-1cdc08c102d0'
+  label: 'Impact block - 3,605'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/programmes/student-bursaries\r\n/impact/support-our-work\r\n/about-us/friends-cumberland-lodge"
+    negate: false
+    context_mapping: {  }

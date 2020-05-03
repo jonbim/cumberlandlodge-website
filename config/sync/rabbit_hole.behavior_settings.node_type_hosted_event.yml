@@ -1,0 +1,11 @@
+uuid: 2dc20f0a-61ba-4f6d-aa18-0d9eb0b03842
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.hosted_event
+id: node_type_hosted_event
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

@@ -1,0 +1,13 @@
+check:
+  disabled_extensions: false
+  interval_days: 1
+fetch:
+  url: ''
+  max_attempts: 2
+  timeout: 30
+notification:
+  emails:
+    - rod@sereno.co.uk
+  threshold: security
+_core:
+  default_config_hash: zgIJtB36M3i2mgOyIgmoxfLuy4aeF9A9YZ_btg6RlPA

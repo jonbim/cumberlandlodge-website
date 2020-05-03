@@ -1,0 +1,8 @@
+uuid: 5484919c-2876-407d-b19d-05aa153ddd7e
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_large_slide
+label: 'Large slide comment'
+target_entity_type_id: node
+description: null

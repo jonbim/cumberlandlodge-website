@@ -1,0 +1,16 @@
+uuid: e19fb811-01b7-41ab-854e-a24c942dfecf
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.staff
+  module:
+    - user
+_core:
+  default_config_hash: jp5jhdJj1IQn2c39Igz-yLmhfYKZEVQidat0d0NFy7Q
+id: user_add_role_action.staff
+label: 'Add the Staff role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: staff

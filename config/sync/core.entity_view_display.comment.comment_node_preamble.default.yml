@@ -1,0 +1,27 @@
+uuid: bb1b3b73-b372-41f0-87d2-827236dea4e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_preamble
+    - field.field.comment.comment_node_preamble.comment_body
+  module:
+    - text
+id: comment.comment_node_preamble.default
+targetEntityType: comment
+bundle: comment_node_preamble
+mode: default
+content:
+  comment_body:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

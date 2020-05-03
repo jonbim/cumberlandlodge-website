@@ -1,0 +1,35 @@
+uuid: 4cd29e5c-a441-4d7d-9f70-be326dd88959
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: featured
+label: Featured
+bundles:
+  - news_article
+  - page
+  - programme_event
+  - resource
+entity_type: node
+global: true
+weight: 0
+flag_short: 'Flag this item'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Unflag this item'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+flag_type: 'entity:node'
+link_type: ajax_link
+flagTypeConfig:
+  show_in_links:
+    full: full
+    teaser: teaser
+  show_as_field: false
+  show_on_form: true
+  show_contextual_link: true
+  extra_permissions:
+    owner: '0'
+linkTypeConfig: {  }

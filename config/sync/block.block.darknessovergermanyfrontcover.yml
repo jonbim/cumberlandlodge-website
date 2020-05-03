@@ -1,0 +1,31 @@
+uuid: fe525c72-b7cc-4ed3-89e6-11d13b429e94
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:b8ec256b-5636-4c7d-9696-7c40e560d748'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: darknessovergermanyfrontcover
+theme: serenowebtheme
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'block_content:b8ec256b-5636-4c7d-9696-7c40e560d748'
+settings:
+  id: 'block_content:b8ec256b-5636-4c7d-9696-7c40e560d748'
+  label: 'Darkness over Germany front cover'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /about-us/darkness-over-germany
+    negate: false
+    context_mapping: {  }

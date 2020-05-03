@@ -1,0 +1,15 @@
+definitions:
+  contact__site_page:
+    enabled: true
+    menu_name: footer
+    parent: ''
+    weight: 0
+    expanded: false
+  help__main:
+    menu_name: admin
+    parent: system.admin
+    weight: 9
+    expanded: true
+    enabled: true
+_core:
+  default_config_hash: o4bYR9ZupWb3AsOIizTUG4g-nu1mdJqA59UB7QT-ifQ

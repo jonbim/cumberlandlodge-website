@@ -1,0 +1,23 @@
+uuid: 5bb52e57-28df-4e34-84aa-5e05261b90c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_capacity
+    - node.type.space
+id: node.space.field_capacity
+field_name: field_capacity
+entity_type: node
+bundle: space
+label: Capacity
+description: 'How many people the space holds'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

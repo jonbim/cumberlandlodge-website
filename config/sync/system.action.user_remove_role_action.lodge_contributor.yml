@@ -1,0 +1,14 @@
+uuid: 9d472474-30ba-4457-bde5-d285eecfc6d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.lodge_contributor
+  module:
+    - user
+id: user_remove_role_action.lodge_contributor
+label: 'Remove the lodge-contributor role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: lodge_contributor

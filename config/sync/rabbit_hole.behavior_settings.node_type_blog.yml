@@ -1,0 +1,11 @@
+uuid: e5bfd238-6d2c-482a-b4af-c6fac6591176
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.blog
+id: node_type_blog
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

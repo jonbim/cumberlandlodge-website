@@ -1,0 +1,75 @@
+uuid: 1334703d-cc84-47d4-9b62-a92d23a1a4ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.visitor_logo
+  theme:
+    - serenowebtheme
+_core:
+  default_config_hash: zGp68xALrFzMvLoncbKBm6Dgm5uuFZp0ZpyxpxUdcpw
+id: crop_example_responsive
+label: 'Crop logo responsive'
+image_style_mappings:
+  -
+    breakpoint_id: serenowebtheme.screen-lg-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-lg-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-md-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-md-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-md-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-md-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-sm-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-sm-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-sm-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+  -
+    breakpoint_id: serenowebtheme.screen-xs-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: visitor_logo
+breakpoint_group: serenowebtheme
+fallback_image_style: visitor_logo

@@ -1,0 +1,69 @@
+uuid: 35765b9c-cca5-47f9-95f5-2967bdc91292
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.project.field_annual_series
+    - field.field.taxonomy_term.project.field_image
+    - field.field.taxonomy_term.project.field_last_resource_update
+    - field.field.taxonomy_term.project.field_sticky_at_top_of_list
+    - taxonomy.vocabulary.project
+  module:
+    - datetime
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: null
+    regions:
+      content:
+        - description
+        - field_annual_series
+id: taxonomy_term.project.default
+targetEntityType: taxonomy_term
+bundle: project
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_annual_series:
+    weight: 1
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_last_resource_update:
+    weight: 2
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_sticky_at_top_of_list:
+    weight: 3
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+hidden:
+  field_image: true
+  search_api_excerpt: true

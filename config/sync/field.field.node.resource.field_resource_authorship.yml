@@ -1,0 +1,19 @@
+uuid: fd4c041e-42fe-484b-8389-d677387f4e26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_authorship
+    - node.type.resource
+id: node.resource.field_resource_authorship
+field_name: field_resource_authorship
+entity_type: node
+bundle: resource
+label: 'Written by'
+description: 'The name of the author of the resource itself eg the writer of the booklet'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,31 @@
+core: 8.x
+type: theme
+base theme: bootstrap
+
+name: 'Sereno web theme'
+description: 'A bootstrap subtheme developed by Sereno'
+package: 'Bootstrap'
+
+regions:
+  upper_deck: 'Upper deck - port'
+  upper_deck_starboard: 'Upper deck - starboard'
+  navigation: 'Navigation'
+  navigation_collapsible: 'Navigation (Collapsible)'
+  header: 'Top Bar'
+  highlighted: 'Highlighted'
+  help: 'Help'
+  content: 'Content'
+  sidebar_first: 'Primary'
+  sidebar_second: 'Secondary'
+  pre_footer_stripe: 'Pre-footer stripe'
+  footer: 'Footer'
+  footer_later: 'Footer later'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  block_car_park: 'Block car park (invisible region to make contained blocks available to paragraphs)'
+
+libraries:
+  - 'serenowebtheme/global-styling'
+  - 'serenowebtheme/fonts'
+  - 'serenowebtheme/bootstrap-scripts'
+  - 'serenowebtheme/srn-js'

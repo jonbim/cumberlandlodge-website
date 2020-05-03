@@ -1,0 +1,11 @@
+uuid: ed6f2a35-e5ee-4eb7-9bde-860855315e08
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_poll_choice
+label: 'Bulk Update Poll Choice Fields'
+type: poll_choice
+plugin: bulk_update_fields_action_base
+configuration: {  }

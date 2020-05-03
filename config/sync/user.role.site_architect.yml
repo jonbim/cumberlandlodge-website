@@ -1,0 +1,15 @@
+uuid: a1927f00-f335-4a5a-952f-2cdd922d1663
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: zcFB9oCi_xzDAqf-3U8b1lO8nqqRd4ih6NJTTA0TYMk
+id: site_architect
+label: 'Site architect'
+weight: 3
+is_admin: null
+permissions:
+  - 'access browse_files entity browser pages'
+  - 'access browse_files_modal entity browser pages'
+  - 'access contextual links'
+  - 'dropzone upload files'

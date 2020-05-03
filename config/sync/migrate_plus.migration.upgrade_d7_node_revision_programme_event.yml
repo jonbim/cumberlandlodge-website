@@ -1,0 +1,191 @@
+uuid: 10f82f7c-8dc2-4855-a641-4856344bf678
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_programme_event
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node revisions (Programme Event)'
+source:
+  plugin: d7_node_revision
+  node_type: programme_event
+process:
+  nid:
+    -
+      plugin: get
+      source: nid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_programme_event/0/status:
+    -
+      plugin: get
+      source: comment
+  field_date:
+    -
+      plugin: sub_process
+      source: field_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_theme:
+    -
+      plugin: sub_process
+      source: field_theme
+      process:
+        target_id: tid
+  field_event_type:
+    -
+      plugin: sub_process
+      source: field_event_type
+      process:
+        target_id: tid
+  field_event_organisation:
+    -
+      plugin: get
+      source: field_event_organisation
+  field_event_image:
+    -
+      plugin: sub_process
+      source: field_event_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_programme_event_resource:
+    -
+      plugin: get
+      source: field_programme_event_resource
+  field_eventbrite_button:
+    -
+      plugin: get
+      source: field_eventbrite_button
+  field_person:
+    -
+      plugin: get
+      source: field_person
+  field_strapline:
+    -
+      plugin: get
+      source: field_strapline
+  field_p_body:
+    -
+      plugin: get
+      source: field_p_body
+  field_downloads:
+    -
+      plugin: sub_process
+      source: field_downloads
+      process:
+        target_id: fid
+        display: display
+        description: description
+  field_eventbrite:
+    -
+      plugin: get
+      source: field_eventbrite
+  field_related_content:
+    -
+      plugin: get
+      source: field_related_content
+  field_twitter_hashtag:
+    -
+      plugin: get
+      source: field_twitter_hashtag
+  field_special_event:
+    -
+      plugin: sub_process
+      source: field_special_event
+      process:
+        target_id: tid
+  field_show_register_link:
+    -
+      plugin: get
+      source: field_show_register_link
+  field_event_label:
+    -
+      plugin: get
+      source: field_event_label
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: programme_event
+migration_dependencies:
+  required:
+    - upgrade_d7_node_blog
+    - upgrade_d7_node_celebration
+    - upgrade_d7_node_downloads
+    - upgrade_d7_node_endorsement
+    - upgrade_d7_node_exhibition
+    - upgrade_d7_node_hosted_event
+    - upgrade_d7_node_landing_page
+    - upgrade_d7_node_landing_page_advanced
+    - upgrade_d7_node_large_slide
+    - upgrade_d7_node_link_tile
+    - upgrade_d7_node_news_article
+    - upgrade_d7_node_organisation
+    - upgrade_d7_node_page
+    - upgrade_d7_node_panel
+    - upgrade_d7_node_person
+    - upgrade_d7_node_preamble
+    - upgrade_d7_node_programme_event
+    - upgrade_d7_node_resource
+    - upgrade_d7_node_space
+    - upgrade_d7_node_vacancy
+    - upgrade_d7_node_webform
+  optional: {  }

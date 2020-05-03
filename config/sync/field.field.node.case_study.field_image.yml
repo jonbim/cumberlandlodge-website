@@ -1,0 +1,38 @@
+uuid: 9e42cf65-e10b-43e1-8261-732b91f399a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.case_study
+  module:
+    - image
+id: node.case_study.field_image
+field_name: field_image
+entity_type: node
+bundle: case_study
+label: Image
+description: 'The main image that will appear cropped in grids and at the top of your page. Use a landscape image of approximately 600 x 330 px for best results. The image will be resized to fit so cropping may occur if your image is the wrong shape.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: basic_page
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 0615ef6a-fae8-4ff3-bd90-13e432bc9811
+    alt: 'Image for Cumberland Lodge case study'
+    title: 'Image for Cumberland Lodge case study'
+    width: 604
+    height: 404
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

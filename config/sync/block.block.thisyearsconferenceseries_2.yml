@@ -1,0 +1,31 @@
+uuid: 45a469da-1f1d-4434-af04-a1076b0625a7
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_buttons:2906549e-23d6-40b0-acbe-602b62b1bf95'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: thisyearsconferenceseries_2
+theme: serenowebtheme
+region: content
+weight: -21
+provider: null
+plugin: 'block_content:2906549e-23d6-40b0-acbe-602b62b1bf95'
+settings:
+  id: 'block_content:2906549e-23d6-40b0-acbe-602b62b1bf95'
+  label: 'This year''s series'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

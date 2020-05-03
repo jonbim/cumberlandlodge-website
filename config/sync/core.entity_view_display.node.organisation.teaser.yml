@@ -1,0 +1,58 @@
+uuid: 6e2df512-82d3-4a6c-afab-4bdd9507f1e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.organisation.body
+    - field.field.node.organisation.comment_node_organisation
+    - field.field.node.organisation.field_external_link
+    - field.field.node.organisation.field_organisation_logo
+    - node.type.organisation
+  module:
+    - ds
+    - field_formatter_class
+    - image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_organisation_logo
+id: node.organisation.teaser
+targetEntityType: node
+bundle: organisation
+mode: teaser
+content:
+  field_organisation_logo:
+    type: image
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: content
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+hidden:
+  body: true
+  comment_node_organisation: true
+  field_external_link: true
+  links: true
+  search_api_excerpt: true

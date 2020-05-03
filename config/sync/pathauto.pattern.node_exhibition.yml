@@ -1,0 +1,21 @@
+uuid: 3b6d505e-c09b-41ff-b552-5af2a567553a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_exhibition
+label: 'Content - Exhibition'
+type: 'canonical_entities:node'
+pattern: 'whats-on/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      exhibition: exhibition
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -8
+relationships: {  }

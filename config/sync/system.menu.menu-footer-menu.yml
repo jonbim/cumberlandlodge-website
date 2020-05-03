@@ -1,0 +1,8 @@
+uuid: cabb61fa-676b-4fd9-9f16-ae885cc790d3
+langcode: en
+status: true
+dependencies: {  }
+id: menu-footer-menu
+label: 'Footer menu'
+description: ''
+locked: false

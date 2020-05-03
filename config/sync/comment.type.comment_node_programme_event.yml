@@ -1,0 +1,8 @@
+uuid: ef156f67-3871-4941-ad2f-784c1d325101
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_programme_event
+label: 'Programme Event comment'
+target_entity_type_id: node
+description: null

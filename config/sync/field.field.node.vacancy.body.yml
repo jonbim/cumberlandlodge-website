@@ -1,0 +1,23 @@
+uuid: f1004f71-dc98-4baf-b124-b1f2c4c1cdb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.vacancy
+  module:
+    - text
+id: node.vacancy.body
+field_name: body
+entity_type: node
+bundle: vacancy
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

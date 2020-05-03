@@ -1,0 +1,22 @@
+uuid: 67c54ae1-f047-4cb0-b763-4836ca814f24
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - serenowebtheme
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: serenowebtheme_messages
+theme: serenowebtheme
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

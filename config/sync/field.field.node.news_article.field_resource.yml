@@ -1,0 +1,32 @@
+uuid: 11ed57ad-c8ff-4596-a623-3bae0c620cb8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource
+    - node.type.news_article
+    - node.type.resource
+id: node.news_article.field_resource
+field_name: field_resource
+entity_type: node
+bundle: news_article
+label: Resource
+description: 'Type the name of a resource you would like to add as a link to your article'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      resource: resource
+    sort:
+      field: title
+      direction: ASC
+    behaviors:
+      entityqueue:
+        status: 0
+      views-select-list:
+        status: 0
+field_type: entity_reference

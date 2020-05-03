@@ -1,0 +1,11 @@
+uuid: e2c8ebdc-a7db-4908-b16f-75c0171988c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.crop_simple_example
+id: node_type_crop_simple_example
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

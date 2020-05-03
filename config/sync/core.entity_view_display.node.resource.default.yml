@@ -1,0 +1,196 @@
+uuid: 49b1c6ed-725d-4e5d-a77f-338a1392658b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.resource.body
+    - field.field.node.resource.comment_node_resource
+    - field.field.node.resource.field_media_types
+    - field.field.node.resource.field_p_body
+    - field.field.node.resource.field_project
+    - field.field.node.resource.field_published_date
+    - field.field.node.resource.field_resource_authorship
+    - field.field.node.resource.field_resource_file
+    - field.field.node.resource.field_resource_image
+    - field.field.node.resource.field_resource_media
+    - field.field.node.resource.field_resource_type
+    - field.field.node.resource.field_sound_cloud
+    - field.field.node.resource.field_strapline
+    - field.field.node.resource.field_theme
+    - field.field.node.resource.field_video_url
+    - node.type.resource
+  module:
+    - addtocalendar
+    - datetime
+    - ds
+    - entity_reference_revisions
+    - field_formatter_class
+    - file
+    - soundcloudfield
+    - text
+    - user
+    - video_embed_field
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: true
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_resource_authorship
+        - body
+        - field_p_body
+        - field_resource_file
+        - field_video_url
+        - field_sound_cloud
+        - field_theme
+        - field_resource_type
+        - field_published_date
+        - links
+id: node.resource.default
+targetEntityType: node
+bundle: resource
+mode: default
+content:
+  body:
+    label: hidden
+    weight: 1
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_p_body:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: content
+    label: visually_hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_published_date:
+    label: inline
+    weight: 8
+    type: datetime_default
+    settings:
+      timezone_override: ''
+      format_type: short
+    third_party_settings:
+      addtocalendar:
+        addtocalendar_settings:
+          style: blue
+          display_text: 'Add to Calendar'
+          atc_title:
+            field: token
+            tokenized: Title
+          atc_description:
+            field: token
+            tokenized: Description
+          atc_location:
+            field: token
+            tokenized: Location
+          atc_organizer:
+            field: token
+            tokenized: 'Cumberland Lodge'
+          atc_organizer_email:
+            field: token
+            tokenized: info@cumberlandlodge.org.uk
+          atc_date_end:
+            field: token
+            tokenized: ''
+          atc_privacy: public
+          data_secure: auto
+          data_calendars:
+            iCalendar: 0
+            'Google Calendar': 0
+            Outlook: 0
+            'Outlook Online': 0
+            'Yahoo! Calendar': 0
+        addtocalendar_show: 0
+      field_formatter_class:
+        class: ''
+    region: content
+  field_resource_authorship:
+    type: string
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+  field_resource_file:
+    label: above
+    weight: 3
+    type: file_default
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    region: content
+  field_resource_type:
+    type: entity_reference_label
+    weight: 7
+    region: content
+    label: inline
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_sound_cloud:
+    weight: 5
+    label: visually_hidden
+    settings:
+      soundcloud_player_type: classic
+      soundcloud_player_width: '100'
+      soundcloud_player_height: '166'
+      soundcloud_player_height_sets: '450'
+      soundcloud_player_visual_height: '450'
+      soundcloud_player_color: ff7700
+      soundcloud_player_autoplay: 0
+      soundcloud_player_hiderelated: 0
+      soundcloud_player_showartwork: 0
+      soundcloud_player_showcomments: 0
+      soundcloud_player_showplaycount: 0
+    third_party_settings:
+      field_formatter_class:
+        class: soundcloud_default
+      ds:
+        ds_limit: ''
+    type: soundcloud_default
+    region: content
+  field_theme:
+    label: above
+    weight: 6
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  field_video_url:
+    label: visually_hidden
+    weight: 4
+    type: video_embed_field_video
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  comment_node_resource: true
+  field_media_types: true
+  field_project: true
+  field_resource_image: true
+  field_resource_media: true
+  field_strapline: true
+  search_api_excerpt: true

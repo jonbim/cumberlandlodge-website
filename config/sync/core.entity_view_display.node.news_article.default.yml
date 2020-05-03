@@ -1,0 +1,89 @@
+uuid: 5dd01614-18b9-4867-aef7-4cfa5ee3e9be
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.news_article.comment_node_news_article
+    - field.field.node.news_article.field_event
+    - field.field.node.news_article.field_image
+    - field.field.node.news_article.field_p_body
+    - field.field.node.news_article.field_resource
+    - field.field.node.news_article.field_strapline
+    - field.field.node.news_article.field_tags
+    - node.type.news_article
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_formatter_class
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_p_body
+        - field_resource
+        - field_event
+        - field_tags
+id: node.news_article.default
+targetEntityType: node
+bundle: news_article
+mode: default
+content:
+  field_event:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: ''
+  field_p_body:
+    label: hidden
+    weight: 0
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: ''
+    region: content
+  field_resource:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+      ds:
+        ds_limit: ''
+  field_tags:
+    label: above
+    weight: 3
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_news_article: true
+  field_image: true
+  field_strapline: true
+  links: true
+  search_api_excerpt: true

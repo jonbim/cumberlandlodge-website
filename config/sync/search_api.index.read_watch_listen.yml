@@ -1,0 +1,97 @@
+uuid: 38d4c010-3be6-4902-a75c-77fd7dfa0840
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_annual_series
+    - field.storage.taxonomy_term.field_image
+    - field.storage.taxonomy_term.field_last_resource_update
+    - field.storage.taxonomy_term.field_sticky_at_top_of_list
+    - search_api.server.read_watch_listen
+  module:
+    - taxonomy
+    - search_api
+id: read_watch_listen
+name: 'Read, Watch, Listen'
+description: ''
+read_only: false
+field_settings:
+  annual_series_name:
+    label: 'Annual Series » Taxonomy term » Name'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: 'field_annual_series:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_annual_series
+      module:
+        - taxonomy
+  description:
+    label: Description
+    datasource_id: 'entity:taxonomy_term'
+    property_path: description
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+  field_annual_series_1:
+    label: 'Annual Series'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_annual_series
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_annual_series
+  field_image:
+    label: Image
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_image
+  field_last_resource_update:
+    label: 'Last resource update'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_last_resource_update
+    type: date
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_last_resource_update
+  field_sticky_at_top_of_list:
+    label: 'Sticky at top of list'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_sticky_at_top_of_list
+    type: boolean
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_sticky_at_top_of_list
+  name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+datasource_settings:
+  'entity:taxonomy_term':
+    bundles:
+      default: false
+      selected:
+        - project
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: read_watch_listen

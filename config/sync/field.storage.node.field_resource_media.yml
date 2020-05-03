@@ -1,0 +1,20 @@
+uuid: 7c932a17-f94b-41b6-86b4-1d60c99abf14
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_resource_media
+field_name: field_resource_media
+entity_type: node
+type: text
+settings:
+  max_length: 512
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

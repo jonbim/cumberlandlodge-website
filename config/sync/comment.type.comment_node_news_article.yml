@@ -1,0 +1,8 @@
+uuid: 44bd2239-de90-494b-b20f-6e69ea1a021b
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_news_article
+label: 'News Article comment'
+target_entity_type_id: node
+description: null

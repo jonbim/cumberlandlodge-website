@@ -1,0 +1,26 @@
+uuid: 31189bc9-958a-4395-b274-f29afd306483
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_space_type
+    - node.type.space
+    - taxonomy.vocabulary.space_type
+id: node.space.field_space_type
+field_name: field_space_type
+entity_type: node
+bundle: space
+label: 'Space Type'
+description: 'Define the space by its structure or function for example bedroom or meeting room'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      space_type: space_type
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

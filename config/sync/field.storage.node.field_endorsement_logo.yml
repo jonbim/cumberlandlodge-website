@@ -1,0 +1,19 @@
+uuid: db6088a1-9321-4320-81c1-f371dc057571
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_endorsement_logo
+field_name: field_endorsement_logo
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

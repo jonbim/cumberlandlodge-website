@@ -1,0 +1,38 @@
+uuid: 2221d4f8-7ab3-4c74-ad4b-76fc583b67a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_vacancy
+    - node.type.vacancy
+  module:
+    - image
+id: node.vacancy.field_vacancy
+field_name: field_vacancy
+entity_type: node
+bundle: vacancy
+label: 'Vacancy image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: fbaaf895-a22e-420b-8274-351f2bf15110
+    alt: 'Cumberland Lodge vacancy image'
+    title: ''
+    width: 604
+    height: 404
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

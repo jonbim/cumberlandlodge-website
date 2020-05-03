@@ -1,0 +1,29 @@
+uuid: 44835ef6-da54-43dd-ade2-55d584cfbb5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.resource_type
+  module:
+    - facets
+    - system
+  theme:
+    - serenowebtheme
+id: resourcetype
+theme: serenowebtheme
+region: sidebar_first
+weight: -23
+provider: null
+plugin: 'facet_block:resource_type'
+settings:
+  id: 'facet_block:resource_type'
+  label: 'Resource type'
+  provider: facets
+  label_display: visible
+  block_id: resourcetype
+visibility:
+  request_path:
+    id: request_path
+    pages: /read-watch-listen/all-our-resources
+    negate: false
+    context_mapping: {  }

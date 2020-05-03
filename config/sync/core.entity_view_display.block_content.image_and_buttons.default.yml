@@ -1,0 +1,47 @@
+uuid: b33b119f-b146-4372-b07d-92ba33b5ab5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_and_buttons
+    - field.field.block_content.image_and_buttons.body
+    - field.field.block_content.image_and_buttons.field_image
+    - field.field.block_content.image_and_buttons.field_links_for_buttons
+  module:
+    - image
+    - link
+    - text
+id: block_content.image_and_buttons.default
+targetEntityType: block_content
+bundle: image_and_buttons
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_links_for_buttons:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

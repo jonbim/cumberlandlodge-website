@@ -1,0 +1,33 @@
+uuid: 39325536-b1e5-4623-a712-f102fa6d2c71
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.crop_responsive_example.body
+    - field.field.node.crop_responsive_example.field_image_crop_simple
+    - node.type.crop_responsive_example
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: ccP8kMJR6_MByNSZfnSztOuJlYJwbc6zJzhEStFct5k
+id: node.crop_responsive_example.teaser
+targetEntityType: node
+bundle: crop_responsive_example
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_image_crop_simple: true
+  search_api_excerpt: true

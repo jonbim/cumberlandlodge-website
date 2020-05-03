@@ -1,0 +1,21 @@
+uuid: a1eaaa76-175f-4bfd-9214-779ca679d6a1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_organisation
+label: 'Content - Organisation'
+type: 'canonical_entities:node'
+pattern: 'clients-partners/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      organisation: organisation
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -5
+relationships: {  }

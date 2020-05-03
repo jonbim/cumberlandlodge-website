@@ -1,0 +1,102 @@
+uuid: d12e8c05-3bd3-474b-94ea-644a988ca263
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p_body
+    - node.type.space
+    - paragraphs.paragraphs_type.image
+    - paragraphs.paragraphs_type.quotation
+    - paragraphs.paragraphs_type.sound_cloud
+    - paragraphs.paragraphs_type.text_block
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.space.field_p_body
+field_name: field_p_body
+entity_type: node
+bundle: space
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    negate: 0
+    target_bundles:
+      image: image
+      quotation: quotation
+      text_block: text_block
+      video: video
+      sound_cloud: sound_cloud
+    target_bundles_drag_drop:
+      image:
+        enabled: true
+        weight: 2
+      quotation:
+        enabled: true
+        weight: 3
+      text_block:
+        enabled: true
+        weight: 4
+      video:
+        enabled: true
+        weight: 5
+      slide:
+        enabled: false
+        weight: 9
+      sound_cloud:
+        enabled: true
+        weight: 10
+      bp_accordion:
+        enabled: false
+        weight: 11
+      bp_accordion_section:
+        enabled: false
+        weight: 12
+      bp_blank:
+        enabled: false
+        weight: 13
+      bp_block:
+        enabled: false
+        weight: 14
+      bp_carousel:
+        enabled: false
+        weight: 15
+      bp_columns:
+        enabled: false
+        weight: 16
+      bp_columns_three_uneven:
+        enabled: false
+        weight: 17
+      bp_columns_two_uneven:
+        enabled: false
+        weight: 18
+      bp_column_wrapper:
+        enabled: false
+        weight: 19
+      bp_image:
+        enabled: false
+        weight: 20
+      bp_modal:
+        enabled: false
+        weight: 21
+      bp_simple:
+        enabled: false
+        weight: 22
+      bp_tabs:
+        enabled: false
+        weight: 23
+      bp_tab_section:
+        enabled: false
+        weight: 24
+      bp_view:
+        enabled: false
+        weight: 25
+      view:
+        enabled: false
+        weight: 26
+  handler: 'default:paragraph'
+field_type: entity_reference_revisions

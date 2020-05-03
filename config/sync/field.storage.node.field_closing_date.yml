@@ -1,0 +1,20 @@
+uuid: 04a5e5de-d5e9-48e8-8170-44d36a0f655a
+langcode: und
+status: true
+dependencies:
+  module:
+    - datetime
+    - node
+id: node.field_closing_date
+field_name: field_closing_date
+entity_type: node
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

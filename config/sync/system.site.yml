@@ -1,0 +1,14 @@
+name: 'Cumberland Lodge'
+mail: info@cumberlandlodge.org.uk
+slogan: 'Exchanging Views. Inspiring Minds.'
+page:
+  403: /node/5540
+  404: /node/5540
+  front: /node/5254
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: P4PscfCjkTPbAiu_ZNZZ2N284IEZOCulY-UmfHlCc54
+uuid: 33a53be9-d63d-44be-8b83-5a07ecf90609

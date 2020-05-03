@@ -1,0 +1,22 @@
+uuid: 1732fc05-0208-46e1-9c99-6a8c9ab96bff
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_programme_event
+label: 'programme event'
+type: 'canonical_entities:node'
+pattern: 'whats-on/[node:title]'
+selection_criteria:
+  d26d0d6a-404d-45e3-9fd7-fa69e1264dd6:
+    id: node_type
+    bundles:
+      programme_event: programme_event
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d26d0d6a-404d-45e3-9fd7-fa69e1264dd6
+selection_logic: and
+weight: 0
+relationships: {  }

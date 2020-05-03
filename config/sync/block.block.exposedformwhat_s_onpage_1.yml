@@ -1,0 +1,29 @@
+uuid: a4f60bc6-967c-42fb-8b11-f1c03d1a242e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.what_s_on
+  module:
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: exposedformwhat_s_onpage_1
+theme: serenowebtheme
+region: sidebar_first
+weight: -21
+provider: null
+plugin: 'views_exposed_filter_block:what_s_on-page_1'
+settings:
+  id: 'views_exposed_filter_block:what_s_on-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: 'What''s On'
+visibility:
+  request_path:
+    id: request_path
+    pages: /whats-on
+    negate: false
+    context_mapping: {  }

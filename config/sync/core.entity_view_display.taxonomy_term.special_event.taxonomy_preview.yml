@@ -1,0 +1,33 @@
+uuid: 914a77d9-9a1f-45dd-aaca-63b0aaca4ebd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_preview
+    - field.field.taxonomy_term.special_event.field_image
+    - taxonomy.vocabulary.special_event
+  module:
+    - image
+    - text
+id: taxonomy_term.special_event.taxonomy_preview
+targetEntityType: taxonomy_term
+bundle: special_event
+mode: taxonomy_preview
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,31 @@
+uuid: 1df54167-917b-47e3-906e-db875cf1cb45
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:fb0795bc-3615-4849-9276-30be1f69ee5e'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: impactblock1200
+theme: serenowebtheme
+region: sidebar_second
+weight: -18
+provider: null
+plugin: 'block_content:fb0795bc-3615-4849-9276-30be1f69ee5e'
+settings:
+  id: 'block_content:fb0795bc-3615-4849-9276-30be1f69ee5e'
+  label: 'Impact block - 1,200'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/programmes/community-engagement\r\n/about-us/friends-cumberland-lodge\r\n/programmes/cumberland-conversations"
+    negate: false
+    context_mapping: {  }

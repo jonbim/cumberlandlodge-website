@@ -1,0 +1,38 @@
+uuid: fbb94230-0c26-48de-9988-adfa68c0db4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.news_article
+  module:
+    - image
+id: node.news_article.field_image
+field_name: field_image
+entity_type: node
+bundle: news_article
+label: Image
+description: 'Upload an image to go with this article.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: field/image
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: 0648ad9c-5b56-4633-9d04-d5a9b8447443
+    alt: '6'
+    title: '6'
+    width: 604
+    height: 404
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

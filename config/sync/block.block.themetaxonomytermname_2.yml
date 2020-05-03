@@ -1,0 +1,29 @@
+uuid: 9a4e03c4-d0e5-4f23-b0b4-3e1670150016
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.theme_taxonomy_term_name
+  module:
+    - facets
+    - system
+  theme:
+    - serenowebtheme
+id: themetaxonomytermname_2
+theme: serenowebtheme
+region: sidebar_first
+weight: -20
+provider: null
+plugin: 'facet_block:theme_taxonomy_term_name'
+settings:
+  id: 'facet_block:theme_taxonomy_term_name'
+  label: Theme
+  provider: facets
+  label_display: visible
+  block_id: themetaxonomytermname_2
+visibility:
+  request_path:
+    id: request_path
+    pages: /read-watch-listen/all-our-resources
+    negate: false
+    context_mapping: {  }

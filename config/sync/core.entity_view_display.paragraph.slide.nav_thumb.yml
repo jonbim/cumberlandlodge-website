@@ -1,0 +1,29 @@
+uuid: b2d583e9-af6f-4c9f-a6b5-a25cb6957d9f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.nav_thumb
+    - field.field.paragraph.slide.field_image
+    - field.field.paragraph.slide.field_label
+    - field.field.paragraph.slide.field_link_url_only
+    - paragraphs.paragraphs_type.slide
+  module:
+    - image
+id: paragraph.slide.nav_thumb
+targetEntityType: paragraph
+bundle: slide
+mode: nav_thumb
+content:
+  field_image:
+    label: hidden
+    weight: 0
+    type: image
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_label: true
+  field_link_url_only: true

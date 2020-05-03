@@ -1,0 +1,8 @@
+uuid: c3501ad5-ef18-4da7-bef0-1d4e46d81881
+langcode: en
+status: true
+dependencies: {  }
+name: Series
+vid: special_event
+description: 'Themed series of events in the Cumberland Lodge programme (annual or otherwise)'
+weight: 0

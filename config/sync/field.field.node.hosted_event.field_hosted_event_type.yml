@@ -1,0 +1,26 @@
+uuid: 189e9b16-9062-4f74-b2b2-413acd1aeb62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hosted_event_type
+    - node.type.hosted_event
+    - taxonomy.vocabulary.hosted_event_type
+id: node.hosted_event.field_hosted_event_type
+field_name: field_hosted_event_type
+entity_type: node
+bundle: hosted_event
+label: 'Hosted Event Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      hosted_event_type: hosted_event_type
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

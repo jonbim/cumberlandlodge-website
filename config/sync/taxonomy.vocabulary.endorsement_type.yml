@@ -1,0 +1,8 @@
+uuid: 7cf058e5-28b2-42b5-9a24-c856cd207f54
+langcode: en
+status: true
+dependencies: {  }
+name: 'Endorsement Type'
+vid: endorsement_type
+description: 'Endorsements classified according to service'
+weight: 0

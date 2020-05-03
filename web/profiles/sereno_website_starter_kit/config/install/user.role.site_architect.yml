@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: site_architect
+label: 'Site architect'
+weight: 3
+is_admin: null
+permissions: {  }

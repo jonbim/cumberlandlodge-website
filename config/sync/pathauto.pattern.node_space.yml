@@ -1,0 +1,21 @@
+uuid: d8e9733b-b832-4bbb-b5cd-1aab716bd4db
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node_space
+label: 'Content - Space'
+type: 'canonical_entities:node'
+pattern: 'venue-hire/rooms-facilities/[node:title]'
+selection_criteria:
+  -
+    id: node_type
+    bundles:
+      space: space
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+weight: -2
+relationships: {  }

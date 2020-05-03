@@ -1,0 +1,209 @@
+{
+    "name": "drupal-composer/drupal-project",
+    "description": "Project template for Drupal 8 projects with composer",
+    "type": "project",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "",
+            "role": ""
+        }
+    ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        }
+    ],
+    "require": {
+        "composer/installers": "^1.2",
+        "cweagans/composer-patches": "^1.6",
+        "drupal-composer/drupal-scaffold": "^2.2",
+        "drupal/address": "^1.7",
+        "drupal/addtocalendar": "3.x-dev",
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/admin_toolbar_tools": "^2.0",
+        "drupal/anonymous_redirect": "^2.1",
+        "drupal/backup_migrate": "^4.0",
+        "drupal/better_exposed_filters": "^3.0@alpha",
+        "drupal/block_class": "^1.0",
+        "drupal/bootstrap": "^3.6",
+        "drupal/bootstrap_layouts": "^4.1",
+        "drupal/bootstrap_paragraphs": "^2.0",
+        "drupal/bulk_copy_fields": "^1.0",
+        "drupal/bulk_update_fields": "^2.0",
+        "drupal/captcha": "^1.0@beta",
+        "drupal/components": "^1.0",
+        "drupal/config_ignore": "^2.1",
+        "drupal/config_readonly": "^1.0",
+        "drupal/console": "~1.0",
+        "drupal/contact_formatter": "^1.0",
+        "drupal/content_type_clone": "1.x-dev",
+        "drupal/context": "^4.0@beta",
+        "drupal/convert_media_tags_to_markup": "^1.0@beta",
+        "drupal/core": "~8.0",
+        "drupal/date_all_day": "^1.0@beta",
+        "drupal/date_popup": "^1.0",
+        "drupal/date_range_formatter": "^3.1",
+        "drupal/date_recur": "^2.0",
+        "drupal/datetime_extras": "^1.0",
+        "drupal/devel": "^2.1",
+        "drupal/devel_entity_updates": "^1.0",
+        "drupal/disable_messages": "^1.1",
+        "drupal/ds": "^3.4",
+        "drupal/easy_breadcrumb": "^1.7",
+        "drupal/editor_advanced_link": "^1.6",
+        "drupal/entity_browser": "^2.2",
+        "drupal/entity_reference_revisions": "^1.3",
+        "drupal/entityqueue": "^1.0@beta",
+        "drupal/environment_indicator": "^3.3",
+        "drupal/eu_cookie_compliance": "^1.8",
+        "drupal/facebook_tracking_pixel": "1.x-dev",
+        "drupal/facets": "^1.4",
+        "drupal/feeds_para_mapper": "1.x-dev",
+        "drupal/feeds_tamper": "^2.0",
+        "drupal/field_formatter_class": "^1.1",
+        "drupal/field_group": "^3.0",
+        "drupal/fieldblock": "^2.0@alpha",
+        "drupal/file_browser": "^1.1",
+        "drupal/flag": "^4.0",
+        "drupal/flexslider": "^2.0@beta",
+        "drupal/focal_point": "^1.3",
+        "drupal/google_analytics": "^2.1",
+        "drupal/honeypot": "^1.29",
+        "drupal/image_styles_mapping": "^1.2",
+        "drupal/image_widget_crop": "^2.2",
+        "drupal/imce": "^1.7",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/layout_plugin": "^1.0@alpha",
+        "drupal/link_attributes": "^1.10",
+        "drupal/linkit": "^4.3",
+        "drupal/masquerade": "^2.0",
+        "drupal/matomo": "^1.6",
+        "drupal/menu_admin_per_menu": "^1.0",
+        "drupal/menu_block": "^1.5",
+        "drupal/metatag": "^1.1",
+        "drupal/migrate_plus": "^4.2",
+        "drupal/migrate_source_csv": "^2.2",
+        "drupal/migrate_tools": "^4.4",
+        "drupal/migrate_upgrade": "^3.0",
+        "drupal/module_filter": "^3.1",
+        "drupal/module_missing_message_fixer": "^1.1",
+        "drupal/pathauto": "^1.0",
+        "drupal/poll": "^1.1",
+        "drupal/rabbit_hole": "^1.0@beta",
+        "drupal/readonly_field_widget": "^1.2",
+        "drupal/recaptcha": "^2.5",
+        "drupal/redirect": "^1.4",
+        "drupal/reroute_email": "^1.0",
+        "drupal/responsive_menu": "^2.6",
+        "drupal/responsive_preview": "^1.0",
+        "drupal/role_delegation": "^1.0",
+        "drupal/scheduler": "^1.1",
+        "drupal/search_api": "1.x-dev",
+        "drupal/search_api_view_modes": "^1.0",
+        "drupal/sharethis_block": "1.x-dev",
+        "drupal/shield": "^1.2",
+        "drupal/single_datetime": "^1.7",
+        "drupal/sitemap": "^1.5",
+        "drupal/social_media_links": "^2.6",
+        "drupal/soundcloudfield": "^1.0@alpha",
+        "drupal/stage_file_proxy": "^1.0",
+        "drupal/statistics_counter": "^1.0",
+        "drupal/taxonomy_manager": "^1.0@alpha",
+        "drupal/taxonomy_unique": "^2.0",
+        "drupal/token": "^1.5",
+        "drupal/twig_field_value": "^1.1",
+        "drupal/twig_tweak": "^1.9",
+        "drupal/twig_xdebug": "^1.1",
+        "drupal/twitter_block": "3.x-dev",
+        "drupal/ultimate_cron": "^2.0",
+        "drupal/video_embed_field": "^2.2",
+        "drupal/views_bootstrap": "^3.0",
+        "drupal/views_bulk_edit": "^2.4",
+        "drupal/views_bulk_operations": "^2.1",
+        "drupal/views_infinite_scroll": "^1.7",
+        "drupal/views_slideshow": "^4.6",
+        "drupal/views_term_hierarchy_weight_field": "1.x-dev",
+        "drupal/webform": "^5.5",
+        "drupal/xmlsitemap": "^1.0@alpha",
+        "drush/drush": "~9.0",
+        "sainsburys/guzzle-oauth2-plugin": "^3.0",
+        "vlucas/phpdotenv": "^2.4",
+        "webflo/drupal-finder": "^1.0.0",
+        "webmozart/path-util": "^2.3",
+        "zaporylie/composer-drupal-optimizations": "^1.0"
+    },
+    "require-dev": {
+    },
+    "conflict": {
+        "drupal/drupal": "*"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "classmap": [
+            "scripts/composer/ScriptHandler.php"
+        ],
+        "files": [
+            "load.environment.php"
+        ]
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "pre-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+        ],
+        "post-install-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ],
+        "post-update-cmd": [
+            "DrupalProject\\composer\\ScriptHandler::createRequiredFiles"
+        ]
+    },
+    "extra": {
+        "patches": {
+          "drupal/entity_embed": {
+            "Link images": "https://www.drupal.org/files/issues/2018-04-23/25114040-47.patch"
+          },
+         "drupal/soundcloudfield": {
+            "Embed stopped working...": "https://www.drupal.org/files/issues/2019-08-15/soundcloud-oembed_https-3075203-2-D8.patch"
+          }
+        },
+        "composer-exit-on-patch-failure": true,
+        "patchLevel": {
+            "drupal/core": "-p2"
+        },
+        "installer-paths": {
+            "web/core": [
+                "type:drupal-core"
+            ],
+            "web/libraries/{$name}": [
+                "type:drupal-library"
+            ],
+            "web/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "web/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "web/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/Commands/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "drupal-scaffold": {
+            "initial": {
+                ".editorconfig": "../.editorconfig",
+                ".gitattributes": "../.gitattributes"
+            }
+        }
+    }
+}

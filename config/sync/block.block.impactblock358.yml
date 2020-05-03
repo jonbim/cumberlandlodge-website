@@ -1,0 +1,31 @@
+uuid: 97ad53cc-b6e1-48b9-a8b1-be2f3af92107
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image:c283304f-fbe3-471d-9b70-835afacbfda8'
+  module:
+    - block_content
+    - system
+  theme:
+    - serenowebtheme
+id: impactblock358
+theme: serenowebtheme
+region: sidebar_second
+weight: -15
+provider: null
+plugin: 'block_content:c283304f-fbe3-471d-9b70-835afacbfda8'
+settings:
+  id: 'block_content:c283304f-fbe3-471d-9b70-835afacbfda8'
+  label: 'Impact block - 358'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/venue-hire/virtual-tour\r\n/venue-hire/room-specifications\r\n/venue-hire/conference-facilities\r\n/venue-hire/meetings-courses-away-days"
+    negate: false
+    context_mapping: {  }

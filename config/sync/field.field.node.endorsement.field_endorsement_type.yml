@@ -1,0 +1,26 @@
+uuid: 3e59ed56-b3f1-4b62-9afb-92f101a7a3af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_endorsement_type
+    - node.type.endorsement
+    - taxonomy.vocabulary.endorsement_type
+id: node.endorsement.field_endorsement_type
+field_name: field_endorsement_type
+entity_type: node
+bundle: endorsement
+label: 'Endorsement Type'
+description: 'Classify your endorsement so it can be placed in the correct part of the site'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler_settings:
+    sort:
+      field: _none
+    target_bundles:
+      endorsement_type: endorsement_type
+  handler: 'default:taxonomy_term'
+field_type: entity_reference

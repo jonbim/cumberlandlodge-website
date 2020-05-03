@@ -1,0 +1,23 @@
+uuid: 154cac79-ee70-4885-90d9-97bde5af0a91
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.endorsement
+  module:
+    - text
+id: node.endorsement.body
+field_name: body
+entity_type: node
+bundle: endorsement
+label: Quote
+description: 'Your client endorsement quote goes here. Use the Summary view to highlight a short sentence so this can be used when the full quote cannot be displayed, eg in the site sidebar.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

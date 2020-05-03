@@ -1,0 +1,192 @@
+Package,Name,Status,Version
+Core,"Actions (action)",Disabled,8.7.5
+Core,"Aggregator (aggregator)",Disabled,8.7.5
+Core,"Automated Cron (automated_cron)",Enabled,8.7.5
+Core,"Ban (ban)",Disabled,8.7.5
+"Web services","HTTP Basic Authentication (basic_auth)",Disabled,8.7.5
+Core,"BigPipe (big_pipe)",Disabled,8.7.5
+Core,"Block (block)",Enabled,8.7.5
+Core,"Custom Block (block_content)",Enabled,8.7.5
+"Core (Experimental)","Place Blocks (block_place)",Disabled,8.7.5
+Core,"Book (book)",Disabled,8.7.5
+Core,"Breakpoint (breakpoint)",Enabled,8.7.5
+Core,"CKEditor (ckeditor)",Enabled,8.7.5
+Core,"Color (color)",Enabled,8.7.5
+Core,"Comment (comment)",Enabled,8.7.5
+Core,"Configuration Manager (config)",Enabled,8.7.5
+Multilingual,"Configuration Translation (config_translation)",Disabled,8.7.5
+Core,"Contact (contact)",Enabled,8.7.5
+Core,"Content Moderation (content_moderation)",Disabled,8.7.5
+Multilingual,"Content Translation (content_translation)",Disabled,8.7.5
+Core,"Contextual Links (contextual)",Enabled,8.7.5
+"Field types","Datetime (datetime)",Enabled,8.7.5
+"Field types","Datetime Range (datetime_range)",Disabled,8.7.5
+Core,"Database Logging (dblog)",Enabled,8.7.5
+Core,"Internal Dynamic Page Cache (dynamic_page_cache)",Enabled,8.7.5
+Core,"Text Editor (editor)",Enabled,8.7.5
+"Field types","Entity Reference (entity_reference)",Enabled,8.7.5
+Core,"Field (field)",Enabled,8.7.5
+"Core (Experimental)","Field Layout (field_layout)",Disabled,8.7.5
+Core,"Field UI (field_ui)",Enabled,8.7.5
+"Field types","File (file)",Enabled,8.7.5
+Core,"Filter (filter)",Enabled,8.7.5
+Core,"Forum (forum)",Disabled,8.7.5
+"Web services","HAL (hal)",Disabled,8.7.5
+Core,"Help (help)",Enabled,8.7.5
+Core,"History (history)",Enabled,8.7.5
+"Field types","Image (image)",Enabled,8.7.5
+Core,"Inline Form Errors (inline_form_errors)",Disabled,8.7.5
+"Web services","JSON:API (jsonapi)",Disabled,
+Multilingual,"Language (language)",Disabled,8.7.5
+Core,"Layout Builder (layout_builder)",Disabled,8.7.5
+Core,"Layout Discovery (layout_discovery)",Disabled,8.7.5
+"Field types","Link (link)",Enabled,8.7.5
+Multilingual,"Interface Translation (locale)",Disabled,8.7.5
+Core,"Media (media)",Disabled,8.7.5
+"Core (Experimental)","Media Library (media_library)",Disabled,8.7.5
+Core,"Custom Menu Links (menu_link_content)",Enabled,8.7.5
+Core,"Menu UI (menu_ui)",Enabled,8.7.5
+Migration,"Migrate (migrate)",Enabled,8.7.5
+Migration,"Migrate Drupal (migrate_drupal)",Enabled,8.7.5
+"Core (Experimental)","Migrate Drupal Multilingual (migrate_drupal_multilingual)",Disabled,
+Migration,"Migrate Drupal UI (migrate_drupal_ui)",Enabled,8.7.5
+Core,"Node (node)",Enabled,8.7.5
+"Field types","Options (options)",Enabled,8.7.5
+Core,"Internal Page Cache (page_cache)",Enabled,8.7.5
+Core,"Path (path)",Enabled,8.7.5
+Core,"Quick Edit (quickedit)",Enabled,8.7.5
+Core,"RDF (rdf)",Enabled,8.7.5
+Core,"Responsive Image (responsive_image)",Enabled,8.7.5
+"Web services","RESTful Web Services (rest)",Disabled,8.7.5
+Core,"Search (search)",Enabled,8.7.5
+"Web services","Serialization (serialization)",Disabled,8.7.5
+Core,"Settings Tray (settings_tray)",Enabled,8.7.5
+Core,"Shortcut (shortcut)",Enabled,8.7.5
+Core,"Testing (simpletest)",Disabled,8.7.5
+Core,"Statistics (statistics)",Enabled,8.7.5
+Core,"Syslog (syslog)",Enabled,8.7.5
+Core,"System (system)",Enabled,8.7.5
+Core,"Taxonomy (taxonomy)",Enabled,8.7.5
+"Field types","Telephone (telephone)",Enabled,8.7.5
+"Field types","Text (text)",Enabled,8.7.5
+Core,"Toolbar (toolbar)",Enabled,8.7.5
+Core,"Tour (tour)",Enabled,8.7.5
+Core,"Activity Tracker (tracker)",Disabled,8.7.5
+Core,"Update Manager (update)",Enabled,8.7.5
+Core,"User (user)",Enabled,8.7.5
+Core,"Views (views)",Enabled,8.7.5
+Core,"Views UI (views_ui)",Enabled,8.7.5
+Core,"Workflows (workflows)",Disabled,8.7.5
+"Core (Experimental)","Workspaces (workspaces)",Disabled,8.7.5
+Administration,"Admin Toolbar (admin_toolbar)",Enabled,8.x-1.27
+Administration,"Admin Toolbar Links Access Filter (admin_toolbar_links_access_filter)",Disabled,8.x-1.27
+Administration,"Admin Toolbar Extra Tools (admin_toolbar_tools)",Enabled,8.x-1.27
+anonymous_redirect,"Anonymous Redirect (anonymous_redirect)",Disabled,8.x-2.2-beta3
+Other,"Block Class (block_class)",Enabled,8.x-1.0
+Layout,"Bootstrap Layouts (bootstrap_layouts)",Disabled,8.x-4.2
+Paragraphs,"Bootstrap Paragraphs (bootstrap_paragraphs)",Enabled,8.x-2.0-beta6
+Paragraphs,"Bootstrap Paragraphs Contact Form (bp_contact)",Disabled,8.x-2.0-beta6
+Paragraphs,"Bootstrap Paragraphs Webform (bp_webform)",Disabled,8.x-2.0-beta6
+Other,"Component Libraries (components)",Enabled,8.x-1.1
+Config,"Config Filter (config_filter)",Enabled,8.x-1.4
+Config,"Config Ignore (config_ignore)",Enabled,8.x-2.1
+Configuration,"Configuration Read-only (config_readonly)",Enabled,8.x-1.0-beta3
+Other,"Contact Formatter (contact_formatter)",Disabled,8.x-1.1
+"Chaos tool suite","Chaos Tools (ctools)",Enabled,8.x-3.2
+"Chaos tool suite (Experimental)","Chaos Tools Blocks (ctools_block)",Disabled,8.x-3.2
+Other,"Entity Mask (ctools_entity_mask)",Disabled,8.x-3.2
+"Chaos tool suite (Experimental)","Chaos Tools Views (ctools_views)",Disabled,8.x-3.2
+Development,"Devel (devel)",Enabled,8.x-2.1
+Development,"Devel Generate (devel_generate)",Disabled,8.x-2.1
+Development,"Devel Kint (kint)",Disabled,8.x-2.1
+Development,"Web Profiler (webprofiler)",Disabled,8.x-2.1
+Other,"Disable Messages (disable_messages)",Enabled,8.x-1.1
+Media,"dropzonejs (dropzonejs)",Disabled,8.x-2.0-alpha4
+Media,"DropzoneJS entity browser widget (dropzonejs_eb_widget)",Disabled,8.x-2.0-alpha4
+Other,"Easy Breadcrumb (easy_breadcrumb)",Enabled,8.x-1.12
+Other,"Embed (embed)",Disabled,8.x-1.0
+Media,"Entity Browser (entity_browser)",Enabled,8.x-2.2
+Media,"Entity Browser IEF (entity_browser_entity_form)",Disabled,8.x-2.2
+Media,"Entity Browser example (entity_browser_example)",Disabled,8.x-2.2
+Filters,"Entity Embed (entity_embed)",Disabled,8.x-1.0
+"Field types","Entity Reference Revisions (entity_reference_revisions)",Enabled,8.x-1.6
+Entityqueue,"Entityqueue (entityqueue)",Enabled,8.x-1.0-beta5
+Development,"Environment indicator (environment_indicator)",Enabled,8.x-3.6
+Development,"Environment indicator UI (environment_indicator_ui)",Disabled,8.x-3.6
+"Field Formatters","Field Formatter Class (field_formatter_class)",Enabled,8.x-1.1
+Migration,"Field Group Migrate (field_group_migrate)",Enabled,8.x-3.0-rc1
+Fields,"Field Group (field_group)",Enabled,8.x-3.0-rc1
+Other,"File Browser (file_browser)",Disabled,8.x-1.1
+Other,"File Browser Example (file_browser_example)",Disabled,8.x-1.1
+Flags,"Flag (flag)",Enabled,8.x-4.0-alpha3
+Flags,"Flag Bookmark (flag_bookmark)",Disabled,8.x-4.0-alpha3
+Flags,"Flag Follower (flag_follower)",Disabled,8.x-4.0-alpha3
+Statistics,"Google Analytics (google_analytics)",Disabled,8.x-2.4
+Layout,"Layout Plugin (layout_plugin)",Enabled,8.x-1.0-alpha23
+Examples,"Example Layouts (layout_plugin_example)",Disabled,8.x-1.0-alpha23
+Other,"Masquerade (masquerade)",Enabled,8.x-2.0-beta2
+Statistics,"Matomo Analytics (matomo)",Enabled,8.x-1.9
+SEO,"Metatag (metatag)",Enabled,8.x-1.9
+SEO,"Metatag: App Links (metatag_app_links)",Disabled,8.x-1.9
+SEO,"Metatag: Dublin Core (metatag_dc)",Disabled,8.x-1.9
+SEO,"Metatag: Dublin Core Advanced (metatag_dc_advanced)",Disabled,8.x-1.9
+SEO,"Metatag: Facebook (metatag_facebook)",Disabled,8.x-1.9
+SEO,"Metatag: favicons (metatag_favicons)",Disabled,8.x-1.9
+SEO,"Metatag: Google Custom Search Engine (CSE) (metatag_google_cse)",Disabled,8.x-1.9
+SEO,"Metatag: Google Plus (metatag_google_plus)",Disabled,8.x-1.9
+SEO,"Metatag: hreflang (metatag_hreflang)",Disabled,8.x-1.9
+SEO,"Metatag: Mobile & UI Adjustments (metatag_mobile)",Disabled,8.x-1.9
+SEO,"Metatag: Open Graph (metatag_open_graph)",Disabled,8.x-1.9
+SEO,"Metatag: Open Graph Products (metatag_open_graph_products)",Disabled,8.x-1.9
+SEO,"Metatag Page Manager (metatag_page_manager)",Disabled,8.x-1.9
+SEO,"Metatag: Pinterest (metatag_pinterest)",Disabled,8.x-1.9
+SEO,"Metatag: Twitter Cards (metatag_twitter_cards)",Disabled,8.x-1.9
+SEO,"Metatag: Verification (metatag_verification)",Disabled,8.x-1.9
+SEO,"Metatag: Views (metatag_views)",Disabled,8.x-1.9
+Paragraphs,"Paragraphs Demo (paragraphs_demo)",Disabled,8.x-1.8
+Paragraphs,"Paragraphs Library (paragraphs_library)",Disabled,8.x-1.8
+Paragraphs,"Paragraphs Type Permissions (paragraphs_type_permissions)",Disabled,8.x-1.8
+Paragraphs,"Paragraphs (paragraphs)",Enabled,8.x-1.8
+Other,"Pathauto (pathauto)",Enabled,8.x-1.4
+Other,"Poll (poll)",Enabled,8.x-1.2
+Other,"Rabbit Hole files (rh_file)",Disabled,8.x-1.0-beta6
+Other,"Rabbit Hole group (rh_group)",Disabled,8.x-1.0-beta6
+Other,"Rabbit Hole media entity (rh_media)",Disabled,8.x-1.0-beta6
+Other,"Rabbit Hole nodes (rh_node)",Disabled,8.x-1.0-beta6
+Other,"Rabbit Hole taxonomy (rh_taxonomy)",Disabled,8.x-1.0-beta6
+Other,"Rabbit Hole users (rh_user)",Disabled,8.x-1.0-beta6
+Other,"Rabbit Hole (rabbit_hole)",Enabled,8.x-1.0-beta6
+Fields,"Readonly Field Widget (readonly_field_widget)",Enabled,8.x-1.3
+Other,"Redirect 404 (redirect_404)",Disabled,8.x-1.4
+Other,"Redirect Domain (redirect_domain)",Disabled,8.x-1.4
+Other,"Redirect (redirect)",Enabled,8.x-1.4
+Development,"Reroute emails (reroute_email)",Enabled,8.x-1.1
+"User interface","Responsive Preview (responsive_preview)",Enabled,8.x-1.0-beta1
+Administration,"PHP Authentication shield (shield)",Enabled,8.x-1.2
+Other,"Date Time Exposed Views Filters (single_datetime_exposed)",Disabled,8.x-1.7
+Other,"Single Date Time Picker (single_datetime)",Enabled,8.x-1.7
+Other,"Sitemap (sitemap)",Enabled,8.x-1.5
+Development,"Stage File Proxy (stage_file_proxy)",Enabled,8.x-1.0-beta1
+Statistics,"Statistics Counter (statistics_counter)",Enabled,8.x-1.0-beta2
+Other,"Taxonomy unique (taxonomy_unique)",Enabled,8.x-2.1
+Other,"Token (token)",Enabled,8.x-1.5
+Other,"Twig Field Value (twig_field_value)",Enabled,8.x-1.2
+Other,"Twig tweak (twig_tweak)",Enabled,8.x-1.9
+Development,"Twig Xdebug (twig_xdebug)",Enabled,8.x-1.1
+Other,"Ultimate Cron (ultimate_cron)",Enabled,8.x-2.0-alpha4
+"Video Embed Field","Video Embed Media - Migrate to core oEmbed (vem_migrate_oembed)",Disabled,8.x-2.2
+"Video Embed Field","Video Embed Media (video_embed_media)",Disabled,8.x-2.2
+"Video Embed Field","Video Embed WYSIWYG (video_embed_wysiwyg)",Disabled,8.x-2.2
+"Video Embed Field","Video Embed Field (video_embed_field)",Enabled,8.x-2.2
+Views,"Views Bootstrap (views_bootstrap)",Enabled,8.x-3.1
+"Views Bulk Operations","Actions Permissions (actions_permissions)",Disabled,8.x-2.5
+Examples,"Views Bulk Operations example (views_bulk_operations_example)",Disabled,8.x-2.5
+Views,"Views Bulk Operations (views_bulk_operations)",Enabled,8.x-2.5
+Views,"Views Reference Field (viewsreference)",Enabled,8.x-1.4
+Core,"Bartik (bartik)",Enabled,8.7.5
+Core,"Classy (classy)",Enabled,8.7.5
+Core,"Seven (seven)",Enabled,8.7.5
+Core,"Stable (stable)",Enabled,8.7.5
+Core,"Stark (stark)",Disabled,8.7.5
+Bootstrap,"Bootstrap (bootstrap)",Enabled,8.x-3.20
+Bootstrap,"Sereno website theme (serenowebsitetheme)",Enabled,

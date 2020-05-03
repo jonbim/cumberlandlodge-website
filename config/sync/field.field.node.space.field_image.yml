@@ -1,0 +1,33 @@
+uuid: 5f7dfe87-8b7d-4a13-8676-23d0f5766e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.space
+  module:
+    - image
+id: node.space.field_image
+field_name: field_image
+entity_type: node
+bundle: space
+label: Image
+description: 'Main space image'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: ''
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: false
+  title_field: false
+  default_image: 0
+  alt_field_required: true
+  title_field_required: false
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

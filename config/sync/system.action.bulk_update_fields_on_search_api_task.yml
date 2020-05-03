@@ -1,0 +1,11 @@
+uuid: e91901ed-7ec5-457d-8206-3aac4aa6d8a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_search_api_task
+label: 'Bulk Update Search task Fields'
+type: search_api_task
+plugin: bulk_update_fields_action_base
+configuration: {  }

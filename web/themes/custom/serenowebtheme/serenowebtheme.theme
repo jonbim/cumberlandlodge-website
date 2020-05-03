@@ -1,0 +1,329 @@
+<?php
+
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ */
+
+
+/**
+ * @param $page
+ *
+ * // Rod Tatham, Sereno :: 2020-02-17 - attach the js buttons for social media
+ *  that float wistfully at the edge of the browser window...
+ */
+function serenowebtheme_page_attachments_alter(&$page) {
+  $page['#attached']['library'][] = 'serenowebtheme/sharethis';
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function serenowebtheme_preprocess_html(&$variables) {
+
+  $request = \Drupal::request();
+  $route_match = \Drupal::routeMatch();
+  $title = \Drupal::service('title_resolver')->getTitle($request, $route_match->getRouteObject());
+
+  if(is_array($title)) {
+    if(is_string($title['#markup'])) {
+      $title = $title['#markup'];
+    }
+  }
+
+  $css_title = \Drupal\Component\Utility\Html::cleanCssIdentifier($title);
+  $srn_current_section = srn_get_current_section();
+  $variables['attributes']['class'][] = strtolower('srn-section-' . $srn_current_section);
+
+  if($srn_current_section != 'home') {
+    $variables['attributes']['class'][] = 'srn-not-home';
+  }
+
+  if(is_string($css_title) && !empty($css_title)) {
+    $variables['attributes']['class'][] = strtolower('srn-page-' . $css_title);
+  }
+}
+//Node and field preprocess commented out - not needed? - John 08-01-2020
+
+
+// function serenowebtheme_preprocess_node(&$variables) {
+//
+//   #dpm($variables['node']);
+//
+//   // get the essential conditions for us to use. What type of node/view mode
+//   // are we dealing with?
+//   $content_type = $variables['node']->getType();
+//   $view_mode = $variables['view_mode'];
+//
+//   if ($content_type == 'event') {
+//     #	if($content_type=='event' && $view_mode=='teaser') {
+//
+//     // get the start date as a string and an object
+//     if(!empty($variables['node']->get('field_date_range')
+//                                                     ->getValue()[0]['value'])) {
+//       $raw_start_date_and_time = $variables['node']->get('field_date_range')
+//         ->getValue()[0]['value'];
+//     }
+//     else {
+//       $raw_start_date_and_time = '';
+//     }
+//
+//     if(!empty($variables['node']->get('field_display_times')
+//                                                     ->getValue()[0]['value'])){
+//       $display_times = TRUE;
+//     }
+//     else {
+//       $display_times = FALSE;
+//     }
+//
+//     $object_start_date_and_time = new DateTime($raw_start_date_and_time,
+//       new DateTimeZone('UTC'));
+//     $object_start_date_and_time
+//       ->setTimezone(new DateTimeZone('Europe/London'));
+//
+//     // now get the end date as a string and an object
+//     if(!empty($variables['node']->get('field_date_range')
+//       ->getValue()[0]['end_value'])) {
+//       $raw_end_date_and_time = $variables['node']->get('field_date_range')
+//         ->getValue()[0]['end_value'];
+//     }
+//     else {
+//       $raw_end_date_and_time = '';
+//     }
+//
+//     $object_end_date_and_time = new DateTime($raw_end_date_and_time,
+//       new DateTimeZone('UTC'));
+//     $object_end_date_and_time
+//       ->setTimezone(new DateTimeZone('Europe/London'));
+//
+//     // is the event all happening on the same day?
+//     if ($object_start_date_and_time->format('j M Y') ==
+//       $object_end_date_and_time->format('j M Y')) {
+//
+//       // date_strapline is used in the listing
+//       $date_strapline = '';
+//
+//       if($display_times) {
+//         $date_strapline = $object_start_date_and_time->format('g:ia');
+//         $date_strapline .= ' to ';
+//         $date_strapline .= $object_end_date_and_time->format('g:ia');
+//       }
+//
+//       // date_string is used in the full node view
+//       $date_string_start = $object_start_date_and_time->format('j M Y');
+//       $date_string_time = $date_strapline;
+//     }
+//     else { //it happens across a number of days, so set a multi-day subtitle
+//
+//       // date_strapline is used in the listing - work that out first
+//       // is it happening in the same month?
+//       if ($object_start_date_and_time->format('M') ==
+//         $object_end_date_and_time->format('M')) {
+//
+//         $date_strapline = $object_start_date_and_time->format('j');
+//         $date_strapline .= '-';
+//         $date_strapline .= $object_end_date_and_time->format('j M Y');
+//       }
+//       else { // start date is in a different month from end date
+//         $date_strapline = $object_start_date_and_time->format('j M');
+//         $date_strapline .= ' - ';
+//         $date_strapline .= $object_end_date_and_time->format('j M Y');
+//       }
+//
+//       // date_string_* is used in the full node view
+//       $date_string_start_label = 'Starts';
+//
+//       $date_string_start = $object_start_date_and_time->format('j M Y');
+//
+//       if($display_times) {
+//         $date_string_start .= ' (';
+//         $date_string_start .= $object_start_date_and_time->format('g:ia');
+//         $date_string_start .= ")";
+//       }
+//
+//       $date_string_end_label = 'Ends';
+//
+//       $date_string_end = $object_end_date_and_time->format('j M Y');
+//
+//       if($display_times) {
+//         $date_string_end .= ' (';
+//         $date_string_end .= $object_end_date_and_time->format('g:ia');
+//         $date_string_end .= ')';
+//       }
+//     }
+//
+//     // used in listing view, eg sidebar
+//     // formatted text like '4pm to 7pm' or '13 Aug 2019 to 16 Aug 2019'
+//     $variables['srn_date_strapline'] = $date_strapline;
+//
+//     $variables['srn_iso_date'] = $object_start_date_and_time->format('Y-m-j');
+//     $variables['srn_day_only'] = $object_start_date_and_time->format('d');
+//     $variables['srn_month_only'] = $object_start_date_and_time->format('M');
+//     //		$variables['srn_medium_date_only'] = $object_start_date_and_time
+//     //												->format('medium_date_only');
+//
+//     // used in full node view for events
+//     if (!empty($date_string_start_label)) {
+//       $variables['srn_date_string_start_label'] = $date_string_start_label;
+//     }
+//
+//     $variables['srn_date_string_start'] = $date_string_start;
+//
+//     if (!empty($date_string_end_label)) {
+//       $variables['srn_date_string_end_label'] = $date_string_end_label;
+//     }
+//     if (!empty($date_string_end)) {
+//       $variables['srn_date_string_end'] = $date_string_end;
+//     }
+//
+//     if (!empty($date_string_time)) {
+//       $variables['srn_date_string_time'] = $date_string_time;
+//     }
+//   }
+// }
+
+
+/*
+ * Creates variables to use in FIELD templates.
+ * Rod Tatham, Sereno :: 2020-04-07
+ *
+ * */
+ function serenowebtheme_preprocess_field(&$variables, $hook) {
+
+   $element = $variables['element'];
+
+   if ($element['#field_name'] == 'field_eventbrite_button') {
+     if(!empty($element[0]['#text'])) {
+       $field_value = $element[0]['#text'];
+       $field_value_stripped = str_replace([
+         "\r",
+         "\n"
+       ], '', strip_tags($field_value));
+       $variables['srn_output'] = '<a href="https://www.eventbrite.co.uk/' . $field_value_stripped . '" type="button" class="eventbrite btn btn-primary" target="_blank">Register now</a>';
+     }
+   }
+   elseif ($element['#field_name'] == 'field_event_label') {
+     if(!empty($element[0]['#context']['value'])) {
+       $field_value = $element[0]['#context']['value'];
+       $variables['srn_output'] = '<span class="label label-primary">' . $field_value . '</span>';
+     }
+   }
+   elseif ($element['#field_name'] == 'field_show_register_link') {
+     if(!empty($element[0]['#markup'])) {
+       $field_value = $element[0]['#markup'];
+       if($field_value=='Show') {
+         // get the title of the thing they are currently looking at...
+         $node = $variables['element']['#object'];;
+         $node_title_encoded = urlencode($node->getTitle());
+
+         $variables['srn_output'] = '<a href="/whats-on/registration-of-interest?event='. $node_title_encoded .'" type="button" class="show-register-link btn btn-primary">Make enquiry</a>';
+       }
+     }
+   }
+ }
+
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function serenowebtheme_preprocess_block(&$variables) {
+
+  $block_id = $variables['elements']['#id'];
+
+  /* Uncomment the line below to see variables you can use to target a block */
+//   print $block_id . '<br/>';
+
+  if($block_id == 'jumbotron') {
+    // Load the node entity from current route
+    if($node = \Drupal::routeMatch()->getParameter('node')) {
+
+      // Load the label of the bundle
+      $bundle_label = \Drupal::entityTypeManager()
+        ->getStorage('node_type')
+        ->load($node->bundle())
+        ->label();
+
+      // pass the summary field for the home page
+//      if ($variables['is_front'] = \Drupal::service('path.matcher')->isFrontPage()) {
+//        $variables['summary'] = $node->get('field_summary')->getString();
+//      }
+
+      // load the image that we'll use as a background image
+      // an image is required. Can't have jumbotron without one
+      if($node->hasField('field_image') && $node->getType()=='landing_page') {
+
+        if(!$node->field_image->isEmpty()) {
+          $variables['srn_jumbotron_image_uri'] =
+            file_create_url($node->field_image->entity->getFileUri());
+
+          $variables['srn_jumbotron_image_alt'] = '';
+          if(!empty($node->field_image->alt)) {
+            $variables['srn_jumbotron_image_alt'] = $node->field_image->alt;
+          }
+
+          $variables['srn_jumbotron_image_title'] = '';
+          if(!empty($node->field_image->title)) {
+            $variables['srn_jumbotron_image_title'] = $node->field_image->title;
+          }
+
+          $variables['srn_jumbotron_title'] = '';
+          if(!$node->field_strapline->isEmpty()) {
+            $variables['srn_jumbotron_title'] = $node->get('field_strapline')->getString();
+          }
+
+
+          $variables['srn_jumbotron_blurb'] = '';
+          if(!$node->field_blurb->isEmpty()) {
+            $variables['srn_jumbotron_blurb'] = $node->get('field_blurb')->get(0)->view();
+          }
+
+          $ary_links = array();
+          if(!$node->field_link_path->isEmpty()) {
+            foreach ($node->get('field_link_path') as $link){
+              $ary_links[$link->getUrl()->toString()] = $link->title;
+            }
+          }
+          $variables['srn_jumbotron_links'] = $ary_links;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ * Implements hook_form_alter().
+ */
+function serenowebtheme_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id=='views_exposed_form' && $form['#id']=='views-exposed-form-what-s-on-page-1') {
+    //var_dump($form_id); uncomment to find out the form_id for the if clause above...
+    //var_dump($form['#id']); uncomment to find out the form['#id'] for above...
+    //var_dump($form); uncomment to look for your field name below...
+    $form['field_date_range_value']['#options']['All'] = t('All events');
+  }
+}
+
+/*
+ * get the path alias
+ * */
+function srn_get_current_path_alias() {
+  //Get the url of the request for displayed on the browser.
+  $page = \Drupal::request()->getRequestUri();
+  return $page;
+}
+
+
+/*
+ * which section of the website are we currently looking at?
+ * */
+function srn_get_current_section(){
+  $path_alias = srn_get_current_path_alias();
+  $path_args = explode('/', $path_alias);
+
+  if(empty($path_args[1])) {
+    return 'home';
+  }
+
+  return $path_args[1]; // eg young-womens-services
+}

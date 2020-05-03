@@ -1,0 +1,26 @@
+uuid: 6824c5ec-510c-4ee9-9103-a6a4b44e04d7
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: btW6TFHajhy7Eo6YUvdFiPh4TcPggo8GBXYctjV6zag
+id: authenticated
+label: 'authenticated user'
+weight: 1
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'access overlay'
+  - 'access site-wide contact form'
+  - 'display EU Cookie Compliance popup'
+  - 'display eu cookie compliance popup'
+  - 'opt-in or out of google analytics tracking'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use manualcrop'
+  - 'use text format filtered_html'
+  - 'view files'
+  - 'view media'
+  - 'view style guides'

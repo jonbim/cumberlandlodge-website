@@ -1,0 +1,27 @@
+uuid: b2303363-28ff-4155-8220-4cec467c795d
+langcode: en
+status: true
+dependencies: {  }
+name: Dev
+format: dev
+weight: -9
+filters:
+  filter_null:
+    id: filter_null
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72

@@ -1,0 +1,52 @@
+#!/bin/bash
+
+# Rod Tatham, Sereno :: 2019-08-05
+
+# part 2 of the set up for data migration. Enabling contrib modules to set
+# up the site.
+
+# run from the sereno/script
+
+PARENT_DIRECTORY="${PWD}"
+
+echo "checking $PARENT_DIRECTORY contains 'sereno/script'..."
+
+if [[ $PARENT_DIRECTORY == *"sereno/script"* ]]; then
+
+  # go to the site root
+  cd ../../
+
+  drush pm:enable address
+  drush pm:enable backup_migrate
+  drush pm:enable better_exposed_filters
+  drush pm:enable captcha
+  drush pm:enable context
+  drush pm:enable date_all_day
+  drush pm:enable date_popup
+  drush pm:enable ds
+  drush pm:enable entityqueue
+  drush pm:enable eu_cookie_compliance
+  drush pm:enable field_group
+  drush pm:enable flexslider
+  drush pm:enable honeypot
+  drush pm:enable imce
+  drush pm:enable linked_field
+  drush pm:enable menu_admin_per_menu
+  drush pm:enable menu_block
+  drush pm:enable module_filter
+  drush pm:enable module_missing_message_fixer
+  drush pm:enable rabbit_hole
+  drush pm:enable redirect
+  drush pm:enable role_delegation
+  drush pm:enable scheduler
+  drush pm:enable sitemap
+  drush pm:enable soundcloudfield
+  drush pm:enable token
+  drush pm:enable video_embed_field
+  drush pm:enable webform
+  drush pm:enable xmlsitemap 
+
+  echo "drush has enabled the initial modules for Drupal 8 in $PARENT_DIRECTORY"
+else
+  echo 'NOT DOING ANYTHING. You need to run this from within a dir called sereno/script'
+fi

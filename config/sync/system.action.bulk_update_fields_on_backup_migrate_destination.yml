@@ -1,0 +1,11 @@
+uuid: 5cb217fc-749e-4058-bdc7-8e94ccae80bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_backup_migrate_destination
+label: 'Bulk Update Backup Destination Fields'
+type: backup_migrate_destination
+plugin: bulk_update_fields_action_base
+configuration: {  }

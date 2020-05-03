@@ -1,0 +1,234 @@
+uuid: c0d989ab-6876-44cf-8d68-b6460826173a
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.browse_files_modal
+    - field.field.node.news_article.comment_node_news_article
+    - field.field.node.news_article.field_event
+    - field.field.node.news_article.field_image
+    - field.field.node.news_article.field_p_body
+    - field.field.node.news_article.field_resource
+    - field.field.node.news_article.field_strapline
+    - field.field.node.news_article.field_tags
+    - node.type.news_article
+  module:
+    - comment
+    - entity_browser
+    - field_group
+    - paragraphs
+    - path
+    - scheduler
+third_party_settings:
+  field_group:
+    group_form:
+      children:
+        - group_about
+        - group_content
+        - group_categories
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      format_settings:
+        id: form-group
+        classes: ''
+        direction: vertical
+      label: Form
+      region: content
+    group_about:
+      children:
+        - title
+        - field_strapline
+      parent_name: group_form
+      weight: 1
+      format_type: tab
+      format_settings:
+        description: 'Info about this news article'
+        formatter: open
+        required_fields: true
+        id: ''
+        classes: ''
+      label: About
+      region: content
+    group_content:
+      children:
+        - field_image
+        - field_p_body
+        - field_p_slideshow
+        - field_slideshow_images
+      parent_name: group_form
+      weight: 2
+      format_type: tab
+      format_settings:
+        description: 'Substance of this news item'
+        formatter: closed
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Content
+      region: content
+    group_categories:
+      children:
+        - field_event
+        - field_resource
+        - field_tags
+      parent_name: group_form
+      weight: 3
+      format_type: tab
+      format_settings:
+        id: ''
+        classes: ''
+        description: 'Tags and groupings'
+        formatter: closed
+        required_fields: true
+      label: Categories
+      region: content
+id: node.news_article.default
+targetEntityType: node
+bundle: news_article
+mode: default
+content:
+  comment_node_news_article:
+    type: comment_default
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_event:
+    weight: 4
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 3
+    type: entity_browser_file
+    settings:
+      entity_browser: browse_files_modal
+      field_widget_remove: true
+      field_widget_replace: true
+      selection_mode: selection_append
+      preview_image_style: file_entity_browser_small
+      field_widget_edit: true
+      open: false
+      view_mode: default
+    third_party_settings: {  }
+    region: content
+  field_p_body:
+    weight: 4
+    type: entity_reference_paragraphs
+    settings:
+      title: Item
+      title_plural: Items
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+    third_party_settings: {  }
+    region: content
+  field_resource:
+    weight: 5
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  field_strapline:
+    weight: 3
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_tags:
+    weight: 6
+    type: entity_reference_autocomplete
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    third_party_settings: {  }
+    region: content
+  flag:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  url_redirects:
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

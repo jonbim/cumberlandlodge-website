@@ -1,0 +1,21 @@
+uuid: 78afafd0-660f-4e84-94ce-58ea79764058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_label
+    - node.type.programme_event
+id: node.programme_event.field_event_label
+field_name: field_event_label
+entity_type: node
+bundle: programme_event
+label: 'Free Event Label'
+description: 'Only use this field if you want to add a label to a fee event to describe it. Typically ''All welcome'' but you can override this text.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 'All welcome'
+default_value_callback: ''
+settings: {  }
+field_type: string

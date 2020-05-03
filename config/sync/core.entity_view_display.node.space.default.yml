@@ -1,0 +1,108 @@
+uuid: f47fda3c-0b70-4675-8b2b-da28a7f94857
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_space.default
+    - field.field.node.space.comment_node_space
+    - field.field.node.space.field_capacity
+    - field.field.node.space.field_image
+    - field.field.node.space.field_p_body
+    - field.field.node.space.field_space_type
+    - node.type.space
+    - responsive_image.styles.sereno_responsive_image_style
+  module:
+    - comment
+    - ds
+    - entity_reference_revisions
+    - field_formatter_class
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      content:
+        - field_image
+        - field_p_body
+        - field_space_type
+        - field_capacity
+        - field_slideshow_images
+        - comment_node_space
+        - links
+        - sharethis
+id: node.space.default
+targetEntityType: node
+bundle: space
+mode: default
+content:
+  comment_node_space:
+    label: hidden
+    type: comment_default
+    weight: 5
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    region: content
+  field_capacity:
+    label: inline
+    weight: 3
+    type: number_integer
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    region: content
+  field_image:
+    label: hidden
+    weight: 0
+    type: responsive_image
+    settings:
+      responsive_image_style: sereno_responsive_image_style
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+  field_p_body:
+    label: hidden
+    weight: 1
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_space_type:
+    label: inline
+    weight: 2
+    type: entity_reference_label
+    settings:
+      link: true
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  search_api_excerpt: true

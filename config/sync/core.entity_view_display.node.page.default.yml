@@ -1,0 +1,95 @@
+uuid: e5ec907d-eae4-4b3b-a815-b3d27936d703
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.page.comment_node_page
+    - field.field.node.page.field_downloads
+    - field.field.node.page.field_image
+    - field.field.node.page.field_p_body
+    - field.field.node.page.field_related_content
+    - field.field.node.page.field_strapline
+    - field.field.node.page.field_testimonials
+    - node.type.page
+    - responsive_image.styles.sereno_responsive_image_style
+  module:
+    - ds
+    - entity_reference_revisions
+    - field_formatter_class
+    - file
+    - responsive_image
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - field_strapline
+        - field_image
+        - field_p_body
+        - field_downloads
+        - links
+id: node.page.default
+targetEntityType: node
+bundle: page
+mode: default
+content:
+  field_downloads:
+    type: file_default
+    weight: 3
+    region: content
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_image:
+    label: hidden
+    weight: 1
+    type: responsive_image
+    settings:
+      responsive_image_style: sereno_responsive_image_style
+      image_link: ''
+    third_party_settings:
+      field_formatter_class:
+        class: ''
+    region: content
+  field_p_body:
+    label: hidden
+    weight: 2
+    type: entity_reference_revisions_entity_view
+    settings:
+      view_mode: full
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_strapline:
+    type: string
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      link_to_entity: false
+    third_party_settings:
+      field_formatter_class:
+        class: 'h2 strapline-content'
+  links:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  comment_node_page: true
+  field_related_content: true
+  field_testimonials: true
+  search_api_excerpt: true

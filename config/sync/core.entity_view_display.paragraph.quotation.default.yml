@@ -1,0 +1,22 @@
+uuid: 86de816d-af65-402d-b25d-83c4c873ef18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.quotation.field_text_block
+    - paragraphs.paragraphs_type.quotation
+  module:
+    - text
+id: paragraph.quotation.default
+targetEntityType: paragraph
+bundle: quotation
+mode: default
+content:
+  field_text_block:
+    label: hidden
+    weight: 0
+    type: text_default
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+ignored_config_entities:
+  - 'devel*'
+  - '*devel*'
+  - 'matomo*'
+  - '*matomo*'
+  - 'reroute_email*'
+  - 'shield*'
+  - 'stage_file_proxy*'
+_core:
+  default_config_hash: UVH1aJ4b44UM-VdPVN7hNNuuVqfReJxwfVeDQH1Hvsk

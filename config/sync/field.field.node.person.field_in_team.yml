@@ -1,0 +1,23 @@
+uuid: 6bc4a0ec-8cce-4bd9-b32e-df105662f229
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_in_team
+    - node.type.person
+id: node.person.field_in_team
+field_name: field_in_team
+entity_type: node
+bundle: person
+label: 'Person is in any teams?'
+description: 'System field hidden from users which tracks whether a person is in any teams or not'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

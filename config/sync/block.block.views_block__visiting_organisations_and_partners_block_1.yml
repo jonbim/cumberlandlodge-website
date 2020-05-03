@@ -1,0 +1,30 @@
+uuid: 70042dee-bf05-4dd0-bb09-e4eeaa2e25e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.visiting_organisations_and_partners
+  module:
+    - system
+    - views
+  theme:
+    - serenowebtheme
+id: views_block__visiting_organisations_and_partners_block_1
+theme: serenowebtheme
+region: pre_footer_stripe
+weight: -25
+provider: null
+plugin: 'views_block:visiting_organisations_and_partners-block_1'
+settings:
+  id: 'views_block:visiting_organisations_and_partners-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }

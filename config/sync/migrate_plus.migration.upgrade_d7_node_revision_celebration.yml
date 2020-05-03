@@ -1,0 +1,129 @@
+uuid: ff3f2394-2405-4f30-b147-2ebbd963ff02
+langcode: en
+status: true
+dependencies: {  }
+id: upgrade_d7_node_revision_celebration
+class: Drupal\migrate\Plugin\Migration
+field_plugin_method: alterFieldFormatterMigration
+cck_plugin_method: null
+migration_tags:
+  - 'Drupal 7'
+  - Content
+migration_group: migrate_drupal_7
+label: 'Node revisions (Celebration)'
+source:
+  plugin: d7_node_revision
+  node_type: celebration
+process:
+  nid:
+    -
+      plugin: get
+      source: nid
+  vid:
+    -
+      plugin: get
+      source: vid
+  langcode:
+    -
+      plugin: default_value
+      source: language
+      default_value: und
+  title:
+    -
+      plugin: get
+      source: title
+  uid:
+    -
+      plugin: get
+      source: node_uid
+  status:
+    -
+      plugin: get
+      source: status
+  created:
+    -
+      plugin: get
+      source: created
+  changed:
+    -
+      plugin: get
+      source: changed
+  promote:
+    -
+      plugin: get
+      source: promote
+  sticky:
+    -
+      plugin: get
+      source: sticky
+  revision_uid:
+    -
+      plugin: get
+      source: revision_uid
+  revision_log:
+    -
+      plugin: get
+      source: log
+  revision_timestamp:
+    -
+      plugin: get
+      source: timestamp
+  comment_node_celebration/0/status:
+    -
+      plugin: get
+      source: comment
+  field_date:
+    -
+      plugin: sub_process
+      source: field_date
+      process:
+        value:
+          plugin: format_date
+          from_format: 'Y-m-d H:i:s'
+          to_format: 'Y-m-d\TH:i:s'
+          source: value
+  field_event_image:
+    -
+      plugin: sub_process
+      source: field_event_image
+      process:
+        target_id: fid
+        alt: alt
+        title: title
+        width: width
+        height: height
+  field_celebration_resource:
+    -
+      plugin: get
+      source: field_celebration_resource
+  field_p_body:
+    -
+      plugin: get
+      source: field_p_body
+destination:
+  plugin: 'entity_revision:node'
+  default_bundle: celebration
+migration_dependencies:
+  required:
+    - upgrade_d7_node_blog
+    - upgrade_d7_node_celebration
+    - upgrade_d7_node_downloads
+    - upgrade_d7_node_endorsement
+    - upgrade_d7_node_exhibition
+    - upgrade_d7_node_hosted_event
+    - upgrade_d7_node_landing_page
+    - upgrade_d7_node_landing_page_advanced
+    - upgrade_d7_node_large_slide
+    - upgrade_d7_node_link_tile
+    - upgrade_d7_node_news_article
+    - upgrade_d7_node_organisation
+    - upgrade_d7_node_page
+    - upgrade_d7_node_panel
+    - upgrade_d7_node_person
+    - upgrade_d7_node_preamble
+    - upgrade_d7_node_programme_event
+    - upgrade_d7_node_resource
+    - upgrade_d7_node_space
+    - upgrade_d7_node_vacancy
+    - upgrade_d7_node_webform
+  optional: {  }

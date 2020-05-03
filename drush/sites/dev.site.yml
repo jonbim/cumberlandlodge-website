@@ -1,0 +1,9 @@
+dev:
+  host: 127.0.0.1
+  user: rtatham
+  root: /home/rtatham/Project/cmb/cmb.biscay.net
+  uri: http://cmb.biscay.net
+  paths:
+    drush-script: /home/rtatham/Project/cmb/cmb.biscay.net/vendor/drush/drush/drush
+  files: web/sites/default/files
+  private: web/sites/default/private

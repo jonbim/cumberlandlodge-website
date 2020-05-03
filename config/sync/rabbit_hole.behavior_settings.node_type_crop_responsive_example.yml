@@ -1,0 +1,11 @@
+uuid: 10ddd9bf-2531-41ba-9a18-cd454f74ef8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.crop_responsive_example
+id: node_type_crop_responsive_example
+action: display_page
+allow_override: 1
+redirect: ''
+redirect_code: 301

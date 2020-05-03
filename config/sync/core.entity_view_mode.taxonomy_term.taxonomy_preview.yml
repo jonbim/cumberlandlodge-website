@@ -1,0 +1,10 @@
+uuid: d87a43fb-73f4-4e33-97f8-fdd5d6f19327
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.taxonomy_preview
+label: taxonomy_preview
+targetEntityType: taxonomy_term
+cache: true

@@ -1,0 +1,155 @@
+uuid: ecd39e54-0a10-4fe4-9574-42f8ed29b130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_p_body
+    - field.storage.node.field_project
+    - field.storage.taxonomy_term.field_annual_series
+    - field.storage.node.field_published_date
+    - field.storage.node.field_resource_type
+    - field.storage.node.field_theme
+    - search_api.server.read_watch_listen_tab
+  module:
+    - taxonomy
+    - node
+    - search_api
+id: read_watch_listen_tab
+name: 'Read, Watch, Listen tab'
+description: ''
+read_only: false
+field_settings:
+  field_p_body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: field_p_body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_p_body
+  field_project:
+    label: 'Project Index tab'
+    datasource_id: 'entity:node'
+    property_path: field_project
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_project
+  field_published_date:
+    label: 'Published Date'
+    datasource_id: 'entity:node'
+    property_path: field_published_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_published_date
+  name:
+    label: 'Resource Type » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_resource_type:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_resource_type
+      module:
+        - taxonomy
+  name_1:
+    label: 'Theme » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_theme:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_theme
+      module:
+        - taxonomy
+  name_2:
+    label: 'Project » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_project:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_project
+      module:
+        - taxonomy
+  name_3:
+    label: 'Project » Taxonomy term » Name New'
+    datasource_id: 'entity:node'
+    property_path: 'field_project:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_project
+      module:
+        - taxonomy
+  name_4:
+    label: 'Project » Taxonomy term » Annual Series » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_project:entity:field_annual_series:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_project
+        - field.storage.taxonomy_term.field_annual_series
+      module:
+        - taxonomy
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    dependencies:
+      module:
+        - node
+  sticky:
+    label: 'Sticky at top of lists'
+    datasource_id: 'entity:node'
+    property_path: sticky
+    type: boolean
+    dependencies:
+      module:
+        - node
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    dependencies:
+      module:
+        - node
+datasource_settings:
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - resource
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - field_p_body
+      - field_project
+      - name
+      - name_1
+      - name_2
+      - name_3
+      - name_4
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  language_with_fallback: {  }
+  rendered_item: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: read_watch_listen_tab
